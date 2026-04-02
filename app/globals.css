@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Color Palette --- */
+  --color-deep-navy: #0D1B2A;
+  --color-midnight-slate: #1B2838;
+  --color-steel-blue: #1A4A7A;
+  --color-vivid-teal: #3A9BD5;
+  --color-alpine-gold: #F0A500;
+  --color-snow-white: #F7F9FC;
+  --color-frost-gray: #8AA0B4;
+  --color-ice-blue: #E8F4FD;
+
+  /* --- Fonts --- */
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* --- Base Styles --- */
+body {
+  background-color: var(--color-deep-navy);
+  color: var(--color-snow-white);
+  font-family: var(--font-body);
+}
+
+/* --- Glass Card Utility --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(58, 155, 213, 0.18);
+  border-radius: 12px;
+}
+
+/* --- Material Symbols --- */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* --- Smooth Scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Selection Color --- */
+::selection {
+  background-color: var(--color-vivid-teal);
+  color: var(--color-deep-navy);
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
+}
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+
+/* --- Atmospheric Background --- */
+.atmospheric-bg {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(58, 155, 213, 0.05) 0%,
+    rgba(13, 27, 42, 0) 100%
+  );
+}
+
+/* --- Topographic Pattern Overlay --- */
+.topo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10C30 10 30 30 50 30S70 10 90 10' stroke='%233A9BD5' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3Cpath d='M0 40C20 40 20 60 40 60S60 40 80 40' stroke='%233A9BD5' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
 }
