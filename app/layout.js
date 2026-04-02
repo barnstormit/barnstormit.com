@@ -29,6 +29,19 @@ export const metadata = {
   },
   description:
     "Reliable computer repair, IT support, and tech services for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
+  openGraph: {
+    title: "Barnstorm Computer Services — Mountain Tech, Done Right",
+    description:
+      "On-site computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
+    url: "https://barnstormit.com",
+    siteName: "Barnstorm Computer Services",
+    images: [
+      {
+        url: "/hero_bg.jpg",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
