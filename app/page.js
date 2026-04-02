@@ -5,14 +5,12 @@ export default function Home() {
     <>
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 px-6 text-center">
       {/* Background Image + Overlays */}
-      <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8KsEducRoSJ50MZXciNd1VAW8Z3SVQxO_ge2NsjJRHs1AxCfLBMQvMx4kFZU3G6-WR31YUE0mctkQAzwYQS-lOpyGmRXeYlcOTuW8jymLqzY-AN0OBEMwFBnyUxOyIrmYqNkpsCdEudSdIs-EmxGYs6ETX4fp_RrPZnqVkkifIyn6xWUBHQAmWnsRNykWZ6fNRw1NYt8n6pCF4qbxH_Dh2eKEd3O-YATJTmvGrD2G0iC7Xjo2XV5005NT13gMEZOGfAoXVR_treg"
-          alt="Jagged snow-capped alpine peaks at dusk with deep blue shadows and a glowing teal horizon"
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/90 via-deep-navy/20 to-deep-navy" />
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/hero_bg.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-[rgba(13,27,42,0.7)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-transparent to-deep-navy" />
         <div className="absolute inset-0 topo-pattern opacity-10" />
       </div>
 
