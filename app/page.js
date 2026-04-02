@@ -332,6 +332,189 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    {/* Service Coverage Zones */}
+    <section className="py-20 md:py-28 px-6 md:px-8 bg-midnight-slate/50 relative">
+      <div className="absolute inset-0 atmospheric-bg opacity-30" />
+      <div className="relative z-10 max-w-[1200px] mx-auto">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+            Service Area
+          </span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-snow-white tracking-tight">
+            Service Coverage Zones
+          </h2>
+          <p className="text-frost-gray text-lg">
+            We travel where the problems are. Our tiered service zones ensure
+            you get the support you need, no matter how remote your location.
+          </p>
+        </div>
+
+        {/* Zone Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Zone 1 — Local */}
+          <div className="glass-card p-8 hover:border-vivid-teal/30 transition-all flex flex-col">
+            <span className="text-xs font-mono font-bold text-vivid-teal tracking-widest uppercase mb-2 block">
+              Zone 01
+            </span>
+            <h3 className="text-2xl font-heading font-bold mb-4 text-snow-white">
+              Local
+            </h3>
+            <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
+              Fairplay, Alma
+            </p>
+            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
+              $25{" "}
+              <span className="text-sm font-normal text-frost-gray">
+                Service Call Fee
+              </span>
+            </div>
+            <ul className="space-y-3 mb-8 text-sm flex-1">
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Same-day On-site</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Priority Response</span>
+              </li>
+            </ul>
+            <Link
+              href="/service-area"
+              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+            >
+              Learn more
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </Link>
+          </div>
+
+          {/* Zone 2 — Regional (Popular) */}
+          <div className="glass-card p-8 transition-all flex flex-col" style={{ borderColor: "rgba(58, 155, 213, 0.5)" }}>
+            <span className="text-xs font-mono font-bold text-alpine-gold tracking-widest uppercase mb-2 block">
+              Zone 02 — Popular
+            </span>
+            <h3 className="text-2xl font-heading font-bold mb-4 text-snow-white">
+              Regional
+            </h3>
+            <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
+              Blue River, Breckenridge, Como
+            </p>
+            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
+              $50{" "}
+              <span className="text-sm font-normal text-frost-gray">
+                Service Call Fee
+              </span>
+            </div>
+            <ul className="space-y-3 mb-8 text-sm flex-1">
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Next-day On-site</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Standard Support</span>
+              </li>
+            </ul>
+            <Link
+              href="/service-area"
+              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+            >
+              Learn more
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </Link>
+          </div>
+
+          {/* Zone 3 — Extended */}
+          <div className="glass-card p-8 hover:border-vivid-teal/30 transition-all flex flex-col">
+            <span className="text-xs font-mono font-bold text-vivid-teal tracking-widest uppercase mb-2 block">
+              Zone 03
+            </span>
+            <h3 className="text-2xl font-heading font-bold mb-4 text-snow-white">
+              Extended
+            </h3>
+            <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
+              Frisco, Dillon, Buena Vista, Jefferson
+            </p>
+            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
+              $75{" "}
+              <span className="text-sm font-normal text-frost-gray">
+                Service Call Fee
+              </span>
+            </div>
+            <ul className="space-y-3 mb-8 text-sm flex-1">
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Scheduled Visits</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">On-site Support</span>
+              </li>
+            </ul>
+            <Link
+              href="/service-area"
+              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+            >
+              Learn more
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </Link>
+          </div>
+
+          {/* Zone 4 — Remote */}
+          <div className="glass-card p-8 hover:border-vivid-teal/30 transition-all flex flex-col">
+            <span className="text-xs font-mono font-bold text-vivid-teal tracking-widest uppercase mb-2 block">
+              Zone 04
+            </span>
+            <h3 className="text-2xl font-heading font-bold mb-4 text-snow-white">
+              Remote
+            </h3>
+            <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
+              Silverthorne, Leadville, Salida
+            </p>
+            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
+              $100+{" "}
+              <span className="text-sm font-normal text-frost-gray">
+                Service Call Fee
+              </span>
+            </div>
+            <ul className="space-y-3 mb-8 text-sm flex-1">
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Scheduled Visits</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-vivid-teal text-lg">
+                  check_circle
+                </span>
+                <span className="text-frost-gray">Remote Support Available</span>
+              </li>
+            </ul>
+            <Link
+              href="/service-area"
+              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+            >
+              Learn more
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
     </>
   );
 }
