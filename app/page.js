@@ -515,6 +515,75 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    {/* Contact CTA */}
+    <section className="relative py-20 md:py-28 px-6 md:px-8 overflow-hidden border-t border-steel-blue/15">
+      {/* Background image + overlays */}
+      <div className="absolute inset-0 z-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMljnSJ6mCIiIsZmdh9PlhS7pa6yGsKlfTwq3VnhCR6ts8QSyrXbPWbhgNaZiD1dxCi0mIVbqBtc9YSRgjaPuSqUZKSNslJp03EJlIGZR2oOvHRxoIhL0gO_9kTBxf5HBl14lHBta8yd_XSsfUNfv63Z__yri3oDS1XsBhHANlLyAHwvSSnZwK75mniosNN2E0mn4gVE8DTlxypan6b8MsPEqptOAKqdoDbjDS6itYoHCaHww7Don3SyGAEC5G_PCFWaKO_wcWM8g"
+          alt="Server circuit boards with teal fiber optic lights"
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/90 to-deep-navy/70" />
+        <div className="absolute inset-0 atmospheric-bg opacity-40" />
+      </div>
+
+      <div className="relative z-10 max-w-[1200px] mx-auto">
+        <div className="max-w-3xl">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+            Get In Touch
+          </span>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-snow-white mb-8 tracking-tight leading-[0.95]">
+            Tech Problems Don&apos;t Care About Your{" "}
+            <span className="text-alpine-gold">Checkout Date.</span>
+          </h2>
+          <p className="text-lg md:text-xl text-frost-gray mb-12 max-w-2xl leading-relaxed">
+            Whether you&apos;re a local business, a full-time resident, or a
+            visitor whose laptop just died at the cabin — we&apos;re here.
+            Professional, local IT support that understands your environment.
+          </p>
+
+          {/* Contact Info + Buttons */}
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-end">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:+17198380435"
+                className="px-10 py-5 bg-alpine-gold text-deep-navy font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95"
+              >
+                <span className="material-symbols-outlined">call</span>
+                Call Now
+              </a>
+              <a
+                href="mailto:jeff@barnstormit.com"
+                className="px-10 py-5 border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white font-heading font-bold text-lg rounded-lg transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              >
+                <span className="material-symbols-outlined">mail</span>
+                Email Jeff
+              </a>
+            </div>
+
+            {/* Contact Details */}
+            <div className="flex flex-col gap-2">
+              <a
+                href="tel:+17198380435"
+                className="text-3xl md:text-4xl font-heading font-bold text-snow-white hover:text-vivid-teal transition-colors"
+              >
+                (719) 838-0435
+              </a>
+              <a
+                href="mailto:jeff@barnstormit.com"
+                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors"
+              >
+                jeff@barnstormit.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </>
   );
 }
