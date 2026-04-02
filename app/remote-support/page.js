@@ -4,7 +4,7 @@ import CopyField from "../components/CopyField";
 export const metadata = {
   title: "Remote Support",
   description:
-    "Get remote IT support from Barnstorm Computer Services. Download the app, share your ID, and your technician connects to fix your computer while you watch.",
+    "Get remote IT support from Barnstorm Computer Services. Download the app, share your ID, and we connect to fix your computer while you watch.",
 };
 
 export default function RemoteSupport() {
@@ -28,7 +28,7 @@ export default function RemoteSupport() {
             the <span className="text-vivid-teal">House Call</span>
           </h1>
           <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed">
-            No travel fee. No waiting. Your technician connects to your screen and fixes it
+            No service call fee. No waiting. We connect to your screen and fix it
             while you watch.
           </p>
         </div>
@@ -227,7 +227,7 @@ export default function RemoteSupport() {
                     (719) 838-0435
                   </a>
                   <p className="text-frost-gray mt-1">
-                    Your technician will connect to your screen and fix the issue while you
+                    We&apos;ll connect to your screen and fix the issue while you
                     watch.
                   </p>
                 </div>
@@ -436,7 +436,7 @@ export default function RemoteSupport() {
                 </span>
               </summary>
               <div className="px-6 md:px-8 pb-6 md:pb-8 text-frost-gray leading-relaxed">
-                $100/hour, same as on-site — but with no travel fee. Most common
+                $100/hour, same as on-site — but with no service call fee. Most common
                 fixes are handled within 30&ndash;60 minutes.
               </div>
             </details>
