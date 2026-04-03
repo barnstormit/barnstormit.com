@@ -46,48 +46,6 @@ export default function RemoteSupport() {
             </h2>
           </div>
 
-          {/* Download Buttons */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-            <a
-              href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
-              className="w-full md:w-auto flex items-center justify-center gap-4 bg-alpine-gold text-deep-navy px-10 py-5 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-1 active:scale-95"
-            >
-              <span className="material-symbols-outlined text-3xl">
-                desktop_windows
-              </span>
-              Download for Windows
-            </a>
-            <a
-              href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
-              className="w-full md:w-auto flex items-center justify-center gap-4 border-2 border-alpine-gold text-alpine-gold bg-transparent px-10 py-5 rounded-lg font-heading font-bold text-lg hover:bg-alpine-gold/5 transition-all hover:-translate-y-1 active:scale-95"
-            >
-              <span className="material-symbols-outlined text-3xl">
-                laptop_mac
-              </span>
-              Download for Mac
-            </a>
-          </div>
-          <div className="text-center space-y-2 mb-14">
-            <p className="text-frost-gray/60 font-mono text-sm flex items-center justify-center gap-2">
-              <span
-                className="material-symbols-outlined text-lg"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                info
-              </span>
-              Free, lightweight app — no account needed, no signup required
-            </p>
-            <p className="text-frost-gray/40 text-sm">
-              Intel Mac?{" "}
-              <a
-                href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
-                className="text-vivid-teal/70 hover:text-vivid-teal underline underline-offset-2 transition-colors"
-              >
-                Download here
-              </a>
-            </p>
-          </div>
-
           <div className="space-y-12">
             {/* Step 1 */}
             <div>
@@ -96,16 +54,50 @@ export default function RemoteSupport() {
                   1
                 </span>
                 <h3 className="font-heading text-xl font-bold text-snow-white">
-                  Open RustDesk and click the three dots next to your ID number
+                  Download and install the app
                 </h3>
               </div>
-              <div className="glass-card rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/rustdesk-step1-dots.png"
-                  alt="RustDesk main screen — click the three-dot menu next to your ID"
-                  className="w-full"
-                />
+              <div className="glass-card rounded-xl p-6 space-y-4">
+                <p className="text-frost-gray leading-relaxed">
+                  Click the button that matches your computer to download the
+                  app:
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
+                    className="flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-all active:scale-95"
+                  >
+                    <span className="material-symbols-outlined text-2xl">
+                      desktop_windows
+                    </span>
+                    Windows &mdash; Click Here
+                  </a>
+                  <a
+                    href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
+                    className="flex items-center justify-center gap-3 border-2 border-alpine-gold text-alpine-gold px-8 py-4 rounded-lg font-heading font-bold text-base hover:bg-alpine-gold/5 transition-all active:scale-95"
+                  >
+                    <span className="material-symbols-outlined text-2xl">
+                      laptop_mac
+                    </span>
+                    Mac &mdash; Click Here
+                  </a>
+                </div>
+                <div className="bg-vivid-teal/5 border border-vivid-teal/20 rounded-lg p-4 mt-2">
+                  <p className="text-frost-gray text-sm leading-relaxed">
+                    <span className="text-vivid-teal font-bold">
+                      After it downloads:
+                    </span>{" "}
+                    Look at the bottom of your screen (or your Downloads folder)
+                    for a file called{" "}
+                    <span className="text-snow-white font-bold">
+                      rustdesk
+                    </span>
+                    . Double-click it to install. If your computer asks
+                    &ldquo;Are you sure?&rdquo; or &ldquo;Do you want to allow
+                    this?&rdquo; &mdash; click{" "}
+                    <span className="text-snow-white font-bold">Yes</span>.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -116,10 +108,45 @@ export default function RemoteSupport() {
                   2
                 </span>
                 <h3 className="font-heading text-xl font-bold text-snow-white">
-                  Click Network on the left, then click Unlock Network Settings
-                  at the top. Click Yes when Windows asks for permission.
+                  Open the app and click the three dots
                 </h3>
               </div>
+              <p className="text-frost-gray mb-4 leading-relaxed">
+                Once the app is open, look for the{" "}
+                <span className="text-snow-white font-bold">
+                  three small vertical dots (
+                </span>
+                <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1">&bull;<br/>&bull;<br/>&bull;</span>
+                <span className="text-snow-white font-bold">)</span> next to
+                your ID number. Click them to open the settings. See the picture
+                below:
+              </p>
+              <div className="glass-card rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/rustdesk-step1-dots.png"
+                  alt="RustDesk main screen — click the three-dot menu next to your ID"
+                  className="w-full"
+                />
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div>
+              <div className="flex items-baseline gap-4 mb-4">
+                <span className="font-heading font-black text-4xl text-vivid-teal/30">
+                  3
+                </span>
+                <h3 className="font-heading text-xl font-bold text-snow-white">
+                  Click &ldquo;Network&rdquo; on the left side, then click
+                  &ldquo;Unlock Network Settings&rdquo;
+                </h3>
+              </div>
+              <p className="text-frost-gray mb-4 leading-relaxed">
+                If Windows asks &ldquo;Do you want to allow this app to make
+                changes?&rdquo; &mdash; click{" "}
+                <span className="text-snow-white font-bold">Yes</span>.
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="glass-card rounded-xl overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -140,16 +167,27 @@ export default function RemoteSupport() {
               </div>
             </div>
 
-            {/* Step 3 */}
+            {/* Step 4 */}
             <div>
               <div className="flex items-baseline gap-4 mb-4">
                 <span className="font-heading font-black text-4xl text-vivid-teal/30">
-                  3
+                  4
                 </span>
                 <h3 className="font-heading text-xl font-bold text-snow-white">
-                  Click ID/Relay Server and enter these settings exactly:
+                  Click &ldquo;ID/Relay Server&rdquo; and fill in the boxes
                 </h3>
               </div>
+              <p className="text-frost-gray mb-4 leading-relaxed">
+                You need to type (or copy and paste) the information below into
+                the matching boxes shown in the picture. To copy: click the{" "}
+                <span className="text-snow-white font-bold">Copy</span> button
+                next to each value. To paste: click inside the box in the app,
+                then press{" "}
+                <span className="text-snow-white font-bold">
+                  Ctrl + V
+                </span>{" "}
+                on your keyboard (hold down Ctrl and tap V).
+              </p>
               <div className="glass-card rounded-xl overflow-hidden mb-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -159,6 +197,10 @@ export default function RemoteSupport() {
                 />
               </div>
               <div className="glass-card rounded-xl p-6 space-y-3">
+                <p className="text-frost-gray text-sm mb-2">
+                  Copy each value below and paste it into the matching box in
+                  the app:
+                </p>
                 <CopyField label="ID Server" value="107.175.137.52" />
                 <CopyField label="Relay Server" value="107.175.137.52" />
                 <CopyField
@@ -171,17 +213,25 @@ export default function RemoteSupport() {
               </div>
             </div>
 
-            {/* Step 4 */}
+            {/* Step 5 */}
             <div>
               <div className="flex items-baseline gap-4 mb-4">
                 <span className="font-heading font-black text-4xl text-vivid-teal/30">
-                  4
+                  5
                 </span>
                 <h3 className="font-heading text-xl font-bold text-snow-white">
-                  Click the Home button at the top. You should see Ready at the
-                  bottom and your ID on the left.
+                  Go back to the Home screen and make sure it says
+                  &ldquo;Ready&rdquo;
                 </h3>
               </div>
+              <p className="text-frost-gray mb-4 leading-relaxed">
+                Click{" "}
+                <span className="text-snow-white font-bold">Home</span> at the
+                top of the app. You should see the word{" "}
+                <span className="text-vivid-teal font-bold">Ready</span> at
+                the bottom of the window and a number on the left side &mdash;
+                that&apos;s your ID.
+              </p>
               <div className="glass-card rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -192,23 +242,20 @@ export default function RemoteSupport() {
               </div>
             </div>
 
-            {/* Step 5 */}
+            {/* Step 6 */}
             <div>
               <div className="flex items-baseline gap-4 mb-4">
                 <span className="font-heading font-black text-4xl text-vivid-teal/30">
-                  5
+                  6
                 </span>
                 <h3 className="font-heading text-xl font-bold text-snow-white">
-                  Call{" "}
-                  <a
-                    href="tel:+17198380435"
-                    className="text-vivid-teal hover:underline"
-                  >
-                    (719) 838-0435
-                  </a>{" "}
-                  and read us your ID number and one-time password.
+                  Call us and read your ID number and password out loud
                 </h3>
               </div>
+              <p className="text-frost-gray mb-4 leading-relaxed">
+                That&apos;s it &mdash; you&apos;re done with the hard part.
+                Just pick up the phone and call. We&apos;ll take it from here.
+              </p>
               <div className="glass-card rounded-xl p-8 flex flex-col sm:flex-row items-center gap-6">
                 <span
                   className="material-symbols-outlined text-vivid-teal"
