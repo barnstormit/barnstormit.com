@@ -360,7 +360,7 @@ export default function Home() {
               Local
             </h3>
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
-              Fairplay, Alma
+              Fairplay, Alma, Como
             </p>
             <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
               $25{" "}
@@ -400,7 +400,7 @@ export default function Home() {
               Regional
             </h3>
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
-              Blue River, Breckenridge, Como
+              Breckenridge, Blue River, Buena Vista, Jefferson, Grant
             </p>
             <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
               $50{" "}
@@ -440,7 +440,7 @@ export default function Home() {
               Extended
             </h3>
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
-              Frisco, Dillon, Buena Vista, Jefferson
+              Frisco, Bailey
             </p>
             <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
               $75{" "}
@@ -480,7 +480,7 @@ export default function Home() {
               Remote
             </h3>
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
-              Silverthorne, Leadville, Salida
+              Dillon, Silverthorne, Leadville, Salida
             </p>
             <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
               $100+{" "}

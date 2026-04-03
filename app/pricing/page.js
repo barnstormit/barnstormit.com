@@ -87,7 +87,7 @@ export default function Pricing() {
                     Local
                   </td>
                   <td className="py-4 text-frost-gray text-sm">
-                    Fairplay, Alma
+                    Fairplay, Alma, Como
                   </td>
                   <td className="py-4 text-right font-heading font-bold text-alpine-gold">
                     $25
@@ -98,7 +98,7 @@ export default function Pricing() {
                     Regional
                   </td>
                   <td className="py-4 text-frost-gray text-sm">
-                    Blue River, Breckenridge, Como
+                    Breckenridge, Blue River, Buena Vista, Jefferson, Grant
                   </td>
                   <td className="py-4 text-right font-heading font-bold text-alpine-gold">
                     $50
@@ -109,7 +109,7 @@ export default function Pricing() {
                     Extended
                   </td>
                   <td className="py-4 text-frost-gray text-sm">
-                    Frisco, Dillon, Buena Vista, Jefferson
+                    Frisco, Bailey
                   </td>
                   <td className="py-4 text-right font-heading font-bold text-alpine-gold">
                     $75
@@ -120,7 +120,7 @@ export default function Pricing() {
                     Remote
                   </td>
                   <td className="py-4 text-frost-gray text-sm">
-                    Silverthorne, Leadville, Salida
+                    Dillon, Silverthorne, Leadville, Salida
                   </td>
                   <td className="py-4 text-right font-heading font-bold text-alpine-gold">
                     $100+

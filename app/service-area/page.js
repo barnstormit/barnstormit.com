@@ -1,4 +1,5 @@
 import Link from "next/link";
+import countyData from "./colorado-counties.json";
 
 export const metadata = {
   title: "Service Area",
@@ -43,28 +44,28 @@ export default function ServiceArea() {
             <ZoneCard
               name="Local Zone"
               fee="$25"
-              towns="Fairplay, Alma"
+              towns="Fairplay, Alma, Como"
               note="Our home base."
               icon="home_pin"
             />
             <ZoneCard
               name="Regional Zone"
               fee="$50"
-              towns="Blue River, Breckenridge, Como"
+              towns="Breckenridge, Blue River, Buena Vista, Jefferson, Grant"
               note="Just over the pass."
               icon="distance"
             />
             <ZoneCard
               name="Extended Zone"
               fee="$75"
-              towns="Frisco, Dillon, Buena Vista, Jefferson"
+              towns="Frisco, Bailey"
               note="Worth the drive."
               icon="explore"
             />
             <ZoneCard
               name="Remote Zone"
               fee="$100+"
-              towns="Silverthorne, Leadville, Salida"
+              towns="Dillon, Silverthorne, Leadville, Salida"
               note="We&apos;ll come to you."
               icon="landscape"
             />
@@ -146,257 +147,136 @@ function ZoneCard({ name, fee, towns, note, icon }) {
   );
 }
 
+/* Nudge labels so close towns don't overlap */
+const LABEL_NUDGE = {
+  Silverthorne: { dx: -8, dy: -16, anchor: "end" },
+  Dillon: { dx: 10, dy: 16, anchor: "start" },
+  Frisco: { dx: -10, dy: -10, anchor: "end" },
+  Breckenridge: { dx: -10, dy: 16, anchor: "end" },
+  Fairplay: { dx: 0, dy: 18, anchor: "middle" },
+  Alma: { dx: -10, dy: -8, anchor: "end" },
+  Leadville: { dx: -10, dy: 4, anchor: "end" },
+  Salida: { dx: 0, dy: -10 },
+  Como: { dx: 10, dy: -8, anchor: "start" },
+  Jefferson: { dx: 10, dy: 14, anchor: "start" },
+  Grant: { dx: 10, dy: -10, anchor: "start" },
+  Bailey: { dx: 10, dy: -10, anchor: "start" },
+};
+
+/* County fill colors — very muted, recede behind town labels */
+const COUNTY_COLORS = {
+  "08093": "#152840", // Park
+  "08117": "#122828", // Summit
+  "08065": "#1C152A", // Lake
+  "08015": "#15281D", // Chaffee
+};
+
+/* Town label colors by pricing zone */
+const TOWN_ZONE_COLORS = {
+  Fairplay: "#FFFFFF",     // Local
+  Alma: "#FFFFFF",         // Local
+  Como: "#FFFFFF",         // Local
+  Breckenridge: "#F0A500", // Regional
+  "Buena Vista": "#F0A500", // Regional
+  Jefferson: "#F0A500",    // Regional
+  Grant: "#F0A500",        // Regional
+  Frisco: "#5CE0D6",       // Extended
+  Bailey: "#5CE0D6",       // Extended
+  Dillon: "#DC2626",       // Remote
+  Silverthorne: "#DC2626",  // Remote
+  Leadville: "#DC2626",    // Remote
+  Salida: "#DC2626",       // Remote
+};
+
 function ColoradoMap() {
-  /*
-   * Simplified SVG map of Colorado with county zones highlighted.
-   * ViewBox maps roughly to Colorado's geographic extent:
-   *   Longitude: -109.05 to -102.05 (7 degrees → 700 units)
-   *   Latitude:  41.0 to 37.0 (4 degrees → 400 units)
-   *   x = (lon + 109.05) * 100
-   *   y = (41.0 - lat) * 100
-   */
   return (
     <svg
-      viewBox="0 0 700 400"
+      viewBox="0 -30 700 530"
       className="w-full h-auto"
       role="img"
-      aria-label="Map of Colorado showing Barnstorm service zones: Park County (Local), Summit County (Regional), Lake County (Extended), and Chaffee County (Extended)"
+      aria-label="Map of Colorado showing Barnstorm service area with town labels colored by pricing zone"
     >
-      <defs>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="2" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
-
-      {/* State outline */}
-      <rect
-        x="0"
-        y="0"
-        width="700"
-        height="400"
-        fill="#1a2740"
-        stroke="#2A3F55"
-        strokeWidth="2"
-      />
-
-      {/* Faint county grid lines for context */}
-      {[80, 160, 240, 320, 400, 480, 560, 620].map((x) => (
-        <line
-          key={`v${x}`}
-          x1={x}
-          y1="0"
-          x2={x}
-          y2="400"
-          stroke="#2A3F55"
-          strokeWidth="0.5"
-        />
-      ))}
-      {[65, 130, 195, 260, 330].map((y) => (
-        <line
-          key={`h${y}`}
-          x1="0"
-          y1={y}
-          x2="700"
-          y2={y}
-          stroke="#2A3F55"
-          strokeWidth="0.5"
+      {/* County paths — muted fills for geographic reference */}
+      {countyData.paths.map((county) => (
+        <path
+          key={county.id}
+          d={county.d}
+          fill={COUNTY_COLORS[county.id] || "#111921"}
+          stroke="#0D1B2A"
+          strokeWidth="0.75"
         />
       ))}
 
-      {/* Extended zone — Lake County (small, west of Park) */}
-      <polygon
-        points="237,155 265,155 265,195 237,195"
-        fill="#1A4A7A"
-        stroke="#2A5A8A"
-        strokeWidth="1"
-      />
+      {/* Town dots and labels — colored by pricing zone */}
+      {countyData.towns.map((town) => {
+        const nudge = LABEL_NUDGE[town.name] || {};
+        const dx = nudge.dx || 0;
+        const dy = nudge.dy || (town.primary ? -10 : -8);
+        const anchor = nudge.anchor || "middle";
+        const color = TOWN_ZONE_COLORS[town.name] || "#F7F9FC";
+        return (
+          <g key={town.name}>
+            <circle
+              cx={town.x}
+              cy={town.y}
+              r={town.primary ? 4 : 2.5}
+              fill={color}
+            />
+            <text
+              x={town.x + dx}
+              y={town.y + dy}
+              fill={color}
+              fontSize={town.primary ? "13" : "11"}
+              fontWeight={town.primary ? "bold" : "normal"}
+              fontFamily="sans-serif"
+              textAnchor={anchor}
+            >
+              {town.name}
+            </text>
+          </g>
+        );
+      })}
 
-      {/* Extended zone — Chaffee County (south of Lake) */}
-      <polygon
-        points="237,195 315,195 315,262 237,262"
-        fill="#1A4A7A"
-        stroke="#2A5A8A"
-        strokeWidth="1"
-      />
-
-      {/* Regional zone — Summit County (north) */}
-      <polygon
-        points="258,112 340,112 340,155 258,155"
-        fill="#F0A500"
-        fillOpacity="0.85"
-        stroke="#F0A500"
-        strokeWidth="1"
-      />
-
-      {/* Local zone — Park County (central, largest) */}
-      <polygon
-        points="265,155 375,155 375,222 265,222"
-        fill="#3A9BD5"
-        fillOpacity="0.7"
-        stroke="#3A9BD5"
-        strokeWidth="1"
-      />
-
-      {/* County labels */}
-      <text
-        x="320"
-        y="195"
-        fill="#F7F9FC"
-        fontSize="9"
-        fontFamily="monospace"
-        textAnchor="middle"
-        opacity="0.4"
-      >
-        PARK CO.
-      </text>
-      <text
-        x="299"
-        y="138"
-        fill="#0D1B2A"
-        fontSize="8"
-        fontFamily="monospace"
-        textAnchor="middle"
-        opacity="0.6"
-      >
-        SUMMIT CO.
-      </text>
-      <text
-        x="251"
-        y="179"
-        fill="#F7F9FC"
-        fontSize="7"
-        fontFamily="monospace"
-        textAnchor="middle"
-        opacity="0.4"
-      >
-        LAKE
-      </text>
-      <text
-        x="276"
-        y="235"
-        fill="#F7F9FC"
-        fontSize="8"
-        fontFamily="monospace"
-        textAnchor="middle"
-        opacity="0.4"
-      >
-        CHAFFEE CO.
-      </text>
-
-      {/* Town dots and labels */}
-      {/* Park County towns */}
-      <TownLabel x={316} y={177} name="Fairplay" primary />
-      <TownLabel x={300} y={168} name="Alma" />
-
-      {/* Summit County towns */}
-      <TownLabel x={305} y={148} name="Breckenridge" />
-      <TownLabel x={280} y={127} name="Frisco" />
-      <TownLabel x={310} y={120} name="Dillon" />
-      <TownLabel x={330} y={130} name="Silverthorne" />
-
-      {/* Lake County towns */}
-      <TownLabel x={251} y={172} name="Leadville" />
-
-      {/* Chaffee County towns */}
-      <TownLabel x={278} y={248} name="Buena Vista" />
-
-      {/* Legend */}
-      <g transform="translate(520, 280)">
+      {/* Legend — pricing zones by label color */}
+      <g transform="translate(500, 350)">
         <rect
           x="0"
           y="0"
-          width="165"
-          height="105"
-          rx="6"
+          width="180"
+          height="115"
+          rx="8"
           fill="#0D1B2A"
-          fillOpacity="0.8"
+          fillOpacity="0.85"
           stroke="#2A3F55"
           strokeWidth="1"
         />
         <text
-          x="12"
-          y="22"
+          x="14"
+          y="26"
           fill="#F7F9FC"
-          fontSize="11"
+          fontSize="13"
           fontWeight="bold"
           fontFamily="sans-serif"
         >
-          Service Zones
+          Pricing Zones
         </text>
-        <rect x="12" y="35" width="14" height="10" rx="2" fill="#3A9BD5" />
-        <text x="32" y="44" fill="#F7F9FC" fontSize="10" fontFamily="sans-serif">
-          Local — Park Co.
+        <circle cx="22" cy="46" r="6" fill="#FFFFFF" />
+        <text x="36" y="50" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
+          Local $25
         </text>
-        <rect x="12" y="52" width="14" height="10" rx="2" fill="#F0A500" />
-        <text x="32" y="61" fill="#F7F9FC" fontSize="10" fontFamily="sans-serif">
-          Regional — Summit Co.
+        <circle cx="22" cy="66" r="6" fill="#F0A500" />
+        <text x="36" y="70" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
+          Regional $50
         </text>
-        <rect x="12" y="69" width="14" height="10" rx="2" fill="#1A4A7A" />
-        <text x="32" y="78" fill="#F7F9FC" fontSize="10" fontFamily="sans-serif">
-          Extended — Lake, Chaffee
+        <circle cx="22" cy="86" r="6" fill="#5CE0D6" />
+        <text x="36" y="90" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
+          Extended $75
         </text>
-        <rect x="12" y="86" width="14" height="10" rx="2" fill="#2A3F55" />
-        <text
-          x="32"
-          y="95"
-          fill="#8AA0B4"
-          fontSize="10"
-          fontFamily="sans-serif"
-        >
-          Remote / Not Served
+        <circle cx="22" cy="106" r="6" fill="#DC2626" />
+        <text x="36" y="110" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
+          Remote $100+
         </text>
       </g>
-
-      {/* Fairplay home base marker */}
-      <circle
-        cx="316"
-        cy="177"
-        r="8"
-        fill="none"
-        stroke="#3A9BD5"
-        strokeWidth="1.5"
-        opacity="0.4"
-        filter="url(#glow)"
-      />
-      <circle
-        cx="316"
-        cy="177"
-        r="14"
-        fill="none"
-        stroke="#3A9BD5"
-        strokeWidth="0.8"
-        opacity="0.2"
-      />
     </svg>
-  );
-}
-
-function TownLabel({ x, y, name, primary }) {
-  return (
-    <g>
-      <circle
-        cx={x}
-        cy={y}
-        r={primary ? 3 : 2}
-        fill={primary ? "#F7F9FC" : "#F7F9FC"}
-        opacity={primary ? 1 : 0.7}
-      />
-      <text
-        x={x}
-        y={y - 6}
-        fill="#F7F9FC"
-        fontSize={primary ? "10" : "8"}
-        fontWeight={primary ? "bold" : "normal"}
-        fontFamily="sans-serif"
-        textAnchor="middle"
-        opacity={primary ? 1 : 0.8}
-      >
-        {name}
-      </text>
-    </g>
   );
 }
