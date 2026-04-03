@@ -88,9 +88,9 @@ export default function Contact() {
                 Operational Hours
               </span>
               <p className="text-frost-gray leading-relaxed">
-                Monday &ndash; Saturday
+                Monday &ndash; Friday
                 <br />
-                8:00 AM &ndash; 6:00 PM
+                9:00 AM &ndash; 5:00 PM
               </p>
             </div>
           </div>
