@@ -4,6 +4,13 @@ export const metadata = {
   title: "Pricing",
   description:
     "Straightforward IT service rates — $100/hour with no hidden fees. Service zone fees from $25–$100+. Serving Fairplay, Breckenridge, and Colorado mountain communities.",
+  alternates: { canonical: "https://barnstormit.com/pricing" },
+  openGraph: {
+    title: "Pricing | Barnstorm Computer Services",
+    description:
+      "Transparent IT support pricing — $100/hour, zone-based service fees, no surprises.",
+    url: "https://barnstormit.com/pricing",
+  },
 };
 
 export default function Pricing() {
@@ -249,7 +256,7 @@ export default function Pricing() {
               className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3"
             >
               <span className="material-symbols-outlined">call</span>
-              Call Jeff: (719) 838-0435
+              Call Us: (719) 838-0435
             </a>
             <Link
               href="/contact"

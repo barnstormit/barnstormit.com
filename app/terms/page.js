@@ -2,6 +2,12 @@ export const metadata = {
   title: "Terms of Service",
   description:
     "Terms of service for Barnstorm Computer Services. Rates, scheduling, warranties, and liability for IT services in Colorado mountain communities.",
+  alternates: { canonical: "https://barnstormit.com/terms" },
+  openGraph: {
+    title: "Terms of Service | Barnstorm Computer Services",
+    description: "Service terms, rates, warranties, and liability information.",
+    url: "https://barnstormit.com/terms",
+  },
 };
 
 export default function TermsOfService() {

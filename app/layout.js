@@ -23,8 +23,10 @@ const dmMono = DM_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://barnstormit.com"),
   title: {
-    default: "Barnstorm Computer Services — IT Support for Colorado Mountain Communities",
+    default:
+      "Barnstorm Computer Services — IT Support for Colorado Mountain Communities",
     template: "%s | Barnstorm Computer Services",
   },
   description:
@@ -35,13 +37,71 @@ export const metadata = {
       "On-site computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
     url: "https://barnstormit.com",
     siteName: "Barnstorm Computer Services",
+    locale: "en_US",
     images: [
       {
         url: "/hero_bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Barnstorm Computer Services — IT support for Colorado mountain communities",
       },
     ],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Barnstorm Computer Services — Mountain Tech, Done Right",
+    description:
+      "On-site computer repair and IT support for Colorado's mountain communities.",
+    images: ["/hero_bg.jpg"],
+  },
+  alternates: {
+    canonical: "https://barnstormit.com",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Barnstorm Computer Services LLC",
+  description:
+    "On-site computer repair, IT support, networking, data recovery, and 3D printing for Colorado mountain communities.",
+  url: "https://barnstormit.com",
+  telephone: "+1-719-838-0435",
+  email: "jeff@barnstormit.com",
+  address: {
+    "@type": "PostalAddress",
+    postOfficeBoxNumber: "371",
+    addressLocality: "Fairplay",
+    addressRegion: "CO",
+    postalCode: "80440",
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Fairplay",
+    "Alma",
+    "Breckenridge",
+    "Frisco",
+    "Dillon",
+    "Silverthorne",
+    "Leadville",
+    "Buena Vista",
+  ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "08:00",
+    closes: "18:00",
+  },
+  priceRange: "$$",
+  image: "https://barnstormit.com/hero_bg.jpg",
 };
 
 export default function RootLayout({ children }) {
@@ -54,6 +114,10 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col font-body bg-deep-navy text-snow-white">

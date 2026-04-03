@@ -5,6 +5,13 @@ export const metadata = {
   title: "Remote Support",
   description:
     "Get remote IT support from Barnstorm Computer Services. Download the app, share your ID, and we connect to fix your computer while you watch.",
+  alternates: { canonical: "https://barnstormit.com/remote-support" },
+  openGraph: {
+    title: "Remote Support | Barnstorm Computer Services",
+    description:
+      "No service call fee. Download the app, share your ID, and we fix your computer while you watch.",
+    url: "https://barnstormit.com/remote-support",
+  },
 };
 
 export default function RemoteSupport() {

@@ -3,7 +3,14 @@ import Link from "next/link";
 export const metadata = {
   title: "Services",
   description:
-    "Computer repair, IT support, networking, data recovery, and 3D printing for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
+    "Computer repair, IT support, networking, data recovery, 3D printing, and AI automation for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
+  alternates: { canonical: "https://barnstormit.com/services" },
+  openGraph: {
+    title: "Services | Barnstorm Computer Services",
+    description:
+      "Hardware repair, software services, networking, business IT, 3D printing, and more for Colorado mountain communities.",
+    url: "https://barnstormit.com/services",
+  },
 };
 
 const services = [
@@ -59,10 +66,46 @@ const services = [
     title: "Business IT",
     items: [
       "Managed IT services",
-      "IT consulting",
+      "IT consulting and strategy",
+      "Business technology planning",
       "POS system installation",
+      "Workflow automation",
       "Remote support",
       "Service contracts",
+    ],
+  },
+  {
+    icon: "school",
+    title: "Training & Education",
+    items: [
+      "One-on-one computer training",
+      "Email and productivity setup",
+      "Safe browsing and security awareness",
+      "Business software training",
+    ],
+  },
+  {
+    icon: "language",
+    title: "Web & Digital",
+    items: [
+      "Website design and development",
+      "SEO and local search optimization",
+      "Google Business Profile setup",
+      "Domain and email setup",
+    ],
+  },
+  {
+    icon: "smart_toy",
+    title: "AI & Automation",
+    badge: "NEW",
+    highlight: true,
+    items: [
+      "AI tool setup and integration",
+      "Workflow automation (n8n, Make, Zapier)",
+      "Local AI server deployment",
+      "Chatbot and AI assistant setup",
+      "Business process automation",
+      "AI strategy consulting",
     ],
   },
   {

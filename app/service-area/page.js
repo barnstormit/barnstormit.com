@@ -5,6 +5,13 @@ export const metadata = {
   title: "Service Area",
   description:
     "Barnstorm Computer Services covers Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista, and surrounding Colorado mountain communities. On-site IT support with zone-based service fees.",
+  alternates: { canonical: "https://barnstormit.com/service-area" },
+  openGraph: {
+    title: "Service Area | Barnstorm Computer Services",
+    description:
+      "On-site IT support across Park, Summit, Lake, and Chaffee counties in Colorado.",
+    url: "https://barnstormit.com/service-area",
+  },
 };
 
 export default function ServiceArea() {

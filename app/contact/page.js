@@ -4,6 +4,13 @@ export const metadata = {
   title: "Contact",
   description:
     "Contact Barnstorm Computer Services for IT support in Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435 or send us a message.",
+  alternates: { canonical: "https://barnstormit.com/contact" },
+  openGraph: {
+    title: "Contact | Barnstorm Computer Services",
+    description:
+      "Get in touch for computer repair and IT support. Call (719) 838-0435 or send a message.",
+    url: "https://barnstormit.com/contact",
+  },
 };
 
 export default function Contact() {

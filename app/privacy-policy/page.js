@@ -2,6 +2,12 @@ export const metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for Barnstorm Computer Services. We keep data collection minimal — no tracking cookies, no analytics, no ad networks.",
+  alternates: { canonical: "https://barnstormit.com/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy | Barnstorm Computer Services",
+    description: "Our privacy practices — minimal data collection, no tracking.",
+    url: "https://barnstormit.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {

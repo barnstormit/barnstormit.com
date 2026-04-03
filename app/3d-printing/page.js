@@ -4,6 +4,13 @@ export const metadata = {
   title: "3D Printing",
   description:
     "Custom 3D printing services in Fairplay, CO. Replacement parts, custom mounts, prototypes, enclosures, and one-off solutions. Most parts ready in 24–48 hours.",
+  alternates: { canonical: "https://barnstormit.com/3d-printing" },
+  openGraph: {
+    title: "3D Printing | Barnstorm Computer Services",
+    description:
+      "Custom 3D printing — replacement parts, mounts, prototypes, and more. Most parts ready in 24–48 hours.",
+    url: "https://barnstormit.com/3d-printing",
+  },
 };
 
 const services = [

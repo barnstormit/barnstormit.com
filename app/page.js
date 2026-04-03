@@ -1,5 +1,18 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Computer Repair & IT Support in Fairplay, CO",
+  description:
+    "On-site computer repair, IT support, networking, data recovery, and 3D printing for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
+  alternates: { canonical: "https://barnstormit.com" },
+  openGraph: {
+    title: "Barnstorm Computer Services — Mountain Tech, Done Right",
+    description:
+      "On-site computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
+    url: "https://barnstormit.com",
+  },
+};
+
 export default function Home() {
   return (
     <>
