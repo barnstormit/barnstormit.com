@@ -132,10 +132,10 @@ export default function PrivacyPolicy() {
               and follow-up purposes. If you&apos;d like your data deleted,
               email us at{" "}
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="text-vivid-teal hover:text-alpine-gold transition-colors"
               >
-                jeff@barnstormit.com
+                info@barnstormit.com
               </a>
               .
             </p>
@@ -170,10 +170,10 @@ export default function PrivacyPolicy() {
             <p className="text-frost-gray leading-relaxed mt-4">
               Contact us at{" "}
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="text-vivid-teal hover:text-alpine-gold transition-colors"
               >
-                jeff@barnstormit.com
+                info@barnstormit.com
               </a>{" "}
               to exercise any of these rights.
             </p>
@@ -212,10 +212,10 @@ export default function PrivacyPolicy() {
                   mail
                 </span>
                 <a
-                  href="mailto:jeff@barnstormit.com"
+                  href="mailto:info@barnstormit.com"
                   className="text-vivid-teal hover:text-alpine-gold transition-colors"
                 >
-                  jeff@barnstormit.com
+                  info@barnstormit.com
                 </a>
               </div>
               <div className="flex items-center gap-3">

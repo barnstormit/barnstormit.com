@@ -231,10 +231,10 @@ export default function TermsOfService() {
                   mail
                 </span>
                 <a
-                  href="mailto:jeff@barnstormit.com"
+                  href="mailto:info@barnstormit.com"
                   className="text-vivid-teal hover:text-alpine-gold transition-colors"
                 >
-                  jeff@barnstormit.com
+                  info@barnstormit.com
                 </a>
               </div>
               <div className="flex items-center gap-3">

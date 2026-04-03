@@ -555,7 +555,7 @@ export default function Home() {
                 Call Now
               </a>
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="px-10 py-5 border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white font-heading font-bold text-lg rounded-lg transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3"
               >
                 <span className="material-symbols-outlined">mail</span>
@@ -572,10 +572,10 @@ export default function Home() {
                 (719) 838-0435
               </a>
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors"
               >
-                jeff@barnstormit.com
+                info@barnstormit.com
               </a>
             </div>
           </div>

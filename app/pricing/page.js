@@ -181,7 +181,7 @@ export default function Pricing() {
                 <p className="text-frost-gray/50 text-xs">
                   Zelle:{" "}
                   <span className="text-frost-gray">
-                    jeff@barnstormit.com
+                    info@barnstormit.com
                   </span>{" "}
                   or{" "}
                   <span className="text-frost-gray">(719) 838-0435</span>

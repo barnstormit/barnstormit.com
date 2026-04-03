@@ -54,10 +54,10 @@ export default function Footer() {
                 mail
               </span>
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300"
               >
-                jeff@barnstormit.com
+                info@barnstormit.com
               </a>
             </div>
           </div>
