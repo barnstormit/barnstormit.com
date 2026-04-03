@@ -65,23 +65,37 @@ export default function RemoteSupport() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
-                    className="flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-6 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-all active:scale-95"
                   >
                     <span className="material-symbols-outlined text-2xl">
                       desktop_windows
                     </span>
-                    Windows &mdash; Click Here
+                    Windows
                   </a>
                   <a
                     href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
-                    className="flex items-center justify-center gap-3 border-2 border-alpine-gold text-alpine-gold px-8 py-4 rounded-lg font-heading font-bold text-base hover:bg-alpine-gold/5 transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center gap-3 border-2 border-alpine-gold text-alpine-gold px-6 py-4 rounded-lg font-heading font-bold text-base hover:bg-alpine-gold/5 transition-all active:scale-95"
                   >
                     <span className="material-symbols-outlined text-2xl">
                       laptop_mac
                     </span>
-                    Mac &mdash; Click Here
+                    Mac (2021+)
+                  </a>
+                  <a
+                    href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
+                    className="flex-1 flex items-center justify-center gap-3 border-2 border-alpine-gold text-alpine-gold px-6 py-4 rounded-lg font-heading font-bold text-base hover:bg-alpine-gold/5 transition-all active:scale-95"
+                  >
+                    <span className="material-symbols-outlined text-2xl">
+                      laptop_mac
+                    </span>
+                    Mac (Pre-2021)
                   </a>
                 </div>
+                <p className="text-frost-gray text-xs">
+                  Not sure which Mac you have? Click the Apple menu &rarr; About
+                  This Mac. If it says &ldquo;Apple M1&rdquo;, &ldquo;M2&rdquo;,
+                  etc., choose Mac (2021+). Otherwise choose Mac (Pre-2021).
+                </p>
                 <div className="bg-vivid-teal/5 border border-vivid-teal/20 rounded-lg p-4 mt-2">
                   <p className="text-frost-gray text-sm leading-relaxed">
                     <span className="text-vivid-teal font-bold">
@@ -532,7 +546,8 @@ export default function RemoteSupport() {
               <div className="flex gap-4">
                 <a
                   href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
-                  className="glass-card p-5 rounded-lg text-vivid-teal hover:bg-vivid-teal hover:text-deep-navy transition-all"
+                  className="glass-card p-5 rounded-lg text-vivid-teal hover:bg-vivid-teal hover:text-deep-navy transition-all text-center"
+                  title="Windows"
                 >
                   <span className="material-symbols-outlined text-4xl">
                     desktop_windows
@@ -540,7 +555,17 @@ export default function RemoteSupport() {
                 </a>
                 <a
                   href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
-                  className="glass-card p-5 rounded-lg text-vivid-teal hover:bg-vivid-teal hover:text-deep-navy transition-all"
+                  className="glass-card p-5 rounded-lg text-vivid-teal hover:bg-vivid-teal hover:text-deep-navy transition-all text-center"
+                  title="Mac (2021+)"
+                >
+                  <span className="material-symbols-outlined text-4xl">
+                    laptop_mac
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
+                  className="glass-card p-5 rounded-lg text-vivid-teal hover:bg-vivid-teal hover:text-deep-navy transition-all text-center"
+                  title="Mac (Pre-2021)"
                 >
                   <span className="material-symbols-outlined text-4xl">
                     laptop_mac
