@@ -199,7 +199,7 @@ export default function Home() {
         </div>
 
         {/* 3D Printing — gold highlight */}
-        <div className="glass-card p-8 group transition-colors duration-500 sm:w-1/3" style={{ borderColor: "rgba(240, 165, 0, 0.4)", background: "rgba(240, 165, 0, 0.06)" }}>
+        <Link href="/3d-printing" className="glass-card p-8 group transition-colors duration-500 sm:w-1/3 block" style={{ borderColor: "rgba(240, 165, 0, 0.4)", background: "rgba(240, 165, 0, 0.06)" }}>
           <div className="flex items-center justify-between mb-6">
             <div className="w-14 h-14 rounded-lg bg-alpine-gold/10 flex items-center justify-center group-hover:bg-alpine-gold/20 transition-colors border border-alpine-gold/30">
               <span className="material-symbols-outlined text-alpine-gold text-3xl">
@@ -217,7 +217,7 @@ export default function Home() {
             Custom parts, replacement components, and prototypes — printed
             locally, delivered fast.
           </p>
-        </div>
+        </Link>
       </div>
     </section>
 

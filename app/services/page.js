@@ -70,6 +70,7 @@ const services = [
     title: "3D Printing",
     badge: "NEW",
     highlight: true,
+    href: "/3d-printing",
     items: [
       "Custom parts",
       "Replacement components",
@@ -150,6 +151,17 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {svc.href && (
+                <Link
+                  href={svc.href}
+                  className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                >
+                  Learn more
+                  <span className="material-symbols-outlined text-sm">
+                    arrow_forward
+                  </span>
+                </Link>
+              )}
             </div>
           ))}
         </div>

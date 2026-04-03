@@ -7,6 +7,7 @@ const quickLinks = [
   { href: "/pricing", label: "Pricing" },
   { href: "/service-area", label: "Service Area" },
   { href: "/remote-support", label: "Remote Support" },
+  { href: "/3d-printing", label: "3D Printing" },
   { href: "/contact", label: "Contact" },
   { href: "/vacation-tech-help", label: "Vacation Tech Help" },
   { href: "/blog", label: "Blog" },
