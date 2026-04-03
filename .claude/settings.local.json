@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(curl:*)",
+      "Bash(ls \"/c/Users/Open Claw/Projects/barnstormit.com/tsconfig\"*)",
+      "Bash(vercel logs:*)"
     ]
   }
 }

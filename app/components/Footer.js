@@ -120,7 +120,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-8 text-xs font-mono tracking-wider text-frost-gray/60">
             <Link
-              href="/privacy"
+              href="/privacy-policy"
               className="hover:text-vivid-teal transition-colors"
             >
               PRIVACY POLICY

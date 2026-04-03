@@ -11,7 +11,7 @@ export default function RemoteSupport() {
   return (
     <>
       {/* Hero */}
-      <header className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+      <header className="relative pt-16 pb-10 md:pt-20 md:pb-12 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
           <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-vivid-teal blur-[160px] rounded-full" />
           <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-alpine-gold blur-[160px] rounded-full opacity-30" />
@@ -35,9 +35,9 @@ export default function RemoteSupport() {
       </header>
 
       {/* Download & Setup Guide */}
-      <section className="py-20 md:py-28 bg-midnight-slate/50">
+      <section className="py-12 md:py-16 bg-midnight-slate/50">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               Get Connected
             </span>
@@ -67,7 +67,7 @@ export default function RemoteSupport() {
               Download for Mac
             </a>
           </div>
-          <div className="text-center space-y-2 mb-20">
+          <div className="text-center space-y-2 mb-14">
             <p className="text-frost-gray/60 font-mono text-sm flex items-center justify-center gap-2">
               <span
                 className="material-symbols-outlined text-lg"
@@ -88,7 +88,7 @@ export default function RemoteSupport() {
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {/* Step 1 */}
             <div>
               <div className="flex items-baseline gap-4 mb-4">
@@ -236,7 +236,7 @@ export default function RemoteSupport() {
           </div>
 
           {/* Trouble note */}
-          <div className="mt-16 text-center glass-card rounded-xl p-6">
+          <div className="mt-12 text-center glass-card rounded-xl p-6">
             <p className="text-frost-gray flex items-center justify-center gap-3">
               <span
                 className="material-symbols-outlined text-alpine-gold"
@@ -252,7 +252,7 @@ export default function RemoteSupport() {
       </section>
 
       {/* Privacy & Trust */}
-      <section className="py-20 md:py-28 bg-midnight-slate/50 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-midnight-slate/50 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -367,9 +367,9 @@ export default function RemoteSupport() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-28">
+      <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               FAQ
             </span>
@@ -462,7 +462,7 @@ export default function RemoteSupport() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 md:py-28 relative overflow-hidden bg-vivid-teal">
+      <section className="py-12 md:py-16 relative overflow-hidden bg-vivid-teal">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
