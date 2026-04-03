@@ -8,6 +8,7 @@ export default function sitemap() {
     { path: "/services", priority: 0.9, changeFrequency: "monthly" },
     { path: "/pricing", priority: 0.9, changeFrequency: "monthly" },
     { path: "/service-area", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/about", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
     { path: "/remote-support", priority: 0.8, changeFrequency: "monthly" },
     { path: "/3d-printing", priority: 0.7, changeFrequency: "monthly" },
