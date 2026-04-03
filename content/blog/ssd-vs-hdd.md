@@ -1,5 +1,5 @@
 ---
-title: "SSD vs HDD: The $80 Upgrade That Makes Your Old Laptop Feel New"
+title: "SSD vs HDD: The $100 Upgrade That Makes Your Old Laptop Feel New"
 date: "2026-04-03"
 category: "Tech Tips"
 excerpt: "Your laptop isn't slow because it's old. It's slow because it's still running a spinning hard drive. Here's why an SSD swap is the single best upgrade you can make."
@@ -10,7 +10,7 @@ Your laptop takes three minutes to boot. Programs hang when you click them. Ever
 
 Hold on.
 
-There's a good chance your laptop isn't actually dying — it's just being held back by a spinning hard drive. And for about $80 and an hour of our time, we can make it feel like a completely different machine.
+There's a good chance your laptop isn't actually dying — it's just being held back by a spinning hard drive. And for about $50-100 and an hour of our time, we can make it feel like a completely different machine.
 
 ## What's the Difference?
 
@@ -31,7 +31,7 @@ We do this upgrade several times a month, and the reaction is always the same: "
 
 ## What It Costs
 
-An SSD for most laptops runs between $40-80 for 500GB to 1TB of storage — that's as much or more space than what you have now. We clone your existing drive to the new SSD, so everything transfers over exactly as it was. Same files, same programs, same desktop, same passwords. Nothing changes except the speed.
+An SSD for most laptops runs between $50-100 for 500GB to 1TB of storage — that's as much or more space than what you have now. We clone your existing drive to the new SSD, so everything transfers over exactly as it was. Same files, same programs, same desktop, same passwords. Nothing changes except the speed.
 
 The whole process usually takes about an hour of on-site time. We come to you, swap the drive, verify everything works, and you're done.
 
