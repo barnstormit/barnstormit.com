@@ -23,7 +23,7 @@ export default function ServiceArea() {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             SERVICE AREA
           </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Colorado Mountain
             <br />
             <span className="text-vivid-teal">Communities, Covered</span>
@@ -80,7 +80,7 @@ export default function ServiceArea() {
           <div className="mt-6 text-center">
             <Link
               href="/pricing"
-              className="text-vivid-teal hover:text-alpine-gold transition-colors font-heading font-bold text-sm"
+              className="text-vivid-teal hover:text-alpine-gold transition-colors font-heading font-bold text-sm focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               See pricing by zone &rarr;
             </Link>
@@ -95,6 +95,7 @@ export default function ServiceArea() {
             <span
               className="material-symbols-outlined text-alpine-gold"
               style={{ fontVariationSettings: "'FILL' 1" }}
+              aria-hidden="true"
             >
               settings_remote
             </span>
@@ -112,7 +113,7 @@ export default function ServiceArea() {
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-6 text-balance">
             Not sure if we cover your area?
           </h2>
           <p className="text-frost-gray text-lg leading-relaxed max-w-2xl mx-auto mb-10">
@@ -121,9 +122,9 @@ export default function ServiceArea() {
           </p>
           <a
             href="tel:+17198380435"
-            className="inline-flex items-center gap-3 bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95"
+            className="inline-flex items-center gap-3 bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
-            <span className="material-symbols-outlined">call</span>
+            <span className="material-symbols-outlined" aria-hidden="true">call</span>
             Call (719) 838-0435 and Ask
           </a>
         </div>
@@ -137,7 +138,7 @@ function ZoneCard({ name, fee, towns, note, icon }) {
     <div className="glass-card rounded-xl p-8 flex flex-col h-full">
       <div className="flex justify-between items-start mb-6">
         <span className="p-3 rounded-lg bg-vivid-teal/10 text-vivid-teal">
-          <span className="material-symbols-outlined">{icon}</span>
+          <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
         </span>
         <span className="font-heading text-xl font-bold text-alpine-gold">
           {fee}
