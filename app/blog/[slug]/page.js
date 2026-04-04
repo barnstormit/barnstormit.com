@@ -36,9 +36,9 @@ export default async function BlogPost({ params }) {
         {/* Back link */}
         <Link
           href="/blog"
-          className="text-frost-gray hover:text-vivid-teal transition-colors text-sm flex items-center gap-2 mb-8"
+          className="text-frost-gray hover:text-vivid-teal transition-colors text-sm flex items-center gap-2 mb-8 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
-          <span className="material-symbols-outlined text-sm">
+          <span className="material-symbols-outlined text-sm" aria-hidden="true">
             arrow_back
           </span>
           Back to Blog
@@ -52,6 +52,7 @@ export default async function BlogPost({ params }) {
               src={post.image}
               alt={post.title}
               className="w-full h-64 md:h-96 object-cover"
+              loading="lazy"
             />
           </div>
         )}
@@ -70,7 +71,7 @@ export default async function BlogPost({ params }) {
               })}
             </span>
           </div>
-          <h1 className="font-heading text-3xl md:text-5xl font-black text-snow-white tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl md:text-5xl font-black text-snow-white tracking-tight leading-tight text-balance">
             {post.title}
           </h1>
         </div>
@@ -96,9 +97,9 @@ export default async function BlogPost({ params }) {
           </p>
           <a
             href="tel:+17198380435"
-            className="inline-flex items-center gap-3 bg-vivid-teal text-deep-navy px-8 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-3 bg-vivid-teal text-deep-navy px-8 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter] focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
-            <span className="material-symbols-outlined">call</span>
+            <span className="material-symbols-outlined" aria-hidden="true">call</span>
             Call (719) 838-0435
           </a>
         </div>
