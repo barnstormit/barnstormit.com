@@ -22,7 +22,7 @@ export default function Pricing() {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             Pricing
           </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Straightforward Rates.
             <br />
             <span className="text-vivid-teal">No Surprises.</span>
@@ -59,6 +59,7 @@ export default function Pricing() {
             <div className="mt-auto flex items-center gap-2 text-vivid-teal">
               <span
                 className="material-symbols-outlined"
+                aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 bolt
@@ -96,7 +97,7 @@ export default function Pricing() {
                   <td className="py-4 text-frost-gray text-sm">
                     Fairplay, Alma, Como
                   </td>
-                  <td className="py-4 text-right font-heading font-bold text-alpine-gold">
+                  <td className="py-4 text-right font-heading font-bold text-alpine-gold tabular-nums">
                     $25
                   </td>
                 </tr>
@@ -107,7 +108,7 @@ export default function Pricing() {
                   <td className="py-4 text-frost-gray text-sm">
                     Breckenridge, Blue River, Buena Vista, Jefferson, Grant
                   </td>
-                  <td className="py-4 text-right font-heading font-bold text-alpine-gold">
+                  <td className="py-4 text-right font-heading font-bold text-alpine-gold tabular-nums">
                     $50
                   </td>
                 </tr>
@@ -118,7 +119,7 @@ export default function Pricing() {
                   <td className="py-4 text-frost-gray text-sm">
                     Frisco, Bailey
                   </td>
-                  <td className="py-4 text-right font-heading font-bold text-alpine-gold">
+                  <td className="py-4 text-right font-heading font-bold text-alpine-gold tabular-nums">
                     $75
                   </td>
                 </tr>
@@ -129,7 +130,7 @@ export default function Pricing() {
                   <td className="py-4 text-frost-gray text-sm">
                     Dillon, Silverthorne, Leadville, Salida
                   </td>
-                  <td className="py-4 text-right font-heading font-bold text-alpine-gold">
+                  <td className="py-4 text-right font-heading font-bold text-alpine-gold tabular-nums">
                     $100+
                   </td>
                 </tr>
@@ -139,7 +140,7 @@ export default function Pricing() {
               Not sure which zone you&apos;re in?{" "}
               <a
                 href="tel:+17198380435"
-                className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 Call and ask
               </a>
@@ -165,6 +166,7 @@ export default function Pricing() {
             <div className="bg-vivid-teal/10 border border-vivid-teal/30 rounded-lg px-5 py-3 mb-8 flex items-center gap-3">
               <span
                 className="material-symbols-outlined text-vivid-teal"
+                aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 thumb_up
@@ -247,22 +249,22 @@ export default function Pricing() {
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-8">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-10">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-10 text-balance">
             Questions about pricing?
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">call</span>
+              <span className="material-symbols-outlined" aria-hidden="true">call</span>
               Call Us: (719) 838-0435
             </a>
             <Link
               href="/contact"
-              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">mail</span>
+              <span className="material-symbols-outlined" aria-hidden="true">mail</span>
               Send a Message
             </Link>
           </div>
