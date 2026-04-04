@@ -134,7 +134,7 @@ export default function Services() {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             SERVICES
           </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Everything Your Computer Needs,
             <br />
             <span className="text-vivid-teal">Under One Roof</span>
@@ -165,6 +165,7 @@ export default function Services() {
             >
               <div className="flex items-center justify-between mb-6">
                 <span
+                  aria-hidden="true"
                   className={`material-symbols-outlined text-3xl ${
                     svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
                   }`}
@@ -187,7 +188,7 @@ export default function Services() {
                     key={item}
                     className="flex items-start gap-2 text-frost-gray text-sm"
                   >
-                    <span className="material-symbols-outlined text-vivid-teal/60 text-base mt-0.5 shrink-0">
+                    <span aria-hidden="true" className="material-symbols-outlined text-vivid-teal/60 text-base mt-0.5 shrink-0">
                       check
                     </span>
                     {item}
@@ -197,10 +198,10 @@ export default function Services() {
               {svc.href && (
                 <Link
                   href={svc.href}
-                  className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                  className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-[gap] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
                 >
                   Learn more
-                  <span className="material-symbols-outlined text-sm">
+                  <span aria-hidden="true" className="material-symbols-outlined text-sm">
                     arrow_forward
                   </span>
                 </Link>
@@ -213,7 +214,7 @@ export default function Services() {
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
             Don&apos;t see what you need?
           </h2>
           <p className="text-frost-gray text-lg mb-10">
@@ -222,16 +223,16 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">call</span>
+              <span aria-hidden="true" className="material-symbols-outlined">call</span>
               Call (719) 838-0435
             </a>
             <Link
               href="/contact"
-              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">mail</span>
+              <span aria-hidden="true" className="material-symbols-outlined">mail</span>
               Request Quote
             </Link>
           </div>
