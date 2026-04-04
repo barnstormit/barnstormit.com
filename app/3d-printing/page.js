@@ -63,7 +63,7 @@ export default function ThreeDPrinting() {
             3D PRINTING
           </span>
           <div className="flex items-center gap-4 mb-6 flex-wrap">
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95]">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] text-balance">
               Custom 3D Printing
             </h1>
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-deep-navy px-4 py-1.5 rounded-full self-start mt-2 md:mt-4">
@@ -93,6 +93,7 @@ export default function ThreeDPrinting() {
               }
             >
               <span
+                aria-hidden="true"
                 className={`material-symbols-outlined text-3xl mb-6 ${
                   svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
                 }`}
@@ -124,9 +125,9 @@ export default function ThreeDPrinting() {
                   1
                 </span>
                 <div>
-                  <h4 className="font-heading font-bold text-snow-white mb-1">
+                  <h3 className="font-heading font-bold text-snow-white mb-1">
                     Share Your File or Idea
-                  </h4>
+                  </h3>
                   <p className="text-frost-gray text-sm leading-relaxed">
                     Send us a .STL, .OBJ, or .3MF file. Don&apos;t have one? We
                     can help you find a design or connect you with someone who
@@ -139,9 +140,9 @@ export default function ThreeDPrinting() {
                   2
                 </span>
                 <div>
-                  <h4 className="font-heading font-bold text-snow-white mb-1">
+                  <h3 className="font-heading font-bold text-snow-white mb-1">
                     We Print It
-                  </h4>
+                  </h3>
                   <p className="text-frost-gray text-sm leading-relaxed">
                     We handle material selection, settings, and quality control.
                   </p>
@@ -152,9 +153,9 @@ export default function ThreeDPrinting() {
                   3
                 </span>
                 <div>
-                  <h4 className="font-heading font-bold text-snow-white mb-1">
+                  <h3 className="font-heading font-bold text-snow-white mb-1">
                     Pick Up or Delivery
-                  </h4>
+                  </h3>
                   <p className="text-frost-gray text-sm leading-relaxed">
                     Most parts ready in 24&ndash;48 hours. Local pickup or
                     delivery available.
@@ -169,7 +170,7 @@ export default function ThreeDPrinting() {
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
             Got a file or an idea?
           </h2>
           <p className="text-frost-gray text-lg mb-10">
@@ -178,16 +179,16 @@ export default function ThreeDPrinting() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">call</span>
+              <span className="material-symbols-outlined" aria-hidden="true">call</span>
               Call (719) 838-0435
             </a>
             <Link
               href="/contact"
-              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-alpine-gold text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-all hover:-translate-y-0.5 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-alpine-gold text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined">mail</span>
+              <span className="material-symbols-outlined" aria-hidden="true">mail</span>
               Request a Print
             </Link>
           </div>
