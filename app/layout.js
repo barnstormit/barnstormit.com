@@ -26,7 +26,7 @@ export const metadata = {
   metadataBase: new URL("https://barnstormit.com"),
   title: {
     default:
-      "Barnstorm Computer Services — IT Support for Colorado Mountain Communities",
+      "Barnstorm Computer Services — Mountain IT Support",
     template: "%s | Barnstorm Computer Services",
   },
   description:
