@@ -10,6 +10,7 @@ export const metadata = {
     description:
       "On-site computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
     url: "https://barnstormit.com",
+    type: "website",
   },
 };
 

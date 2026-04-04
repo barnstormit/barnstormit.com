@@ -10,6 +10,7 @@ export const metadata = {
     description:
       "Transparent IT support pricing — $100/hour, zone-based service fees, no surprises.",
     url: "https://barnstormit.com/pricing",
+    type: "website",
   },
 };
 

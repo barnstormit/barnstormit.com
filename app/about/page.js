@@ -8,6 +8,7 @@ export const metadata = {
     description:
       "Meet Jeff Barnstorf — 27 years of IT experience serving Colorado's mountain communities from Fairplay.",
     url: "https://barnstormit.com/about",
+    type: "website",
   },
 };
 

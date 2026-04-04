@@ -10,6 +10,7 @@ export const metadata = {
     description:
       "Custom 3D printing — replacement parts, mounts, prototypes, and more. Most parts ready in 24–48 hours.",
     url: "https://barnstormit.com/3d-printing",
+    type: "website",
   },
 };
 

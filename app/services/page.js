@@ -10,6 +10,7 @@ export const metadata = {
     description:
       "Hardware repair, software services, networking, business IT, 3D printing, and more for Colorado mountain communities.",
     url: "https://barnstormit.com/services",
+    type: "website",
   },
 };
 

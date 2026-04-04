@@ -10,6 +10,7 @@ export const metadata = {
     description:
       "Get in touch for computer repair and IT support. Call (719) 838-0435 or send a message.",
     url: "https://barnstormit.com/contact",
+    type: "website",
   },
 };
 

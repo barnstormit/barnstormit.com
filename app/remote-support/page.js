@@ -12,6 +12,7 @@ export const metadata = {
     description:
       "No service call fee. Download the app, share your ID, and we fix your computer while you watch.",
     url: "https://barnstormit.com/remote-support",
+    type: "website",
   },
 };
 

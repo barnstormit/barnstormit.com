@@ -11,6 +11,7 @@ export const metadata = {
     description:
       "On-site IT support across Park, Summit, Lake, and Chaffee counties in Colorado.",
     url: "https://barnstormit.com/service-area",
+    type: "website",
   },
 };
 

@@ -7,6 +7,7 @@ export const metadata = {
     title: "Terms of Service | Barnstorm Computer Services",
     description: "Service terms, rates, warranties, and liability information.",
     url: "https://barnstormit.com/terms",
+    type: "website",
   },
 };
 

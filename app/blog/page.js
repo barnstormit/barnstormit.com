@@ -11,6 +11,7 @@ export const metadata = {
     description:
       "Practical tech advice, behind-the-scenes builds, and updates from Colorado's high country.",
     url: "https://barnstormit.com/blog",
+    type: "website",
   },
 };
 

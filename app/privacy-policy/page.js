@@ -7,6 +7,7 @@ export const metadata = {
     title: "Privacy Policy | Barnstorm Computer Services",
     description: "Our privacy practices — minimal data collection, no tracking.",
     url: "https://barnstormit.com/privacy-policy",
+    type: "website",
   },
 };
 
