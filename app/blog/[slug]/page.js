@@ -30,8 +30,35 @@ export default async function BlogPost({ params }) {
   const result = await remark().use(html).process(post.content);
   const contentHtml = result.toString();
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": "Jeff Barnstorf"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Barnstorm Computer Services",
+      "url": "https://barnstormit.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://barnstormit.com/blog/${slug}`
+    },
+    ...(post.image ? { "image": "https://barnstormit.com" + post.image } : {}),
+  };
+
   return (
-    <article className="pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <article className="pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Back link */}
         <Link
@@ -105,5 +132,6 @@ export default async function BlogPost({ params }) {
         </div>
       </div>
     </article>
+    </>
   );
 }
