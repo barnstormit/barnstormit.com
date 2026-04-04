@@ -20,6 +20,7 @@ export async function generateMetadata({ params }) {
       url: `https://barnstormit.com/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
+      authors: ["Jeff Barnstorf"],
     },
   };
 }
