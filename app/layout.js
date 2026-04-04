@@ -58,6 +58,13 @@ export const metadata = {
   alternates: {
     canonical: "https://barnstormit.com",
   },
+  themeColor: "#0D1B2A",
+  other: {
+    "geo.region": "US-CO",
+    "geo.placename": "Fairplay",
+    "geo.position": "39.2247;-105.9989",
+    "ICBM": "39.2247, -105.9989",
+  },
 };
 
 const jsonLd = {
@@ -107,9 +114,12 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      style={{ colorScheme: "dark" }}
       className={`${spaceGrotesk.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
