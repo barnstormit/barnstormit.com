@@ -47,6 +47,7 @@ export default function ContactForm() {
       <div className="glass-card rounded-xl p-8 md:p-10 text-center flex flex-col items-center justify-center min-h-[400px]">
         <span
           className="material-symbols-outlined text-vivid-teal mb-4"
+          aria-hidden="true"
           style={{
             fontSize: "64px",
             fontVariationSettings: "'FILL' 1",
@@ -61,7 +62,7 @@ export default function ContactForm() {
           We&apos;ll get back to you shortly. If it&apos;s urgent, call us at{" "}
           <a
             href="tel:+17198380435"
-            className="text-vivid-teal hover:underline font-bold"
+            className="text-vivid-teal hover:underline font-bold focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             (719) 838-0435
           </a>
@@ -86,8 +87,9 @@ export default function ContactForm() {
             id="name"
             name="name"
             required
-            placeholder="Your name"
-            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus:border-vivid-teal transition-colors"
+            placeholder="Your name…"
+            autoComplete="name"
+            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors"
           />
         </div>
 
@@ -104,7 +106,9 @@ export default function ContactForm() {
             name="email"
             required
             placeholder="you@example.com"
-            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus:border-vivid-teal transition-colors"
+            autoComplete="email"
+            spellCheck={false}
+            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors"
           />
         </div>
 
@@ -120,7 +124,8 @@ export default function ContactForm() {
             id="phone"
             name="phone"
             placeholder="(555) 555-5555"
-            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus:border-vivid-teal transition-colors"
+            autoComplete="tel"
+            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors"
           />
         </div>
 
@@ -136,8 +141,8 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Describe your issue or question..."
-            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus:border-vivid-teal transition-colors resize-none"
+            placeholder="Describe your issue or question\u2026"
+            className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors resize-none"
           />
         </div>
 
@@ -150,9 +155,9 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform,opacity] hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
         >
-          {status === "sending" ? "Sending..." : "Submit Request"}
+          {status === "sending" ? "Sending\u2026" : "Submit Request"}
         </button>
       </form>
 

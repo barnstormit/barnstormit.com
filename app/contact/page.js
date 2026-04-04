@@ -22,7 +22,7 @@ export default function Contact() {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             CONTACT
           </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Let&apos;s Get Your
             <br />
             <span className="text-vivid-teal">Tech Working</span>
@@ -42,7 +42,7 @@ export default function Contact() {
               </span>
               <a
                 href="tel:+17198380435"
-                className="font-heading text-3xl md:text-4xl font-black text-snow-white hover:text-vivid-teal transition-colors block mb-2"
+                className="font-heading text-3xl md:text-4xl font-black text-snow-white hover:text-vivid-teal transition-colors block mb-2 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 (719) 838-0435
               </a>
@@ -50,6 +50,7 @@ export default function Contact() {
                 <span
                   className="material-symbols-outlined text-base"
                   style={{ fontVariationSettings: "'FILL' 1" }}
+                  aria-hidden="true"
                 >
                   bolt
                 </span>
@@ -64,7 +65,7 @@ export default function Contact() {
               </span>
               <a
                 href="mailto:jeff@barnstormit.com"
-                className="text-lg text-snow-white hover:text-vivid-teal transition-colors"
+                className="text-lg text-snow-white hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 jeff@barnstormit.com
               </a>
@@ -109,13 +110,14 @@ export default function Contact() {
               src="/hero-bg.jpg"
               alt=""
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           <div className="relative z-10">
             <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               Service Area
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-8 text-balance">
               Serving Colorado&apos;s High Country
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
