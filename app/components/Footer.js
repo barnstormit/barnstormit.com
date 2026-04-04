@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
           <div className="space-y-4 text-frost-gray">
             <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-vivid-teal mt-0.5">
+              <span className="material-symbols-outlined text-vivid-teal mt-0.5" aria-hidden="true">
                 location_on
               </span>
               <address className="not-italic leading-relaxed">
@@ -40,23 +40,23 @@ export default function Footer() {
               </address>
             </div>
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-vivid-teal">
+              <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
                 call
               </span>
               <a
                 href="tel:+17198380435"
-                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300"
+                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 (719) 838-0435
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-vivid-teal">
+              <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
                 mail
               </span>
               <a
                 href="mailto:info@barnstormit.com"
-                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300"
+                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 info@barnstormit.com
               </a>
@@ -90,7 +90,7 @@ export default function Footer() {
           </h3>
           <div className="glass-card p-6 relative group overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
-              <span className="material-symbols-outlined text-6xl">map</span>
+              <span className="material-symbols-outlined text-6xl" aria-hidden="true">map</span>
             </div>
             <p className="text-frost-gray leading-relaxed relative z-10">
               Serving{" "}
@@ -101,10 +101,10 @@ export default function Footer() {
             </p>
             <Link
               href="/service-area"
-              className="mt-4 flex items-center gap-2 text-vivid-teal text-sm font-mono font-medium group-hover:translate-x-1 transition-transform duration-300"
+              className="mt-4 flex items-center gap-2 text-vivid-teal text-sm font-mono font-medium group-hover:translate-x-1 transition-transform duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               <span>View Coverage Map</span>
-              <span className="material-symbols-outlined text-sm">
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">
                 arrow_forward
               </span>
             </Link>
@@ -122,13 +122,13 @@ export default function Footer() {
           <div className="flex gap-8 text-xs font-mono tracking-wider text-frost-gray/60">
             <Link
               href="/privacy-policy"
-              className="hover:text-vivid-teal transition-colors"
+              className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               PRIVACY POLICY
             </Link>
             <Link
               href="/terms"
-              className="hover:text-vivid-teal transition-colors"
+              className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               TERMS OF SERVICE
             </Link>

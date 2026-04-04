@@ -69,9 +69,9 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <a
               href="tel:+17198380435"
-              className="hidden lg:flex items-center gap-2 bg-vivid-teal text-deep-navy px-6 py-3 rounded-lg font-heading font-bold text-sm tracking-wide hover:brightness-110 transition-all duration-200"
+              className="hidden lg:flex items-center gap-2 bg-vivid-teal text-deep-navy px-6 py-3 rounded-lg font-heading font-bold text-sm tracking-wide hover:brightness-110 transition-[filter] duration-200 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined text-lg">call</span>
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">call</span>
               (719) 838-0435
             </a>
             <button
@@ -79,7 +79,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
-              <span className="material-symbols-outlined text-3xl">menu</span>
+              <span className="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
             </button>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
             aria-label="Close menu"
           >
-            <span className="material-symbols-outlined">close</span>
+            <span className="material-symbols-outlined" aria-hidden="true">close</span>
           </button>
         </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="text-frost-gray hover:text-snow-white hover:bg-deep-navy/50 p-3 flex items-center gap-3 transition-colors rounded-lg"
             >
-              <span className="material-symbols-outlined">{link.icon}</span>
+              <span className="material-symbols-outlined" aria-hidden="true">{link.icon}</span>
               {link.label}
             </Link>
           ))}
@@ -129,7 +129,7 @@ export default function Navbar() {
         <div className="mt-auto">
           <a
             href="tel:+17198380435"
-            className="w-full flex justify-center py-4 bg-vivid-teal text-deep-navy rounded-lg font-heading font-bold"
+            className="w-full flex justify-center py-4 bg-vivid-teal text-deep-navy rounded-lg font-heading font-bold focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             Call (719) 838-0435
           </a>
