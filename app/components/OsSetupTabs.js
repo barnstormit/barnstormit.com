@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import CopyField from "./CopyField";
 
 const SERVER_CONFIG = [
@@ -19,7 +20,7 @@ function StepNumber({ n }) {
 
 function StepHeading({ children }) {
   return (
-    <h3 className="font-heading text-xl font-bold text-snow-white">
+    <h3 className="font-heading text-xl font-bold text-snow-white text-balance">
       {children}
     </h3>
   );
@@ -57,9 +58,9 @@ function WindowsSteps() {
           </p>
           <a
             href="https://remote.barnstormit.com/rustdesk.exe"
-            className="flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-6 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-all active:scale-95"
+            className="flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-6 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-[filter,transform] active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
-            <span className="material-symbols-outlined text-2xl">
+            <span className="material-symbols-outlined text-2xl" aria-hidden="true">
               desktop_windows
             </span>
             Download for Windows
@@ -91,7 +92,7 @@ function WindowsSteps() {
           <span className="text-snow-white font-bold">rustdesk.exe</span> to
           open it. Look for the{" "}
           <span className="text-snow-white font-bold">three small vertical dots (</span>
-          <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1">
+          <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1" aria-hidden="true">
             &bull;<br />&bull;<br />&bull;
           </span>
           <span className="text-snow-white font-bold">)</span> next to your ID
@@ -102,6 +103,8 @@ function WindowsSteps() {
           <img
             src="/rustdesk-step1-dots.png"
             alt="RustDesk main screen — click the three-dot menu next to your ID"
+            width={776}
+            height={582}
             className="w-full"
           />
         </div>
@@ -127,6 +130,8 @@ function WindowsSteps() {
             <img
               src="/rustdesk-step2-network.png"
               alt="RustDesk settings — click Network on the left sidebar"
+              width={778}
+              height={583}
               className="w-full"
             />
           </div>
@@ -135,6 +140,8 @@ function WindowsSteps() {
             <img
               src="/rustdesk-step3-unlock.png"
               alt="Click Unlock Network Settings and approve the Windows prompt"
+              width={771}
+              height={581}
               className="w-full"
             />
           </div>
@@ -162,6 +169,8 @@ function WindowsSteps() {
           <img
             src="/rustdesk-step4-server.png"
             alt="RustDesk ID/Relay Server configuration screen"
+            width={779}
+            height={591}
             className="w-full"
           />
         </div>
@@ -188,6 +197,8 @@ function WindowsSteps() {
           <img
             src="/rustdesk-step5-ready.png"
             alt="RustDesk home screen showing Ready status and your ID number"
+            width={773}
+            height={584}
             className="w-full"
           />
         </div>
@@ -221,9 +232,9 @@ function MacSteps() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
-              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-all active:scale-95 text-center"
+              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined text-2xl">
+              <span className="material-symbols-outlined text-2xl" aria-hidden="true">
                 laptop_mac
               </span>
               <span className="text-sm leading-tight">
@@ -233,9 +244,9 @@ function MacSteps() {
             </a>
             <a
               href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
-              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-all active:scale-95 text-center"
+              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined text-2xl">
+              <span className="material-symbols-outlined text-2xl" aria-hidden="true">
                 laptop_mac
               </span>
               <span className="text-sm leading-tight">Intel Mac</span>
@@ -264,6 +275,8 @@ function MacSteps() {
           <img
             src="/mac1.png"
             alt="Drag RustDesk into the Applications folder"
+            width={661}
+            height={423}
             className="w-full"
           />
         </div>
@@ -284,6 +297,8 @@ function MacSteps() {
           <img
             src="/mac2.png"
             alt="Quit RustDesk from the menu bar"
+            width={279}
+            height={71}
             className="w-full"
           />
         </div>
@@ -309,6 +324,8 @@ function MacSteps() {
             <img
               src="/mac3.png"
               alt="macOS blocked RustDesk prompt"
+              width={667}
+              height={570}
               className="w-full"
             />
           </div>
@@ -317,6 +334,8 @@ function MacSteps() {
             <img
               src="/mac4.png"
               alt="Security & Privacy — click Allow to unblock RustDesk"
+              width={667}
+              height={570}
               className="w-full"
             />
           </div>
@@ -352,6 +371,8 @@ function MacSteps() {
             <img
               src="/mac5.png"
               alt="Accessibility permission settings for RustDesk"
+              width={218}
+              height={301}
               className="w-full"
             />
           </div>
@@ -360,6 +381,8 @@ function MacSteps() {
             <img
               src="/mac7.png"
               alt="Screen Recording permission settings for RustDesk"
+              width={666}
+              height={571}
               className="w-full"
             />
           </div>
@@ -386,6 +409,8 @@ function MacSteps() {
             <img
               src="/mac8.png"
               alt="Remove RustDesk from the permissions list"
+              width={674}
+              height={572}
               className="w-full"
             />
           </div>
@@ -394,6 +419,8 @@ function MacSteps() {
             <img
               src="/mac9.png"
               alt="Re-add RustDesk to the permissions list"
+              width={799}
+              height={449}
               className="w-full"
             />
           </div>
@@ -420,6 +447,8 @@ function MacSteps() {
           <img
             src="/mac10.png"
             alt="Screen Recording permission confirmed for RustDesk"
+            width={665}
+            height={582}
             className="w-full"
           />
         </div>
@@ -433,7 +462,7 @@ function MacSteps() {
         </div>
         <p className="text-frost-gray mb-4 leading-relaxed">
           Open RustDesk, click the menu button (
-          <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1">
+          <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1" aria-hidden="true">
             &bull;<br />&bull;<br />&bull;
           </span>
           ) next to your ID, select{" "}
@@ -465,12 +494,13 @@ function CallUsBlock() {
       <span
         className="material-symbols-outlined text-vivid-teal"
         style={{ fontSize: "64px", fontVariationSettings: "'FILL' 1" }}
+        aria-hidden="true"
       >
         call
       </span>
       <a
         href="tel:+17198380435"
-        className="font-heading font-black text-3xl md:text-4xl text-snow-white hover:text-vivid-teal transition-colors"
+        className="font-heading font-black text-3xl md:text-4xl text-snow-white hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-deep-navy"
       >
         (719) 838-0435
       </a>
@@ -486,7 +516,18 @@ function CallUsBlock() {
 }
 
 export default function OsSetupTabs() {
-  const [activeTab, setActiveTab] = useState("windows");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const tabParam = searchParams.get("tab");
+  const [activeTab, setActiveTab] = useState(
+    tabParam === "mac" ? "mac" : "windows"
+  );
+
+  function switchTab(tab) {
+    setActiveTab(tab);
+    const url = tab === "windows" ? "/remote-support" : "/remote-support?tab=mac";
+    router.replace(url, { scroll: false });
+  }
 
   return (
     <>
@@ -494,27 +535,27 @@ export default function OsSetupTabs() {
       <div className="flex justify-center mb-12">
         <div className="inline-flex rounded-xl glass-card p-1.5 gap-1.5">
           <button
-            onClick={() => setActiveTab("windows")}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-all ${
+            onClick={() => switchTab("windows")}
+            className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none ${
               activeTab === "windows"
                 ? "bg-alpine-gold text-deep-navy"
                 : "text-frost-gray hover:text-snow-white"
             }`}
           >
-            <span className="material-symbols-outlined text-xl">
+            <span className="material-symbols-outlined text-xl" aria-hidden="true">
               desktop_windows
             </span>
             Windows
           </button>
           <button
-            onClick={() => setActiveTab("mac")}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-all ${
+            onClick={() => switchTab("mac")}
+            className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none ${
               activeTab === "mac"
                 ? "bg-alpine-gold text-deep-navy"
                 : "text-frost-gray hover:text-snow-white"
             }`}
           >
-            <span className="material-symbols-outlined text-xl">
+            <span className="material-symbols-outlined text-xl" aria-hidden="true">
               laptop_mac
             </span>
             Mac
