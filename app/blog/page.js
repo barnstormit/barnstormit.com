@@ -25,7 +25,7 @@ export default function Blog() {
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             BLOG
           </span>
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Tech Tips, Projects
             <br />
             <span className="text-vivid-teal">&amp; Mountain Life</span>

@@ -34,7 +34,7 @@ export default function BlogGrid({ posts }) {
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-5 py-2 rounded-full font-heading font-bold text-sm transition-all ${
+            className={`px-5 py-2 rounded-full font-heading font-bold text-sm transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none ${
               active === cat
                 ? "bg-vivid-teal text-deep-navy"
                 : "glass-card text-frost-gray hover:text-snow-white"
@@ -56,7 +56,7 @@ export default function BlogGrid({ posts }) {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="glass-card rounded-xl overflow-hidden group hover:border-vivid-teal/40 transition-all block"
+              className="glass-card rounded-xl overflow-hidden group hover:border-vivid-teal/40 transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none block"
             >
               {/* Post Image */}
               <div className="h-48 bg-midnight-slate relative overflow-hidden">
@@ -65,6 +65,7 @@ export default function BlogGrid({ posts }) {
                   src={post.image || "/hero_bg.jpg"}
                   alt={post.title}
                   className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-slate/80 to-transparent" />
               </div>
@@ -93,9 +94,9 @@ export default function BlogGrid({ posts }) {
                 <p className="text-frost-gray text-sm leading-relaxed line-clamp-2">
                   {post.excerpt}
                 </p>
-                <span className="mt-4 text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                <span className="mt-4 text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
                   Read more
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm" aria-hidden="true">
                     arrow_forward
                   </span>
                 </span>
