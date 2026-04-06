@@ -83,7 +83,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-frost-gray hover:text-alpine-gold transition-colors duration-300 text-base flex items-center gap-2 group"
+                className="text-frost-gray hover:text-alpine-gold transition-colors duration-300 text-base flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-vivid-teal/30 group-hover:bg-alpine-gold transition-colors" />
                 {link.label}

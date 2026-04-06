@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300 ${
           scrolled
             ? "bg-deep-navy/95 backdrop-blur-xl shadow-lg shadow-deep-navy/50"
             : "bg-deep-navy/85 backdrop-blur-xl"
@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Brand */}
           <Link
             href="/"
-            className="flex flex-col leading-none font-heading"
+            className="flex flex-col leading-none font-heading focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             <span className="text-3xl font-black text-snow-white tracking-tight">
               BARNSTORM
@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-heading text-sm uppercase tracking-tight text-snow-white hover:text-vivid-teal transition-colors duration-300"
+                className="font-heading text-sm uppercase tracking-tight text-snow-white hover:text-vivid-teal transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
               (719) 838-0435
             </a>
             <button
-              className="md:hidden text-snow-white hover:text-vivid-teal transition-colors"
+              className="md:hidden text-snow-white hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
@@ -104,7 +104,7 @@ export default function Navbar() {
             BARNSTORM
           </span>
           <button
-            className="text-frost-gray hover:text-snow-white transition-colors"
+            className="text-frost-gray hover:text-snow-white transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             onClick={() => setMobileOpen(false)}
             aria-label="Close menu"
           >
@@ -118,7 +118,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-frost-gray hover:text-snow-white hover:bg-deep-navy/50 p-3 flex items-center gap-3 transition-colors rounded-lg"
+              className="text-frost-gray hover:text-snow-white hover:bg-deep-navy/50 p-3 flex items-center gap-3 transition-colors rounded-lg focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">{link.icon}</span>
               {link.label}

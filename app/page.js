@@ -165,9 +165,9 @@ export default function Home() {
               speed
             </span>
           </div>
-          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             On-Site Support
-          </h3>
+          </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
             We come to you. Professional troubleshooting for home offices,
             vacation rentals, and local businesses across the high country.
@@ -181,9 +181,9 @@ export default function Home() {
               wifi
             </span>
           </div>
-          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Network &amp; WiFi
-          </h3>
+          </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
             Secure networks, strong WiFi coverage, firewalls, and encrypted
             VPNs for homes and businesses.
@@ -197,9 +197,9 @@ export default function Home() {
               cloud_sync
             </span>
           </div>
-          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Remote Support
-          </h3>
+          </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
             Instant assistance via secure screen sharing. Resolving software
             issues without the drive time.
@@ -216,9 +216,9 @@ export default function Home() {
               business_center
             </span>
           </div>
-          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Business IT
-          </h3>
+          </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
             Managed services, consulting, and service contracts tailored for
             local businesses.
@@ -226,7 +226,7 @@ export default function Home() {
         </div>
 
         {/* 3D Printing — gold highlight */}
-        <Link href="/3d-printing" className="glass-card p-8 group transition-colors duration-500 sm:w-1/3 block" style={{ borderColor: "rgba(240, 165, 0, 0.4)", background: "rgba(240, 165, 0, 0.06)" }}>
+        <Link href="/3d-printing" className="glass-card p-8 group transition-colors duration-500 sm:w-1/3 block focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none" style={{ borderColor: "rgba(240, 165, 0, 0.4)", background: "rgba(240, 165, 0, 0.06)" }}>
           <div className="flex items-center justify-between mb-6">
             <div className="w-14 h-14 rounded-lg bg-alpine-gold/10 flex items-center justify-center group-hover:bg-alpine-gold/20 transition-colors border border-alpine-gold/30">
               <span className="material-symbols-outlined text-alpine-gold text-3xl" aria-hidden="true">
@@ -237,9 +237,9 @@ export default function Home() {
               New
             </span>
           </div>
-          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             3D Printing
-          </h3>
+          </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
             Custom parts, replacement components, and prototypes — printed
             locally, delivered fast.
