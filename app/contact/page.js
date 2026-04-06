@@ -142,7 +142,7 @@ export default function Contact() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/hero-bg.jpg"
-              alt=""
+              alt="Colorado mountain landscape"
               className="w-full h-full object-cover"
               loading="lazy"
             />
