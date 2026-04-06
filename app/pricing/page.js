@@ -268,6 +268,13 @@ export default function Pricing() {
               <span className="material-symbols-outlined" aria-hidden="true">mail</span>
               Send a Message
             </Link>
+            <Link
+              href="/book"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">event</span>
+              Book a Call
+            </Link>
           </div>
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40">
             Serving South Park &amp; Summit County, Colorado

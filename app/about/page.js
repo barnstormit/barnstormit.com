@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "About",
   description:
@@ -204,13 +206,20 @@ export default function About() {
               <span className="material-symbols-outlined" aria-hidden="true">call</span>
               Call (719) 838-0435
             </a>
-            <a
-              href="mailto:jeff@barnstormit.com"
+            <Link
+              href="/contact"
               className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">mail</span>
-              jeff@barnstormit.com
-            </a>
+              Contact Us
+            </Link>
+            <Link
+              href="/book"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">event</span>
+              Book a Call
+            </Link>
           </div>
         </div>
       </section>
