@@ -89,7 +89,7 @@ export default function Book() {
           {/* Primary CTA */}
           <div className="text-center mb-16">
             <a
-              href="https://calendar.proton.me/bookings/guest#bILEoNxAWGfua9kbENy-U8IOYkdby_EYCUy5W_3x6Qw="
+              href="https://calendar.proton.me/bookings#09QBswOvmtV3jol2kqY5sFsrj7dRNRdmnN_j2Mq0tvE="
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-alpine-gold text-deep-navy px-12 py-5 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
