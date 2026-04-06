@@ -577,22 +577,6 @@ export default function Home() {
           Professional, local IT support that understands your environment.
         </p>
 
-        {/* Phone Number */}
-        <a
-          href="tel:+17198380435"
-          className="text-4xl md:text-5xl font-heading font-black text-snow-white hover:text-alpine-gold transition-colors mb-2 inline-block focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
-        >
-          (719) 838-0435
-        </a>
-        <p className="text-frost-gray mb-10">
-          <a
-            href="mailto:info@barnstormit.com"
-            className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-          >
-            info@barnstormit.com
-          </a>
-        </p>
-
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
