@@ -4,7 +4,7 @@ import BlogGrid from "./BlogGrid";
 export const metadata = {
   title: "Blog",
   description:
-    "Tech tips, 3D printing projects, and mountain living updates from Barnstorm Computer Services in Fairplay, Colorado.",
+    "Tech tips, 3D printing projects, and mountain living updates from Barnstorm Computer Services. Practical advice from Fairplay, Colorado.",
   alternates: { canonical: "https://barnstormit.com/blog" },
   openGraph: {
     title: "Blog | Barnstorm Computer Services",

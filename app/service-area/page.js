@@ -4,7 +4,7 @@ import countyData from "./colorado-counties.json";
 export const metadata = {
   title: "Service Area",
   description:
-    "Barnstorm Computer Services covers Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista, and surrounding Colorado mountain communities. On-site IT support with zone-based service fees.",
+    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, and Buena Vista. Zone-based service fees starting at $25.",
   alternates: { canonical: "https://barnstormit.com/service-area" },
   openGraph: {
     title: "Service Area | Barnstorm Computer Services",

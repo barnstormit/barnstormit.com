@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Pricing",
   description:
-    "Straightforward IT service rates — $100/hour with no hidden fees. Service zone fees from $25–$100+. Serving Fairplay, Breckenridge, and Colorado mountain communities.",
+    "Transparent IT rates — $100/hour, no hidden fees. Zone-based service fees from $25–$100+. Serving Colorado mountain communities.",
   alternates: { canonical: "https://barnstormit.com/pricing" },
   openGraph: {
     title: "Pricing | Barnstorm Computer Services",

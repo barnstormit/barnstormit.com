@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "IT Support & Repair in Fairplay, CO",
   description:
-    "On-site computer repair, IT support, networking, data recovery, and 3D printing for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
+    "On-site computer repair, IT support, and networking for Fairplay, Breckenridge, and Colorado mountain communities. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com" },
   openGraph: {
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",

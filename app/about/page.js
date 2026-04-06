@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About",
   description:
-    "Meet Jeff Barnstorf — 27 years of IT experience, MCSE certified, based in Fairplay, Colorado. On-site computer repair and IT support for mountain communities.",
+    "Meet Jeff Barnstorf — 27 years of IT experience, MCSE certified, based in Fairplay. On-site repair and IT support for mountain communities.",
   alternates: { canonical: "https://barnstormit.com/about" },
   openGraph: {
     title: "About | Barnstorm Computer Services",
