@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
@@ -99,6 +100,38 @@ export default function Contact() {
 
           {/* Right — Contact Form */}
           <ContactForm />
+        </div>
+      </section>
+
+      {/* Book a Call */}
+      <section className="pb-8 px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="bg-alpine-gold/5 border border-alpine-gold/20 rounded-xl py-6 px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <span
+                className="material-symbols-outlined text-alpine-gold text-2xl"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+                aria-hidden="true"
+              >
+                event
+              </span>
+              <p className="text-frost-gray">
+                Prefer to schedule a specific time?{" "}
+                <span className="text-snow-white font-bold">
+                  Book a discovery call.
+                </span>
+              </p>
+            </div>
+            <Link
+              href="/book"
+              className="shrink-0 bg-alpine-gold text-deep-navy px-6 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter] flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            >
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">
+                calendar_month
+              </span>
+              Book a Call
+            </Link>
+          </div>
         </div>
       </section>
 

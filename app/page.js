@@ -77,6 +77,15 @@ export default function Home() {
               arrow_forward
             </span>
           </Link>
+          <Link
+            href="/book"
+            className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">
+              event
+            </span>
+            Book a Call
+          </Link>
         </div>
 
         {/* Trust Badges */}
@@ -587,6 +596,13 @@ export default function Home() {
                 <span className="material-symbols-outlined" aria-hidden="true">mail</span>
                 Email Us
               </a>
+              <Link
+                href="/book"
+                className="px-10 py-5 border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              >
+                <span className="material-symbols-outlined" aria-hidden="true">event</span>
+                Book a Discovery Call
+              </Link>
             </div>
 
             {/* Contact Details */}
