@@ -47,9 +47,9 @@ export default function Book() {
               >
                 timer
               </span>
-              <h3 className="font-heading font-bold text-snow-white mb-1">
+              <p className="font-heading font-bold text-snow-white mb-1">
                 30 Minutes
-              </h3>
+              </p>
               <p className="text-frost-gray text-sm">
                 Quick and focused
               </p>
@@ -62,9 +62,9 @@ export default function Book() {
               >
                 calendar_month
               </span>
-              <h3 className="font-heading font-bold text-snow-white mb-1">
+              <p className="font-heading font-bold text-snow-white mb-1">
                 Mon&ndash;Fri, 4&ndash;5 PM MT
-              </h3>
+              </p>
               <p className="text-frost-gray text-sm">
                 Available time slots
               </p>
@@ -77,9 +77,9 @@ export default function Book() {
               >
                 call
               </span>
-              <h3 className="font-heading font-bold text-snow-white mb-1">
+              <p className="font-heading font-bold text-snow-white mb-1">
                 Phone Call
-              </h3>
+              </p>
               <p className="text-frost-gray text-sm">
                 We&apos;ll call you
               </p>
