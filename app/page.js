@@ -563,64 +563,59 @@ export default function Home() {
         <div className="absolute inset-0 atmospheric-bg opacity-40" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto">
-        <div className="max-w-3xl">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
-            Get In Touch
-          </span>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-snow-white mb-8 tracking-tight leading-[0.95] text-balance">
-            Tech Problems Don&apos;t Care About Your{" "}
-            <span className="text-alpine-gold">Checkout Date.</span>
-          </h2>
-          <p className="text-lg md:text-xl text-frost-gray mb-12 max-w-2xl leading-relaxed">
-            Whether you&apos;re a local business, a full-time resident, or a
-            visitor whose laptop just died at the cabin — we&apos;re here.
-            Professional, local IT support that understands your environment.
-          </p>
+      <div className="relative z-10 max-w-[1200px] mx-auto text-center">
+        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+          Get In Touch
+        </span>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-snow-white mb-8 tracking-tight leading-[0.95] text-balance">
+          Tech Problems Don&apos;t Care About Your{" "}
+          <span className="text-alpine-gold">Checkout Date.</span>
+        </h2>
+        <p className="text-lg md:text-xl text-frost-gray mb-12 max-w-2xl mx-auto leading-relaxed">
+          Whether you&apos;re a local business, a full-time resident, or a
+          visitor whose laptop just died at the cabin — we&apos;re here.
+          Professional, local IT support that understands your environment.
+        </p>
 
-          {/* Contact Info + Buttons */}
-          <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-end">
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:+17198380435"
-                className="px-10 py-5 bg-alpine-gold text-deep-navy font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">call</span>
-                Call Now
-              </a>
-              <a
-                href="mailto:info@barnstormit.com"
-                className="px-10 py-5 border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">mail</span>
-                Email Us
-              </a>
-              <Link
-                href="/book"
-                className="px-10 py-5 border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">event</span>
-                Book a Discovery Call
-              </Link>
-            </div>
+        {/* Phone Number */}
+        <a
+          href="tel:+17198380435"
+          className="text-4xl md:text-5xl font-heading font-black text-snow-white hover:text-alpine-gold transition-colors mb-2 inline-block focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+        >
+          (719) 838-0435
+        </a>
+        <p className="text-frost-gray mb-10">
+          <a
+            href="mailto:info@barnstormit.com"
+            className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          >
+            info@barnstormit.com
+          </a>
+        </p>
 
-            {/* Contact Details */}
-            <div className="flex flex-col gap-2">
-              <a
-                href="tel:+17198380435"
-                className="text-3xl md:text-4xl font-heading font-bold text-snow-white hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                (719) 838-0435
-              </a>
-              <a
-                href="mailto:info@barnstormit.com"
-                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                info@barnstormit.com
-              </a>
-            </div>
-          </div>
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="tel:+17198380435"
+            className="w-full sm:w-auto px-10 py-5 bg-alpine-gold text-deep-navy font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">call</span>
+            Call Now
+          </a>
+          <a
+            href="mailto:info@barnstormit.com"
+            className="w-full sm:w-auto px-10 py-5 border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">mail</span>
+            Email Us
+          </a>
+          <Link
+            href="/book"
+            className="w-full sm:w-auto px-10 py-5 border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">event</span>
+            Book a Call
+          </Link>
         </div>
       </div>
     </section>
