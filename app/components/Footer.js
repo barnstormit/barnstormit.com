@@ -61,6 +61,15 @@ export default function Footer() {
                 info@barnstormit.com
               </a>
             </div>
+            <Link
+              href="/book"
+              className="inline-flex items-center gap-2 bg-alpine-gold text-deep-navy px-5 py-2.5 rounded-lg font-heading font-bold text-sm hover:brightness-110 transition-[filter] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            >
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">
+                event
+              </span>
+              Book a Discovery Call
+            </Link>
           </div>
         </div>
 
