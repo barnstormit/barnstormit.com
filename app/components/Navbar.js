@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/pricing", label: "Pricing", icon: "payments" },
   { href: "/service-area", label: "Service Area", icon: "map" },
   { href: "/remote-support", label: "Remote Support", icon: "terminal" },
-  { href: "/vacation-help", label: "Vacation Help", icon: "luggage" },
   { href: "/contact", label: "Contact", icon: "mail" },
 ];
 
