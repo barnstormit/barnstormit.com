@@ -21,7 +21,7 @@ export default function Pricing() {
     <>
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto text-center">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             Pricing
           </span>
@@ -30,7 +30,7 @@ export default function Pricing() {
             <br />
             <span className="text-vivid-teal">No Surprises.</span>
           </h1>
-          <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-frost-gray max-w-2xl mx-auto leading-relaxed">
             No hidden fees, no hourly creep. You&apos;ll know what it costs
             before we start.
           </p>
