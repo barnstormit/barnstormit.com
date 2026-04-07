@@ -3,7 +3,7 @@
 # Barnstorm Computer Services — Project Rules
 
 ## Stack
-- **Next.js** + **Tailwind CSS**, deployed on Vercel from GitHub (barnstormit/barnstormit.com)
+- **Next.js** + **Tailwind CSS**
 - Mobile-first. Key breakpoints: 640px (sm), 768px (md), 1024px (lg), 1280px (xl)
 
 ## Color Palette
@@ -41,11 +41,33 @@
 - Section vertical padding: 80–120px desktop, 48–64px mobile
 - Smooth scroll, subtle scroll-triggered fade-in-up animations (under 400ms, nothing flashy)
 
-## SEO / Accessibility
+## SEO / Accessibility (updated 2026-04-04)
 - WCAG 2.1 AA — minimum 4.5:1 contrast ratio (critical on dark theme)
-- Unique `<title>`, meta description, and OG tags per page
-- LocalBusiness schema.org structured data
+- Unique `<title>`, meta description, and OG tags per page (all titles under 70 chars)
+- `og:type` set on every page (`website` for pages, `article` for blog posts)
+- LocalBusiness schema.org structured data (layout.js)
+- Article schema.org structured data on blog posts (app/blog/[slug]/page.js)
+- Auto-generated branded OG image (app/opengraph-image.js) — 1200x630
+- Auto-generated Apple touch icon (app/apple-icon.js) — 180x180
+- `theme-color: #0D1B2A` and `color-scheme: dark` on `<html>`
+- Geo meta tags (Fairplay, CO coordinates)
+- Google Fonts preconnect for Material Symbols
 - Semantic HTML, keyboard navigable, alt text on all images
+- `aria-hidden="true"` on all decorative icons (material-symbols-outlined)
+- Visible `focus-visible:ring-*` states on all interactive elements
+- Proper heading hierarchy (h1 → h2 → h3, no skipped levels)
+- `text-balance` on headings to prevent widows
+- No `transition-all` — use specific properties (e.g. `transition-[filter,transform]`)
+- `width`/`height` on images where possible; `loading="lazy"` on below-fold images
+- `tabular-nums` on numeric columns (pricing page)
+- Sitemap at `/sitemap.xml` (auto-generated, includes all pages + blog posts)
+- robots.txt at `/robots.txt`
+
+## Domain & Hosting
+- Primary domain: `barnstormit.com` (no www)
+- `www.barnstormit.com` → 307 redirect to `barnstormit.com`
+- Deployed on Vercel from GitHub (barnstormit/barnstormit.com)
+- Google Search Console and Bing Webmaster Tools configured (2026-04-04)
 
 ## Content Rules
 - Phone number **(719) 838-0435** must be visible on every page without scrolling
