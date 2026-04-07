@@ -31,6 +31,11 @@ const businessServices = [
     desc: "Network drops, rack setup, equipment relocation, and everything plugged back in and working.",
   },
   {
+    icon: "smart_toy",
+    title: "AI & Automation",
+    desc: "Workflow automation, local AI deployment, chatbots, and tools that save your team hours every week.",
+  },
+  {
     icon: "language",
     title: "Website & SEO",
     desc: "Business websites, Google Business Profile setup, local SEO, and domain/email configuration.",
@@ -346,8 +351,8 @@ function BusinessTab() {
       </div>
 
       {/* Service Category Cards — top row */}
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {businessServices.slice(0, 3).map((svc) => (
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {businessServices.slice(0, 4).map((svc) => (
           <div
             key={svc.title}
             className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500"
@@ -370,10 +375,10 @@ function BusinessTab() {
       </div>
       {/* Bottom row — centered */}
       <div className="max-w-[1200px] mx-auto mt-6 mb-10 flex flex-col sm:flex-row justify-center gap-6">
-        {businessServices.slice(3).map((svc) => (
+        {businessServices.slice(4).map((svc) => (
           <div
             key={svc.title}
-            className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/3"
+            className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/4"
           >
             <span
               className="material-symbols-outlined text-vivid-teal text-3xl mb-5 block"
