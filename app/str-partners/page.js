@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "STR Partner Program — On-Call Tech for Hosts",
+  title: "STR Partner Program for Hosts",
   description:
     "On-call IT support for vacation rental hosts and property managers in Summit & Park County. No contracts, local response. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/str-partners" },

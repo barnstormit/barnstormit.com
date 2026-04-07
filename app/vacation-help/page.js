@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Vacation Tech Help — On-Site IT for Guests",
+  title: "Vacation Tech Help for Guests",
   description:
     "Tech emergency during your stay? We come to your rental. WiFi, smart TV, printer, and laptop help in Summit & Park County. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/vacation-help" },
