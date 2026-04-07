@@ -1,4 +1,5 @@
 import { Space_Grotesk, DM_Sans, DM_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -133,6 +134,9 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1 pt-[72px] md:pt-[88px]">{children}</main>
         <Footer />
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-C7QTMH6VK9" />
+        )}
       </body>
     </html>
   );
