@@ -76,7 +76,8 @@ export default function Pricing() {
             <h2 className="font-heading text-2xl font-bold text-snow-white mb-8">
               Service Zone Fees
             </h2>
-            <table className="w-full">
+            <div className="overflow-x-auto -mx-2">
+            <table className="w-full min-w-[360px]">
               <thead>
                 <tr className="border-b border-steel-blue/30">
                   <th className="text-left font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray/50 pb-3">
@@ -137,6 +138,7 @@ export default function Pricing() {
                 </tr>
               </tbody>
             </table>
+            </div>
             <p className="text-frost-gray/50 text-sm mt-6">
               Not sure which zone you&apos;re in?{" "}
               <a
@@ -180,7 +182,7 @@ export default function Pricing() {
             <div className="divide-y divide-steel-blue/15">
               {/* Cash, Check, Zelle */}
               <div className="py-4">
-                <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center justify-between flex-wrap gap-y-2 mb-1">
                   <span className="font-heading font-bold text-snow-white">
                     Cash, Check, or Zelle
                   </span>
@@ -249,7 +251,7 @@ export default function Pricing() {
 
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-8">
-        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
+        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-10 text-balance">
             Questions about pricing?
           </h2>

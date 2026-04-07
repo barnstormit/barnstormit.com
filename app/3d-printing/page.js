@@ -116,7 +116,7 @@ export default function ThreeDPrinting() {
       {/* How It Works */}
       <section className="py-12 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <div className="glass-card rounded-xl p-10 md:p-14">
+          <div className="glass-card rounded-xl p-6 sm:p-10 md:p-14">
             <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               How It Works
             </span>
@@ -170,7 +170,7 @@ export default function ThreeDPrinting() {
 
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
-        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
+        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
             Got a file or an idea?
           </h2>

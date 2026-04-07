@@ -148,9 +148,9 @@ export default function StrPartners() {
                   {s.detail}
                 </p>
                 <div className="border-t border-steel-blue/20 pt-4">
-                  <p className="text-vivid-teal text-sm font-medium flex items-center gap-2">
+                  <p className="text-vivid-teal text-sm font-medium flex items-start gap-2">
                     <span
-                      className="material-symbols-outlined text-lg"
+                      className="material-symbols-outlined text-lg shrink-0 mt-0.5"
                       aria-hidden="true"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                     >

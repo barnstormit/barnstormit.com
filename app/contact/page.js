@@ -137,7 +137,7 @@ export default function Contact() {
 
       {/* Service Area */}
       <section className="py-16 md:py-20 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

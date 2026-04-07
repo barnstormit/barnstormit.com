@@ -113,7 +113,7 @@ export default function ServiceArea() {
 
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
-        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">
+        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-6 text-balance">
             Not sure if we cover your area?
           </h2>
