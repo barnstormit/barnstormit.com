@@ -31,19 +31,9 @@ const businessServices = [
     desc: "Network drops, rack setup, equipment relocation, and everything plugged back in and working.",
   },
   {
-    icon: "smart_toy",
-    title: "AI & Automation",
-    desc: "Workflow automation, local AI deployment, chatbots, and tools that save your team hours every week.",
-  },
-  {
     icon: "language",
     title: "Website & SEO",
     desc: "Business websites, Google Business Profile setup, local SEO, and domain/email configuration.",
-  },
-  {
-    icon: "view_in_ar",
-    title: "3D Printing",
-    desc: "Custom parts, replacement components, prototypes, and enclosures — printed locally and delivered fast.",
   },
 ];
 
@@ -355,30 +345,51 @@ function BusinessTab() {
         </div>
       </div>
 
-      {/* Service Category Cards */}
-      <div className="max-w-[1200px] mx-auto mb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {businessServices.map((svc) => (
-            <div
-              key={svc.title}
-              className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500"
+      {/* Service Category Cards — top row */}
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {businessServices.slice(0, 3).map((svc) => (
+          <div
+            key={svc.title}
+            className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500"
+          >
+            <span
+              className="material-symbols-outlined text-vivid-teal text-3xl mb-5 block"
+              aria-hidden="true"
+              style={{ fontVariationSettings: "'FILL' 1" }}
             >
-              <span
-                className="material-symbols-outlined text-vivid-teal text-3xl mb-5 block"
-                aria-hidden="true"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                {svc.icon}
-              </span>
-              <h3 className="font-heading text-lg font-bold text-snow-white mb-2">
-                {svc.title}
-              </h3>
-              <p className="text-frost-gray text-sm leading-relaxed">
-                {svc.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+              {svc.icon}
+            </span>
+            <h3 className="font-heading text-lg font-bold text-snow-white mb-2">
+              {svc.title}
+            </h3>
+            <p className="text-frost-gray text-sm leading-relaxed">
+              {svc.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* Bottom row — centered */}
+      <div className="max-w-[1200px] mx-auto mt-6 mb-10 flex flex-col sm:flex-row justify-center gap-6">
+        {businessServices.slice(3).map((svc) => (
+          <div
+            key={svc.title}
+            className="glass-card rounded-xl p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/3"
+          >
+            <span
+              className="material-symbols-outlined text-vivid-teal text-3xl mb-5 block"
+              aria-hidden="true"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              {svc.icon}
+            </span>
+            <h3 className="font-heading text-lg font-bold text-snow-white mb-2">
+              {svc.title}
+            </h3>
+            <p className="text-frost-gray text-sm leading-relaxed">
+              {svc.desc}
+            </p>
+          </div>
+        ))}
       </div>
 
       {/* Flat-rate note */}
