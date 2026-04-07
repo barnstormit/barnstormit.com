@@ -30,6 +30,21 @@ const businessServices = [
     title: "Office Moves & Buildouts",
     desc: "Network drops, rack setup, equipment relocation, and everything plugged back in and working.",
   },
+  {
+    icon: "smart_toy",
+    title: "AI & Automation",
+    desc: "Workflow automation, local AI deployment, chatbots, and tools that save your team hours every week.",
+  },
+  {
+    icon: "language",
+    title: "Website & SEO",
+    desc: "Business websites, Google Business Profile setup, local SEO, and domain/email configuration.",
+  },
+  {
+    icon: "view_in_ar",
+    title: "3D Printing",
+    desc: "Custom parts, replacement components, prototypes, and enclosures — printed locally and delivered fast.",
+  },
 ];
 
 export default function PricingTabs() {
