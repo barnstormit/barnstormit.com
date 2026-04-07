@@ -131,8 +131,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-full flex flex-col font-body bg-deep-navy text-snow-white">
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-vivid-teal focus:text-deep-navy focus:px-4 focus:py-2 focus:rounded-lg focus:font-heading focus:font-bold focus:text-sm">
+          Skip to main content
+        </a>
         <Navbar />
-        <main className="flex-1 pt-[72px] md:pt-[88px]">{children}</main>
+        <main id="main" className="flex-1 pt-[72px] md:pt-[88px]">{children}</main>
         <Footer />
         {process.env.NODE_ENV === "production" && (
           <GoogleAnalytics gaId="G-C7QTMH6VK9" />

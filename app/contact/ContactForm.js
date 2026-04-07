@@ -105,7 +105,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
-            placeholder="you@example.com"
+            placeholder="you@example.com…"
             autoComplete="email"
             spellCheck={false}
             className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors"
@@ -123,7 +123,7 @@ export default function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
-            placeholder="(555) 555-5555"
+            placeholder="(555) 555-5555…"
             autoComplete="tel"
             className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors"
           />

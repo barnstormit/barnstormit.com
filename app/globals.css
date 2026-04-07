@@ -72,6 +72,12 @@ html {
 .stagger-3 { animation-delay: 300ms; }
 .stagger-4 { animation-delay: 400ms; }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+  }
+}
+
 /* --- Atmospheric Background --- */
 .atmospheric-bg {
   background: radial-gradient(
