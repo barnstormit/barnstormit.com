@@ -57,17 +57,31 @@ export default function Pricing() {
             <p className="text-frost-gray/50 text-sm leading-relaxed mb-8">
               Parts and travel billed separately — see below.
             </p>
-            <div className="mt-auto flex items-center gap-2 text-vivid-teal">
-              <span
-                className="material-symbols-outlined"
-                aria-hidden="true"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                bolt
-              </span>
-              <span className="font-heading font-bold text-sm">
-                Responsive &amp; Efficient
-              </span>
+            <div className="mt-auto space-y-3">
+              <div className="flex items-center gap-2 text-vivid-teal">
+                <span
+                  className="material-symbols-outlined"
+                  aria-hidden="true"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  bolt
+                </span>
+                <span className="font-heading font-bold text-sm">
+                  Responsive &amp; Efficient
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-frost-gray">
+                <span
+                  className="material-symbols-outlined text-vivid-teal"
+                  aria-hidden="true"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  verified_user
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-tight">
+                  Licensed &amp; Insured
+                </span>
+              </div>
             </div>
           </div>
 

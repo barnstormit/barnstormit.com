@@ -138,6 +138,18 @@ export default function Home() {
               Local Owner &amp; Operator
             </span>
           </div>
+          <div className="flex items-center gap-2 text-snow-white">
+            <span
+              className="material-symbols-outlined text-vivid-teal"
+              aria-hidden="true"
+              style={{ fontVariationSettings: "'FILL' 1" }}
+            >
+              verified_user
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
+              Licensed &amp; Insured
+            </span>
+          </div>
         </div>
       </div>
 

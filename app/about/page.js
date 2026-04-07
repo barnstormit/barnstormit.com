@@ -117,7 +117,7 @@ export default function About() {
 
             {/* Service Pills */}
             <div className="flex flex-wrap gap-3">
-              {["Remote Support", "On-Site Repair", "Network Setup"].map(
+              {["Remote Support", "On-Site Repair", "Network Setup", "Licensed & Insured"].map(
                 (service) => (
                   <span
                     key={service}

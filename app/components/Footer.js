@@ -62,6 +62,18 @@ export default function Footer() {
                 info@barnstormit.com
               </a>
             </div>
+            <div className="flex items-center gap-2 text-frost-gray">
+              <span
+                className="material-symbols-outlined text-vivid-teal text-lg"
+                aria-hidden="true"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                verified_user
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-tight">
+                Licensed &amp; Insured
+              </span>
+            </div>
             <Link
               href="/book"
               className="inline-flex items-center gap-2 bg-alpine-gold text-deep-navy px-5 py-2.5 rounded-lg font-heading font-bold text-sm hover:brightness-110 transition-[filter] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
