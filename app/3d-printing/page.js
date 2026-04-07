@@ -102,9 +102,9 @@ export default function ThreeDPrinting() {
               >
                 {svc.icon}
               </span>
-              <h3 className="font-heading text-xl font-bold text-snow-white mb-3">
+              <h2 className="font-heading text-xl font-bold text-snow-white mb-3">
                 {svc.title}
-              </h3>
+              </h2>
               <p className="text-frost-gray text-sm leading-relaxed">
                 {svc.description}
               </p>
@@ -117,9 +117,9 @@ export default function ThreeDPrinting() {
       <section className="py-12 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="glass-card rounded-xl p-6 sm:p-10 md:p-14">
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+            <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               How It Works
-            </span>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex gap-4 items-start">
                 <span className="font-heading text-4xl font-black text-vivid-teal/20">

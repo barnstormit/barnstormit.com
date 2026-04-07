@@ -180,9 +180,9 @@ export default function Services() {
                   </span>
                 )}
               </div>
-              <h3 className="font-heading text-xl font-bold text-snow-white mb-4">
+              <h2 className="font-heading text-xl font-bold text-snow-white mb-4">
                 {svc.title}
-              </h3>
+              </h2>
               <ul className="space-y-2 flex-1">
                 {svc.items.map((item) => (
                   <li
@@ -230,9 +230,9 @@ export default function Services() {
               >
                 luggage
               </span>
-              <h3 className="font-heading text-xl font-bold text-snow-white mb-3">
+              <h2 className="font-heading text-xl font-bold text-snow-white mb-3">
                 Vacation Tech Help
-              </h3>
+              </h2>
               <p className="text-frost-gray text-sm leading-relaxed flex-1">
                 Tech emergency during your stay? We come to your rental
                 fast&nbsp;&mdash; WiFi, laptops, Smart TV, and more.
@@ -259,9 +259,9 @@ export default function Services() {
                   NEW
                 </span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-snow-white mb-3">
+              <h2 className="font-heading text-xl font-bold text-snow-white mb-3">
                 STR Partner Program
-              </h3>
+              </h2>
               <p className="text-frost-gray text-sm leading-relaxed flex-1">
                 Property managers and hosts&nbsp;&mdash; keep your guests happy
                 with on-call tech support. No contracts, local response.

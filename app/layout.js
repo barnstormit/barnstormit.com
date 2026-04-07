@@ -41,7 +41,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://barnstormit.com/opengraph-image",
+        url: "/barnstorm_cover_v2.png",
         width: 1200,
         height: 630,
         alt: "Barnstorm Computer Services — Mountain Tech, Done Right",
@@ -54,7 +54,7 @@ export const metadata = {
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",
     description:
       "On-site computer repair and IT support for Colorado's mountain communities.",
-    images: ["https://barnstormit.com/opengraph-image"],
+    images: ["/barnstorm_cover_v2.png"],
   },
   alternates: {
     canonical: "https://barnstormit.com",

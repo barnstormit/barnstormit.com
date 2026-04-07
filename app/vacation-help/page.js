@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Vacation Tech Help — On-Site IT for Guests | Barnstorm",
+  title: "Vacation Tech Help — On-Site IT for Guests",
   description:
     "Tech emergency during your stay? We come to your rental. WiFi, smart TV, printer, and laptop help in Summit & Park County. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/vacation-help" },
@@ -325,7 +325,7 @@ export default function VacationHelp() {
           </div>
           <Link
             href="/str-partners"
-            className="shrink-0 bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 active:scale-95 flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            className="w-full md:w-auto shrink-0 bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             Learn More
             <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>

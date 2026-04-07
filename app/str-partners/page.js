@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "STR Partner Program — On-Call Tech for Hosts | Barnstorm",
+  title: "STR Partner Program — On-Call Tech for Hosts",
   description:
     "On-call IT support for vacation rental hosts and property managers in Summit & Park County. No contracts, local response. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/str-partners" },
@@ -257,7 +257,7 @@ export default function StrPartners() {
           </div>
           <Link
             href="/vacation-help"
-            className="shrink-0 bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 active:scale-95 flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            className="w-full md:w-auto shrink-0 bg-vivid-teal text-deep-navy px-8 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             Vacation Tech Help
             <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>

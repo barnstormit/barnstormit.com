@@ -145,9 +145,9 @@ function ZoneCard({ name, fee, towns, note, icon }) {
           {fee}
         </span>
       </div>
-      <h3 className="font-heading text-xl font-bold text-snow-white mb-2">
+      <h2 className="font-heading text-xl font-bold text-snow-white mb-2">
         {name}
-      </h3>
+      </h2>
       <p className="text-vivid-teal text-sm mb-6">{towns}</p>
       <div className="mt-auto pt-6 border-t border-steel-blue/20">
         <p className="text-sm italic text-frost-gray">{note}</p>

@@ -13,6 +13,8 @@ export default function sitemap() {
     { path: "/remote-support", priority: 0.8, changeFrequency: "monthly" },
     { path: "/3d-printing", priority: 0.7, changeFrequency: "monthly" },
     { path: "/book", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/vacation-help", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/str-partners", priority: 0.8, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
     { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
     { path: "/terms", priority: 0.3, changeFrequency: "yearly" },

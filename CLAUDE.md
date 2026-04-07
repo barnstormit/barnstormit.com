@@ -41,17 +41,20 @@
 - Section vertical padding: 80–120px desktop, 48–64px mobile
 - Smooth scroll, subtle scroll-triggered fade-in-up animations (under 400ms, nothing flashy)
 
-## SEO / Accessibility (updated 2026-04-04)
+## SEO / Accessibility (updated 2026-04-07)
 - WCAG 2.1 AA — minimum 4.5:1 contrast ratio (critical on dark theme)
 - Unique `<title>`, meta description, and OG tags per page (all titles under 70 chars)
+- Title template is `%s | Barnstorm Computer Services` — page titles must NOT include "| Barnstorm" to avoid duplication
+- Meta descriptions: 120–155 chars for Bing compliance
 - `og:type` set on every page (`website` for pages, `article` for blog posts)
 - LocalBusiness schema.org structured data (layout.js)
 - Article schema.org structured data on blog posts (app/blog/[slug]/page.js)
-- Auto-generated branded OG image (app/opengraph-image.js) — 1200x630
+- Static OG image at `/public/barnstorm_cover_v2.png` — 1200x630 (referenced in layout.js metadata)
 - Auto-generated Apple touch icon (app/apple-icon.js) — 180x180
 - `theme-color: #0D1B2A` and `color-scheme: dark` on `<html>`
 - Geo meta tags (Fairplay, CO coordinates)
 - Google Fonts preconnect for Material Symbols
+- Google Analytics via `@next/third-parties` — measurement ID `G-C7QTMH6VK9`, production only (layout.js)
 - Semantic HTML, keyboard navigable, alt text on all images
 - `aria-hidden="true"` on all decorative icons (material-symbols-outlined)
 - Visible `focus-visible:ring-*` states on all interactive elements
@@ -60,6 +63,8 @@
 - No `transition-all` — use specific properties (e.g. `transition-[filter,transform]`)
 - `width`/`height` on images where possible; `loading="lazy"` on below-fold images
 - `tabular-nums` on numeric columns (pricing page)
+- CTA glass card padding: use `p-6 sm:p-10 md:p-16` (never `p-10` without mobile breakpoint)
+- Banner CTA buttons in flex-col layouts: always include `w-full md:w-auto`
 - Sitemap at `/sitemap.xml` (auto-generated, includes all pages + blog posts)
 - robots.txt at `/robots.txt`
 
@@ -68,6 +73,7 @@
 - `www.barnstormit.com` → 307 redirect to `barnstormit.com`
 - Deployed on Vercel from GitHub (barnstormit/barnstormit.com)
 - Google Search Console and Bing Webmaster Tools configured (2026-04-04)
+- Google Analytics: G-C7QTMH6VK9 (via @next/third-parties, production only)
 
 ## Content Rules
 - Phone number **(719) 838-0435** must be visible on every page without scrolling
@@ -76,6 +82,6 @@
 - Avoid jargon, buzzwords, generic stock photos
 
 ## Pages
-Homepage, Services, About, Pricing, Service Area, Contact, Blog, Vacation/STR Help, Remote Support
+Homepage, Services, About, Pricing, Service Area, Contact, Blog, Vacation Help, STR Partners, Remote Support, 3D Printing, Book
 
 See `DESIGN.md` for full page specs and `STITCH_PROMPTS.md` for section-by-section design prompts.
