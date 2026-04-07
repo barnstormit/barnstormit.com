@@ -212,6 +212,69 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Vacation & STR */}
+      <section className="pb-12 px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-6 block">
+            Vacation &amp; STR Support
+          </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link
+              href="/vacation-help"
+              className="glass-card rounded-xl p-8 flex flex-col group hover:border-vivid-teal/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            >
+              <span
+                aria-hidden="true"
+                className="material-symbols-outlined text-3xl text-vivid-teal mb-6"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                luggage
+              </span>
+              <h3 className="font-heading text-xl font-bold text-snow-white mb-3">
+                Vacation Tech Help
+              </h3>
+              <p className="text-frost-gray text-sm leading-relaxed flex-1">
+                Tech emergency during your stay? We come to your rental
+                fast&nbsp;&mdash; WiFi, laptops, Smart TV, and more.
+              </p>
+              <span className="mt-6 text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
+                Learn more
+                <span aria-hidden="true" className="material-symbols-outlined text-sm">arrow_forward</span>
+              </span>
+            </Link>
+            <Link
+              href="/str-partners"
+              className="glass-card rounded-xl p-8 flex flex-col group hover:border-alpine-gold/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              style={{ borderColor: "rgba(240, 165, 0, 0.4)", background: "rgba(240, 165, 0, 0.06)" }}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <span
+                  aria-hidden="true"
+                  className="material-symbols-outlined text-3xl text-alpine-gold"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  handshake
+                </span>
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-deep-navy px-3 py-1 rounded-full">
+                  NEW
+                </span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-snow-white mb-3">
+                STR Partner Program
+              </h3>
+              <p className="text-frost-gray text-sm leading-relaxed flex-1">
+                Property managers and hosts&nbsp;&mdash; keep your guests happy
+                with on-call tech support. No contracts, local response.
+              </p>
+              <span className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
+                Learn more
+                <span aria-hidden="true" className="material-symbols-outlined text-sm">arrow_forward</span>
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-10 md:p-16 text-center">

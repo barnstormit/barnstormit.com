@@ -10,6 +10,7 @@ const quickLinks = [
   { href: "/3d-printing", label: "3D Printing" },
   { href: "/contact", label: "Contact" },
   { href: "/vacation-help", label: "Vacation Tech Help" },
+  { href: "/str-partners", label: "STR Partners" },
   { href: "/blog", label: "Blog" },
 ];
 

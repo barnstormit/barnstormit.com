@@ -88,6 +88,18 @@ export default function Home() {
           </Link>
         </div>
 
+        {/* Vacation callout */}
+        <p className="text-sm text-frost-gray/70 mt-2 animate-fade-in-up stagger-4">
+          Vacationing in the mountains?{" "}
+          <Link
+            href="/vacation-help"
+            className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors inline-flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          >
+            Get vacation tech help
+            <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+          </Link>
+        </p>
+
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center items-center gap-y-4 gap-x-6 mt-12 pt-12 border-t border-frost-gray/15 w-full animate-fade-in-up stagger-4">
           <div className="flex items-center gap-2 text-snow-white">
