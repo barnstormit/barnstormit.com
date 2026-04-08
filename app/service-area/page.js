@@ -52,7 +52,6 @@ export default function ServiceArea() {
             <ZoneCard
               name="Local Zone"
               fee="Free"
-              oldFee="$25"
               towns="Fairplay, Alma, Como"
               note="Our home base."
               icon="home_pin"

@@ -449,10 +449,9 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Fairplay, Alma, Como
             </p>
-            <div className="mb-8">
-              <span className="text-sm font-heading text-frost-gray line-through mr-2">$25</span>
-              <span className="text-3xl font-heading font-bold text-vivid-teal">Free</span>
-              <span className="text-sm font-normal text-frost-gray ml-2">
+            <div className="text-3xl font-heading font-bold mb-8 text-vivid-teal">
+              Free{" "}
+              <span className="text-sm font-normal text-frost-gray">
                 Service Call Fee
               </span>
             </div>
