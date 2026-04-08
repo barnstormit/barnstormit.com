@@ -30,6 +30,35 @@ export default function Home() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
+        {/* Grand Opening Banner */}
+        <div
+          className="w-full rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-fade-in-up"
+          style={{
+            background: "#1B2838",
+            border: "2px solid #F0A500",
+            boxShadow: "0 0 20px rgba(240,165,0,0.1)",
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-alpine-gold text-2xl" aria-hidden="true">&#10022;</span>
+            <span className="font-heading text-lg sm:text-xl font-bold text-snow-white">
+              Grand Opening Special
+            </span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
+            <span className="text-snow-white text-sm">
+              50% off service call fees through July 4th
+            </span>
+            <Link
+              href="/pricing"
+              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            >
+              See Pricing
+              <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Eyebrow Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-frost-gray/20 animate-fade-in-up">
           <span
@@ -178,37 +207,6 @@ export default function Home() {
         </span>
       </div>
     </section>
-
-    {/* Grand Opening Banner */}
-    <div className="px-6 md:px-8 py-6">
-      <div
-        className="max-w-[1200px] mx-auto rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-        style={{
-          background: "#1B2838",
-          border: "2px solid #F0A500",
-          boxShadow: "0 0 20px rgba(240,165,0,0.1)",
-        }}
-      >
-        <div className="flex items-center gap-3">
-          <span className="text-alpine-gold text-2xl" aria-hidden="true">&#10022;</span>
-          <h2 className="font-heading text-xl sm:text-2xl font-bold text-snow-white">
-            Grand Opening Special
-          </h2>
-        </div>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
-          <p className="text-snow-white text-sm sm:text-base">
-            50% off service call fees through July 4th
-          </p>
-          <Link
-            href="/pricing"
-            className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-          >
-            See Pricing
-            <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
-          </Link>
-        </div>
-      </div>
-    </div>
 
     {/* Services Overview */}
     <section className="bg-midnight-slate/50 py-20 md:py-24 px-6 md:px-8">
