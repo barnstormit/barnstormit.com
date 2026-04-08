@@ -294,9 +294,12 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="text-frost-gray/40 text-xs font-mono text-center mt-8">
-        $100/hr &middot; Larger projects scoped &amp; quoted upfront
-      </p>
+      <div className="flex items-center justify-center gap-2 mt-10 pt-8 border-t border-frost-gray/10 max-w-[600px] mx-auto">
+        <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
+        <p className="text-snow-white text-sm">
+          $100/hr &middot; Larger projects scoped &amp; quoted upfront
+        </p>
+      </div>
     </section>
 
     {/* Why Barnstorm — Trust Section */}
