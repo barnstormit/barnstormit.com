@@ -398,7 +398,7 @@ function ResidentialTab() {
       {/* Bigger project nudge */}
       <div className="max-w-[1200px] mx-auto mt-8 text-center">
         <p className="text-frost-gray text-sm">
-          Got a bigger project? We&apos;ll scope it first — no open-ended billing.{" "}
+          Got a bigger project? We&apos;ll quote a fixed price so you know the cost before we start.{" "}
           <Link
             href="/contact"
             className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors inline-flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"

@@ -297,7 +297,14 @@ export default function Home() {
       <div className="flex items-center justify-center gap-2 mt-10 pt-8 border-t border-frost-gray/10 max-w-[600px] mx-auto">
         <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
         <p className="text-snow-white text-lg">
-          Small jobs billed hourly &middot; Bigger projects get better rates.
+          Small jobs billed hourly &middot; Big projects get a fixed price &mdash;{" "}
+          <Link
+            href="/book"
+            className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          >
+            book a call
+          </Link>{" "}
+          to get started.
         </p>
       </div>
     </section>
