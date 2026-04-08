@@ -259,11 +259,11 @@ function ColoradoMap() {
       })}
 
       {/* Legend — pricing zones by label color */}
-      <g transform="translate(500, 350)">
+      <g transform="translate(480, 350)">
         <rect
           x="0"
           y="0"
-          width="180"
+          width="210"
           height="115"
           rx="8"
           fill="#0D1B2A"
@@ -281,22 +281,39 @@ function ColoradoMap() {
         >
           Pricing Zones
         </text>
+        {/* Local — Free */}
         <circle cx="22" cy="46" r="6" fill="#FFFFFF" />
-        <text x="36" y="50" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
-          Local $25
+        <text x="36" y="50" fontSize="12" fontFamily="sans-serif">
+          <tspan fill="#F7F9FC">Local </tspan>
+          <tspan fill="#3A9BD5" fontWeight="bold">Free</tspan>
         </text>
+        {/* Regional — $50 → $25 */}
         <circle cx="22" cy="66" r="6" fill="#F0A500" />
-        <text x="36" y="70" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
-          Regional $50
+        <text x="36" y="70" fontSize="12" fontFamily="sans-serif">
+          <tspan fill="#F7F9FC">Regional </tspan>
+          <tspan fill="#8AA0B4">$50</tspan>
+          <tspan fill="#F7F9FC"> </tspan>
+          <tspan fill="#F0A500" fontWeight="bold">$25</tspan>
         </text>
+        <line x1="100" y1="67" x2="120" y2="67" stroke="#8AA0B4" strokeWidth="1" />
+        {/* Extended — $75 → $38 */}
         <circle cx="22" cy="86" r="6" fill="#5CE0D6" />
-        <text x="36" y="90" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
-          Extended $75
+        <text x="36" y="90" fontSize="12" fontFamily="sans-serif">
+          <tspan fill="#F7F9FC">Extended </tspan>
+          <tspan fill="#8AA0B4">$75</tspan>
+          <tspan fill="#F7F9FC"> </tspan>
+          <tspan fill="#F0A500" fontWeight="bold">$38</tspan>
         </text>
+        <line x1="102" y1="87" x2="122" y2="87" stroke="#8AA0B4" strokeWidth="1" />
+        {/* Remote — $100+ → $50 */}
         <circle cx="22" cy="106" r="6" fill="#DC2626" />
-        <text x="36" y="110" fill="#F7F9FC" fontSize="12" fontFamily="sans-serif">
-          Remote $100+
+        <text x="36" y="110" fontSize="12" fontFamily="sans-serif">
+          <tspan fill="#F7F9FC">Remote </tspan>
+          <tspan fill="#8AA0B4">$100+</tspan>
+          <tspan fill="#F7F9FC"> </tspan>
+          <tspan fill="#F0A500" fontWeight="bold">$50</tspan>
         </text>
+        <line x1="93" y1="107" x2="123" y2="107" stroke="#8AA0B4" strokeWidth="1" />
       </g>
     </svg>
   );
