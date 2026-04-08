@@ -225,7 +225,6 @@ export default function Home() {
             We come to you. Professional troubleshooting for home offices,
             vacation rentals, and local businesses across the high country.
           </p>
-          <p className="text-frost-gray/40 text-xs mt-4 font-mono">$100/hr &middot; Larger projects scoped &amp; quoted upfront</p>
         </div>
 
         {/* Network & WiFi */}
@@ -242,7 +241,6 @@ export default function Home() {
             Secure networks, strong WiFi coverage, firewalls, and encrypted
             VPNs for homes and businesses.
           </p>
-          <p className="text-frost-gray/40 text-xs mt-4 font-mono">$100/hr &middot; Larger projects scoped &amp; quoted upfront</p>
         </div>
 
         {/* Remote Support */}
@@ -259,7 +257,6 @@ export default function Home() {
             Instant assistance via secure screen sharing. Resolving software
             issues without the drive time.
           </p>
-          <p className="text-frost-gray/40 text-xs mt-4 font-mono">$100/hr &middot; Larger projects scoped &amp; quoted upfront</p>
         </div>
 
       </div>
@@ -279,7 +276,6 @@ export default function Home() {
             Managed services, consulting, and service contracts tailored for
             local businesses.
           </p>
-          <p className="text-frost-gray/40 text-xs mt-4 font-mono">$100/hr &middot; Larger projects scoped &amp; quoted upfront</p>
         </div>
 
         {/* AI & Automation */}
@@ -296,9 +292,11 @@ export default function Home() {
             Streamline your business with AI tools, workflow automation, and
             smart integrations that save time and cut busywork.
           </p>
-          <p className="text-frost-gray/40 text-xs mt-4 font-mono">$100/hr &middot; Larger projects scoped &amp; quoted upfront</p>
         </div>
       </div>
+      <p className="text-frost-gray/40 text-xs font-mono text-center mt-8">
+        $100/hr &middot; Larger projects scoped &amp; quoted upfront
+      </p>
     </section>
 
     {/* Why Barnstorm — Trust Section */}
