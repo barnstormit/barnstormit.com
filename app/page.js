@@ -179,6 +179,23 @@ export default function Home() {
       </div>
     </section>
 
+    {/* Grand Opening Promo Strip */}
+    <div className="px-6 md:px-8 py-4 bg-midnight-slate/80">
+      <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 border-l-4 border-alpine-gold pl-4 py-2">
+        <p className="text-frost-gray text-sm text-center sm:text-left">
+          <span className="text-alpine-gold font-bold">Grand Opening Special</span>
+          {" "}&mdash; 50% off service call fees through July 4th
+        </p>
+        <Link
+          href="/pricing"
+          className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+        >
+          See Pricing
+          <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+        </Link>
+      </div>
+    </div>
+
     {/* Services Overview */}
     <section className="bg-midnight-slate/50 py-20 md:py-24 px-6 md:px-8">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -420,8 +437,8 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Fairplay, Alma, Como
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
-              $25{" "}
+            <div className="text-3xl font-heading font-bold mb-8 text-vivid-teal">
+              Free{" "}
               <span className="text-sm font-normal text-frost-gray">
                 Service Call Fee
               </span>

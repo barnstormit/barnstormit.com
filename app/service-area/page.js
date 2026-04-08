@@ -51,10 +51,11 @@ export default function ServiceArea() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <ZoneCard
               name="Local Zone"
-              fee="$25"
+              fee="Free"
               towns="Fairplay, Alma, Como"
               note="Our home base."
               icon="home_pin"
+              feeColor="text-vivid-teal"
             />
             <ZoneCard
               name="Regional Zone"
@@ -134,14 +135,14 @@ export default function ServiceArea() {
   );
 }
 
-function ZoneCard({ name, fee, towns, note, icon }) {
+function ZoneCard({ name, fee, towns, note, icon, feeColor }) {
   return (
     <div className="glass-card rounded-xl p-8 flex flex-col h-full">
       <div className="flex justify-between items-start mb-6">
         <span className="p-3 rounded-lg bg-vivid-teal/10 text-vivid-teal">
           <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
         </span>
-        <span className="font-heading text-xl font-bold text-alpine-gold">
+        <span className={`font-heading text-xl font-bold ${feeColor || "text-alpine-gold"}`}>
           {fee}
         </span>
       </div>

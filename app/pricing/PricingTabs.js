@@ -100,6 +100,80 @@ export default function PricingTabs() {
 function ResidentialTab() {
   return (
     <>
+      {/* Grand Opening Special */}
+      <div
+        className="max-w-[1200px] mx-auto mb-8 rounded-xl overflow-hidden"
+        style={{
+          background: "#1B2838",
+          borderTop: "2px solid #F0A500",
+          boxShadow: "0 4px 24px rgba(240,165,0,0.15)",
+        }}
+      >
+        <div className="p-6 sm:p-8">
+          <div className="flex items-center gap-3 mb-1">
+            <span className="text-alpine-gold text-xl" aria-hidden="true">&#10022;</span>
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-snow-white">
+              Grand Opening Special
+            </h2>
+          </div>
+          <p className="text-frost-gray mb-6">
+            50% off all service call fees through July 4th
+          </p>
+
+          <div className="overflow-x-auto -mx-2">
+            <table className="w-full min-w-[320px]">
+              <thead>
+                <tr className="border-b border-steel-blue/30">
+                  <th className="text-left font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray/50 pb-3">Zone</th>
+                  <th className="text-right font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray/50 pb-3">Normal</th>
+                  <th className="text-center font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray/50 pb-3 px-2" aria-hidden="true" />
+                  <th className="text-right font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray/50 pb-3">Launch Price</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-steel-blue/15">
+                <tr>
+                  <td className="py-3 font-heading font-bold text-vivid-teal">Local</td>
+                  <td className="py-3 text-right text-vivid-teal font-heading font-bold tabular-nums">Free</td>
+                  <td className="py-3 text-center text-frost-gray/30 px-2" aria-hidden="true">&mdash;</td>
+                  <td className="py-3 text-right text-vivid-teal font-heading font-bold tabular-nums">Free</td>
+                </tr>
+                <tr>
+                  <td className="py-3 font-heading font-bold text-snow-white">Regional</td>
+                  <td className="py-3 text-right text-frost-gray line-through tabular-nums">$50</td>
+                  <td className="py-3 text-center text-frost-gray/30 px-2" aria-hidden="true">&rarr;</td>
+                  <td className="py-3 text-right text-alpine-gold font-heading font-bold tabular-nums">$25</td>
+                </tr>
+                <tr>
+                  <td className="py-3 font-heading font-bold text-snow-white">Extended</td>
+                  <td className="py-3 text-right text-frost-gray line-through tabular-nums">$75</td>
+                  <td className="py-3 text-center text-frost-gray/30 px-2" aria-hidden="true">&rarr;</td>
+                  <td className="py-3 text-right text-alpine-gold font-heading font-bold tabular-nums">$38</td>
+                </tr>
+                <tr>
+                  <td className="py-3 font-heading font-bold text-snow-white">Remote</td>
+                  <td className="py-3 text-right text-frost-gray line-through tabular-nums">$100</td>
+                  <td className="py-3 text-center text-frost-gray/30 px-2" aria-hidden="true">&rarr;</td>
+                  <td className="py-3 text-right text-alpine-gold font-heading font-bold tabular-nums">$50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <Link
+              href="/book"
+              className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-8 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            >
+              Book a Service Call
+              <span className="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
+            </Link>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-alpine-gold bg-alpine-gold/10 px-3 py-1.5 rounded-full border border-alpine-gold/30">
+              Offer ends July 4, 2026
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Rate Card + Zone Fees */}
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Rate Card */}
@@ -177,8 +251,8 @@ function ResidentialTab() {
                   <td className="py-4 text-frost-gray text-sm">
                     Fairplay, Alma, Como
                   </td>
-                  <td className="py-4 text-right font-heading font-bold text-alpine-gold tabular-nums">
-                    $25
+                  <td className="py-4 text-right font-heading font-bold text-vivid-teal tabular-nums">
+                    Free
                   </td>
                 </tr>
                 <tr>
