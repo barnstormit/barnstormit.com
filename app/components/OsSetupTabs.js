@@ -90,13 +90,11 @@ function WindowsSteps() {
         <p className="text-frost-gray mb-4 leading-relaxed">
           Double-click{" "}
           <span className="text-snow-white font-bold">rustdesk.exe</span> to
-          open it. Look for the{" "}
-          <span className="text-snow-white font-bold">three small vertical dots (</span>
-          <span className="text-vivid-teal font-bold inline-flex flex-col items-center leading-[0.4] text-lg align-middle mx-1" aria-hidden="true">
-            &bull;<br />&bull;<br />&bull;
-          </span>
-          <span className="text-snow-white font-bold">)</span> next to your ID
-          number. Click them to open the settings.
+          open it. You should see a window that looks like the screenshot
+          below. Look for the{" "}
+          <span className="text-snow-white font-bold">three small vertical dots</span>{" "}
+          inside the red circle next to your ID number. Click those dots to
+          open the settings.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -108,6 +106,10 @@ function WindowsSteps() {
             className="w-full"
           />
         </div>
+        <p className="text-frost-gray/60 text-sm italic mt-3">
+          Your ID and password will be different &mdash; we&apos;ve hidden ours
+          in this example for privacy.
+        </p>
       </div>
 
       {/* Step 3 */}
