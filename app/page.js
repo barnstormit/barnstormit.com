@@ -300,7 +300,7 @@ export default function Home() {
           href="/book"
           className="text-vivid-teal font-bold hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
-          book a call
+          Book a Call
         </Link>{" "}
         to get started.
       </p>
