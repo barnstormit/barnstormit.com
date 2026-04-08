@@ -157,24 +157,28 @@ function WindowsSteps() {
           </StepHeading>
         </div>
         <p className="text-frost-gray mb-4 leading-relaxed">
-          You need to type (or copy and paste) the information below into the
-          matching boxes shown in the picture. To copy: click the{" "}
+          Copy each value below and paste it into the matching box in the app.
+          To copy: click the{" "}
           <span className="text-snow-white font-bold">Copy</span> button next to
           each value. To paste: click inside the box in the app, then press{" "}
           <span className="text-snow-white font-bold">Ctrl + V</span> on your
           keyboard (hold down Ctrl and tap V).
         </p>
-        <div className="glass-card rounded-xl overflow-hidden mb-4">
+        <ServerConfigBlock />
+        <p className="text-frost-gray/60 text-sm mt-4 mb-4">
+          Here&apos;s what it should look like when filled in:
+        </p>
+        <div className="glass-card rounded-xl overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/rustdesk-step4-server.png"
-            alt="RustDesk ID/Relay Server configuration screen"
+            src="/images/rustdesk-settings.png"
+            alt="RustDesk ID/Relay Server configuration screen with fields filled in"
             width={779}
             height={591}
             className="w-full"
+            loading="lazy"
           />
         </div>
-        <ServerConfigBlock />
       </div>
 
       {/* Step 5 */}
@@ -474,6 +478,20 @@ function MacSteps() {
           keyboard (hold down Command and tap V).
         </p>
         <ServerConfigBlock />
+        <p className="text-frost-gray/60 text-sm mt-4 mb-4">
+          Here&apos;s what it should look like when filled in:
+        </p>
+        <div className="glass-card rounded-xl overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/rustdesk-settings.png"
+            alt="RustDesk server configuration screen with fields filled in"
+            width={779}
+            height={591}
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
       </div>
 
       {/* Step 9 — Call Us */}
