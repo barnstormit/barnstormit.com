@@ -296,8 +296,8 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center gap-2 mt-10 pt-8 border-t border-frost-gray/10 max-w-[600px] mx-auto">
         <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true" style={{ fontVariationSettings: "'FILL' 1" }}>info</span>
-        <p className="text-snow-white text-sm">
-          $100/hr &middot; Larger projects scoped &amp; quoted upfront
+        <p className="text-snow-white text-base">
+          Every job gets a clear estimate upfront &mdash; no surprises.
         </p>
       </div>
     </section>
