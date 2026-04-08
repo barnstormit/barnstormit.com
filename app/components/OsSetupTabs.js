@@ -122,31 +122,23 @@ function WindowsSteps() {
           </StepHeading>
         </div>
         <p className="text-frost-gray mb-4 leading-relaxed">
-          If Windows asks &ldquo;Do you want to allow this app to make
-          changes?&rdquo; &mdash; click{" "}
+          Click{" "}
+          <span className="text-snow-white font-bold">Network</span> in the
+          left sidebar. You&apos;ll see a button that says{" "}
+          <span className="text-snow-white font-bold">Unlock Network Settings</span>{" "}
+          &mdash; click it. If Windows asks &ldquo;Do you want to allow this
+          app to make changes?&rdquo; &mdash; click{" "}
           <span className="text-snow-white font-bold">Yes</span>.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/rustdesk-step2-network.png"
-              alt="RustDesk settings — click Network on the left sidebar"
-              width={778}
-              height={583}
-              className="w-full"
-            />
-          </div>
-          <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/rustdesk-step3-unlock.png"
-              alt="Click Unlock Network Settings and approve the Windows prompt"
-              width={771}
-              height={581}
-              className="w-full"
-            />
-          </div>
+        <div className="glass-card rounded-xl overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/rustdesk-step2-network.png"
+            alt="RustDesk settings — click Unlock Network Settings circled in red"
+            width={778}
+            height={583}
+            className="w-full"
+          />
         </div>
       </div>
 
@@ -155,7 +147,32 @@ function WindowsSteps() {
         <div className="flex items-baseline gap-4 mb-4">
           <StepNumber n={4} />
           <StepHeading>
-            Click &ldquo;ID/Relay Server&rdquo; and fill in the boxes
+            Click &ldquo;ID/Relay Server&rdquo;
+          </StepHeading>
+        </div>
+        <p className="text-frost-gray mb-4 leading-relaxed">
+          After unlocking, you&apos;ll see the screen below. Click{" "}
+          <span className="text-snow-white font-bold">ID/Relay Server</span>{" "}
+          (circled in red) to open the connection settings.
+        </p>
+        <div className="glass-card rounded-xl overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/rustdesk-step3-unlock.png"
+            alt="RustDesk Network settings — click ID/Relay Server circled in red"
+            width={771}
+            height={581}
+            className="w-full"
+          />
+        </div>
+      </div>
+
+      {/* Step 5 */}
+      <div>
+        <div className="flex items-baseline gap-4 mb-4">
+          <StepNumber n={5} />
+          <StepHeading>
+            Fill in the boxes
           </StepHeading>
         </div>
         <p className="text-frost-gray mb-4 leading-relaxed">
@@ -183,10 +200,10 @@ function WindowsSteps() {
         </div>
       </div>
 
-      {/* Step 5 */}
+      {/* Step 6 */}
       <div>
         <div className="flex items-baseline gap-4 mb-4">
-          <StepNumber n={5} />
+          <StepNumber n={6} />
           <StepHeading>
             Go back to the Home screen and make sure it says &ldquo;Ready&rdquo;
           </StepHeading>
@@ -210,10 +227,10 @@ function WindowsSteps() {
         </div>
       </div>
 
-      {/* Step 6 */}
+      {/* Step 7 */}
       <div>
         <div className="flex items-baseline gap-4 mb-4">
-          <StepNumber n={6} />
+          <StepNumber n={7} />
           <StepHeading>Call Us</StepHeading>
         </div>
         <CallUsBlock />
