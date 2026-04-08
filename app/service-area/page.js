@@ -52,6 +52,7 @@ export default function ServiceArea() {
             <ZoneCard
               name="Local Zone"
               fee="Free"
+              oldFee="$25"
               towns="Fairplay, Alma, Como"
               note="Our home base."
               icon="home_pin"
@@ -59,27 +60,33 @@ export default function ServiceArea() {
             />
             <ZoneCard
               name="Regional Zone"
-              fee="$50"
+              fee="$25"
+              oldFee="$50"
               towns="Breckenridge, Blue River, Buena Vista, Jefferson, Grant"
               note="Just over the pass."
               icon="distance"
             />
             <ZoneCard
               name="Extended Zone"
-              fee="$75"
+              fee="$38"
+              oldFee="$75"
               towns="Frisco, Bailey"
               note="Worth the drive."
               icon="explore"
             />
             <ZoneCard
               name="Remote Zone"
-              fee="$100+"
+              fee="$50"
+              oldFee="$100+"
               towns="Dillon, Silverthorne, Leadville, Salida"
               note="We&apos;ll come to you."
               icon="landscape"
             />
           </div>
-          <div className="mt-6 text-center">
+          <p className="mt-6 text-center text-frost-gray text-sm italic">
+            Launch special pricing through July 4, 2026
+          </p>
+          <div className="mt-3 text-center">
             <Link
               href="/pricing"
               className="text-vivid-teal hover:text-alpine-gold transition-colors font-heading font-bold text-sm focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
@@ -135,16 +142,21 @@ export default function ServiceArea() {
   );
 }
 
-function ZoneCard({ name, fee, towns, note, icon, feeColor }) {
+function ZoneCard({ name, fee, oldFee, towns, note, icon, feeColor }) {
   return (
     <div className="glass-card rounded-xl p-8 flex flex-col h-full">
       <div className="flex justify-between items-start mb-6">
         <span className="p-3 rounded-lg bg-vivid-teal/10 text-vivid-teal">
           <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
         </span>
-        <span className={`font-heading text-xl font-bold ${feeColor || "text-alpine-gold"}`}>
-          {fee}
-        </span>
+        <div className="text-right">
+          {oldFee && (
+            <span className="text-frost-gray text-sm line-through mr-2">{oldFee}</span>
+          )}
+          <span className={`font-heading text-xl font-bold ${feeColor || "text-alpine-gold"}`}>
+            {fee}
+          </span>
+        </div>
       </div>
       <h2 className="font-heading text-xl font-bold text-snow-white mb-2">
         {name}

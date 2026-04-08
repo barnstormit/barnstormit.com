@@ -102,17 +102,17 @@ function ResidentialTab() {
     <>
       {/* Grand Opening Special */}
       <div
-        className="max-w-[1200px] mx-auto mb-8 rounded-xl overflow-hidden"
+        className="max-w-[1200px] mx-auto mb-10 rounded-xl overflow-hidden"
         style={{
           background: "#1B2838",
-          borderTop: "2px solid #F0A500",
-          boxShadow: "0 4px 24px rgba(240,165,0,0.15)",
+          border: "2px solid #F0A500",
+          boxShadow: "0 0 20px rgba(240,165,0,0.1)",
         }}
       >
         <div className="p-6 sm:p-8">
-          <div className="flex items-center gap-3 mb-1">
-            <span className="text-alpine-gold text-xl" aria-hidden="true">&#10022;</span>
-            <h2 className="font-heading text-xl sm:text-2xl font-bold text-snow-white">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-alpine-gold text-2xl" aria-hidden="true">&#10022;</span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-snow-white">
               Grand Opening Special
             </h2>
           </div>

@@ -179,20 +179,34 @@ export default function Home() {
       </div>
     </section>
 
-    {/* Grand Opening Promo Strip */}
-    <div className="px-6 md:px-8 py-4 bg-midnight-slate/80">
-      <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 border-l-4 border-alpine-gold pl-4 py-2">
-        <p className="text-frost-gray text-sm text-center sm:text-left">
-          <span className="text-alpine-gold font-bold">Grand Opening Special</span>
-          {" "}&mdash; 50% off service call fees through July 4th
-        </p>
-        <Link
-          href="/pricing"
-          className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-        >
-          See Pricing
-          <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
-        </Link>
+    {/* Grand Opening Banner */}
+    <div className="px-6 md:px-8 py-6">
+      <div
+        className="max-w-[1200px] mx-auto rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+        style={{
+          background: "#1B2838",
+          border: "2px solid #F0A500",
+          boxShadow: "0 0 20px rgba(240,165,0,0.1)",
+        }}
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-alpine-gold text-2xl" aria-hidden="true">&#10022;</span>
+          <h2 className="font-heading text-xl sm:text-2xl font-bold text-snow-white">
+            Grand Opening Special
+          </h2>
+        </div>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+          <p className="text-snow-white text-sm sm:text-base">
+            50% off service call fees through July 4th
+          </p>
+          <Link
+            href="/pricing"
+            className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          >
+            See Pricing
+            <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+          </Link>
+        </div>
       </div>
     </div>
 
@@ -437,9 +451,10 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Fairplay, Alma, Como
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-vivid-teal">
-              Free{" "}
-              <span className="text-sm font-normal text-frost-gray">
+            <div className="mb-8">
+              <span className="text-sm font-heading text-frost-gray line-through mr-2">$25</span>
+              <span className="text-3xl font-heading font-bold text-vivid-teal">Free</span>
+              <span className="text-sm font-normal text-frost-gray ml-2">
                 Service Call Fee
               </span>
             </div>
@@ -477,9 +492,10 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Breckenridge, Blue River, Buena Vista, Jefferson, Grant
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
-              $50{" "}
-              <span className="text-sm font-normal text-frost-gray">
+            <div className="mb-8">
+              <span className="text-sm font-heading text-frost-gray line-through mr-2">$50</span>
+              <span className="text-3xl font-heading font-bold text-alpine-gold">$25</span>
+              <span className="text-sm font-normal text-frost-gray ml-2">
                 Service Call Fee
               </span>
             </div>
@@ -517,9 +533,10 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Frisco, Bailey
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
-              $75{" "}
-              <span className="text-sm font-normal text-frost-gray">
+            <div className="mb-8">
+              <span className="text-sm font-heading text-frost-gray line-through mr-2">$75</span>
+              <span className="text-3xl font-heading font-bold text-alpine-gold">$38</span>
+              <span className="text-sm font-normal text-frost-gray ml-2">
                 Service Call Fee
               </span>
             </div>
@@ -557,9 +574,10 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Dillon, Silverthorne, Leadville, Salida
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-snow-white">
-              $100+{" "}
-              <span className="text-sm font-normal text-frost-gray">
+            <div className="mb-8">
+              <span className="text-sm font-heading text-frost-gray line-through mr-2">$100+</span>
+              <span className="text-3xl font-heading font-bold text-alpine-gold">$50</span>
+              <span className="text-sm font-normal text-frost-gray ml-2">
                 Service Call Fee
               </span>
             </div>
