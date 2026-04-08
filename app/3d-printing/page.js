@@ -59,7 +59,7 @@ export default function ThreeDPrinting() {
     <>
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto text-center">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
             3D PRINTING
           </span>
@@ -71,7 +71,7 @@ export default function ThreeDPrinting() {
               NEW
             </span>
           </div>
-          <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-frost-gray max-w-2xl mx-auto leading-relaxed">
             Need a part that doesn&apos;t exist? We can probably print it.
             Bring us your file or your idea and we&apos;ll make it real.
           </p>

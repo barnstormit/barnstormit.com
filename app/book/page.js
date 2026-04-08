@@ -19,14 +19,14 @@ export default function Book() {
     <>
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto text-center">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
             Schedule a Call
           </span>
           <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
             Book a <span className="text-vivid-teal">Discovery Call</span>
           </h1>
-          <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl text-frost-gray max-w-2xl mx-auto leading-relaxed">
             Quick call to discuss your tech issue and determine if an on-site
             visit or remote session is the best fit. We&apos;ll cover what&apos;s
             going on, what to expect, and get you scheduled.
