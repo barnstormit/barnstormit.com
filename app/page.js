@@ -298,7 +298,7 @@ export default function Home() {
         Small jobs billed hourly &middot; Big projects get a fixed price &mdash;{" "}
         <Link
           href="/book"
-          className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          className="text-vivid-teal font-bold hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
           book a call
         </Link>{" "}
