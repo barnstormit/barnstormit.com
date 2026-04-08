@@ -205,26 +205,36 @@ function WindowsSteps() {
         <div className="flex items-baseline gap-4 mb-4">
           <StepNumber n={6} />
           <StepHeading>
-            Go back to the Home screen and make sure it says &ldquo;Ready&rdquo;
+            Go back to the Home screen and share your ID and password with us
           </StepHeading>
         </div>
         <p className="text-frost-gray mb-4 leading-relaxed">
-          Click <span className="text-snow-white font-bold">Home</span> at the
-          top of the app. You should see the word{" "}
-          <span className="text-vivid-teal font-bold">Ready</span> at the bottom
-          of the window and a number on the left side &mdash; that&apos;s your
-          ID.
+          Click{" "}
+          <span className="text-snow-white font-bold">Home</span> at the top of
+          the app (circled in red). You should see the word{" "}
+          <span className="text-vivid-teal font-bold">Ready</span> in green at
+          the bottom of the window. On the left side you&apos;ll see your{" "}
+          <span className="text-snow-white font-bold">ID</span> (circled in
+          green) and your{" "}
+          <span className="text-snow-white font-bold">One-time password</span>{" "}
+          (also circled in green). When you call us, you&apos;ll read these two
+          values to Jeff so he can connect to your computer. That&apos;s it
+          &mdash; you&apos;re all set!
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/rustdesk-step5-ready.png"
-            alt="RustDesk home screen showing Ready status and your ID number"
+            alt="RustDesk home screen showing your ID and one-time password circled in green"
             width={773}
             height={584}
             className="w-full"
           />
         </div>
+        <p className="text-frost-gray/60 text-sm italic mt-3">
+          Your ID and password are unique to your computer &mdash; we&apos;ve
+          hidden ours in this example for privacy.
+        </p>
       </div>
 
       {/* Step 7 */}
