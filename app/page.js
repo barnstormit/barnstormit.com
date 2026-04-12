@@ -280,17 +280,22 @@ export default function Home() {
 
         {/* 3D Printing */}
         <Link href="/3d-printing" className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/3 block focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none">
-          <div className="w-14 h-14 rounded-lg bg-vivid-teal/10 flex items-center justify-center mb-6 group-hover:bg-vivid-teal/20 transition-colors border border-vivid-teal/20">
-            <span className="material-symbols-outlined text-vivid-teal text-3xl" aria-hidden="true">
-              view_in_ar
+          <div className="flex items-center justify-between mb-6">
+            <div className="w-14 h-14 rounded-lg bg-vivid-teal/10 flex items-center justify-center group-hover:bg-vivid-teal/20 transition-colors border border-vivid-teal/20">
+              <span className="material-symbols-outlined text-vivid-teal text-3xl" aria-hidden="true">
+                view_in_ar
+              </span>
+            </div>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-alpine-gold bg-alpine-gold/10 px-2.5 py-1 rounded-full border border-alpine-gold/30">
+              New
             </span>
           </div>
           <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
             3D Printing
           </h2>
           <p className="text-frost-gray text-sm leading-relaxed">
-            Custom parts, replacements, and prototypes. Bring your file or
-            idea and we&apos;ll make it real.
+            Need a part that doesn&apos;t exist? We can probably print it.
+            Bring us your file or your idea and we&apos;ll make it real.
           </p>
         </Link>
       </div>
