@@ -21,6 +21,9 @@ export async function generateMetadata({ params }) {
       type: "article",
       publishedTime: post.date,
       authors: ["Jeff Barnstorf"],
+      ...(post.image
+        ? { images: [{ url: `https://barnstormit.com${post.image}`, width: 1200, height: 630 }] }
+        : {}),
     },
   };
 }
