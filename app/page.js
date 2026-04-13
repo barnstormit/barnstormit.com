@@ -671,6 +671,55 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    {/* Latest from the Blog */}
+    <section className="py-20 md:py-28 px-6 md:px-8 bg-midnight-slate/50">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="text-center mb-12">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+            Latest from the Blog
+          </span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-snow-white tracking-tight text-balance">
+            What We&apos;re Working On
+          </h2>
+        </div>
+
+        <Link
+          href="/blog/tailscale-mesh-vpn"
+          className="glass-card group block overflow-hidden hover:border-vivid-teal/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="relative h-56 md:h-auto">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/blog/tailscale-mesh-vpn-header.jpg"
+                alt="How I Use Tailscale to Run My Business From Anywhere in the Mountains"
+                className="w-full h-full object-cover object-left"
+                width={600}
+                height={400}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-midnight-slate/60 hidden md:block" />
+            </div>
+            <div className="p-6 sm:p-10 md:p-12 flex flex-col justify-center">
+              <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold px-3 py-1 rounded-full border text-vivid-teal bg-vivid-teal/10 border-vivid-teal/30 w-fit mb-4">
+                Tech Tips
+              </span>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-snow-white tracking-tight leading-tight mb-4 group-hover:text-vivid-teal transition-colors text-balance">
+                How I Use Tailscale to Run My Business From Anywhere in the Mountains
+              </h3>
+              <p className="text-frost-gray leading-relaxed mb-6">
+                How a mesh VPN connects my entire infrastructure — from a Raspberry Pi in Fairplay to a VPS in Los Angeles — and why you might want one too.
+              </p>
+              <span className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
+                Read more
+                <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </section>
     </>
   );
 }
