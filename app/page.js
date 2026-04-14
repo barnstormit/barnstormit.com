@@ -299,7 +299,7 @@ export default function Home() {
           </p>
         </Link>
       </div>
-      <p className="mt-10 pt-8 border-t border-frost-gray/10 max-w-[1200px] mx-auto text-center text-snow-white text-sm md:text-base whitespace-nowrap">
+      <p className="mt-10 pt-8 border-t border-frost-gray/10 max-w-[1200px] mx-auto text-center text-snow-white text-sm md:text-base">
         Small jobs billed hourly &middot; Big projects get a fixed price &mdash;{" "}
         <Link
           href="/book"

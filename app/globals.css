@@ -23,6 +23,7 @@ body {
   background-color: var(--color-deep-navy);
   color: var(--color-snow-white);
   font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
 /* --- Glass Card Utility --- */
@@ -44,6 +45,7 @@ body {
 /* --- Smooth Scrolling --- */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* --- Selection Color --- */
