@@ -82,7 +82,7 @@ export default async function BlogPost({ params }) {
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-64 md:h-96 object-cover"
+              className="w-full h-52 sm:h-64 md:h-96 object-cover object-bottom"
               loading="lazy"
             />
           </div>
@@ -109,7 +109,7 @@ export default async function BlogPost({ params }) {
 
         {/* Content */}
         <div
-          className="prose prose-invert prose-lg max-w-none
+          className="prose prose-invert prose-base md:prose-lg max-w-none
             prose-headings:font-heading prose-headings:text-snow-white prose-headings:tracking-tight
             prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
             prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
@@ -117,7 +117,8 @@ export default async function BlogPost({ params }) {
             prose-strong:text-snow-white
             prose-a:text-vivid-teal prose-a:no-underline hover:prose-a:underline
             prose-li:text-frost-gray
-            prose-ul:space-y-1"
+            prose-ul:space-y-1
+            prose-pre:overflow-x-auto prose-pre:text-sm prose-code:text-sm prose-code:break-words"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
 
