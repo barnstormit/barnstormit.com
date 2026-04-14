@@ -300,7 +300,7 @@ export default function Home() {
         </Link>
       </div>
       <p className="mt-10 pt-8 border-t border-frost-gray/10 max-w-[1200px] mx-auto text-center text-snow-white text-sm md:text-base">
-        Small jobs billed hourly &middot; Big projects get a fixed price &mdash;{" "}
+        Every job gets a clear estimate &mdash;{" "}
         <Link
           href="/book"
           className="text-alpine-gold font-bold hover:text-vivid-teal hover:underline transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"

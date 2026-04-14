@@ -174,26 +174,22 @@ function ResidentialTab() {
         </div>
       </div>
 
-      {/* Rate Card + Zone Fees */}
+      {/* Pricing Info + Zone Fees */}
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* Rate Card */}
+        {/* Pricing Info */}
         <div className="glass-card rounded-xl p-8 md:p-10 flex flex-col">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/60 mb-6 block">
-            Standard Rate
+            How Pricing Works
           </span>
-          <div className="mb-6">
-            <span className="font-heading text-6xl md:text-7xl font-black text-alpine-gold">
-              $100
-            </span>
-            <span className="text-frost-gray text-2xl font-heading font-medium ml-1">
-              /hour
-            </span>
-          </div>
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-snow-white mb-4">
+            Clear Estimates,{" "}
+            <span className="text-alpine-gold">No Surprises</span>
+          </h2>
           <p className="text-frost-gray leading-relaxed mb-4">
-            1.5-hour minimum for on-site service calls.
+            Pricing varies by job — contact us for a free estimate. Every job is scoped and quoted before work begins.
           </p>
           <p className="text-frost-gray/50 text-sm leading-relaxed mb-8">
-            Parts and travel billed separately — see below.
+            Parts billed separately at fair pricing. Bigger projects get a fixed quote.
           </p>
           <div className="mt-auto space-y-3">
             <div className="flex items-center gap-2 text-vivid-teal">

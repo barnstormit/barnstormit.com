@@ -5,12 +5,12 @@ import PricingTabs from "./PricingTabs";
 export const metadata = {
   title: "Pricing",
   description:
-    "Transparent IT rates — $100/hour, no hidden fees. Zone-based service fees from $25–$100+. Serving Colorado mountain communities.",
+    "Transparent IT pricing — zone-based service fees, clear estimates, no hidden charges. Serving Colorado mountain communities.",
   alternates: { canonical: "https://barnstormit.com/pricing" },
   openGraph: {
     title: "Pricing | Barnstorm Computer Services",
     description:
-      "Transparent IT support pricing — $100/hour, zone-based service fees, no surprises.",
+      "Transparent IT support pricing — zone-based service fees, clear estimates, no surprises.",
     url: "https://barnstormit.com/pricing",
     type: "website",
   },
