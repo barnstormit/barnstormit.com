@@ -282,7 +282,7 @@ function ColoradoMap() {
           Pricing Zones
         </text>
         {/* Local — Free */}
-        <circle cx="22" cy="46" r="6" fill="#FFFFFF" />
+        <circle cx="22" cy="46" r="6" fill="#FFFFFF" stroke="#0D1B2A" strokeWidth="1.5" />
         <text x="36" y="50" fontSize="12" fontFamily="sans-serif">
           <tspan fill="#0D1B2A">Local </tspan>
           <tspan fill="#3A9BD5" fontWeight="bold">Free</tspan>
