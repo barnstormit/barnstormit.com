@@ -73,6 +73,18 @@ export default function Pricing() {
               Book a Call
             </Link>
           </div>
+          <p className="text-frost-gray text-sm mb-4 flex items-center justify-center gap-2">
+            <span className="material-symbols-outlined text-alpine-gold text-base" aria-hidden="true">
+              nights_stay
+            </span>
+            Emergency &amp; after-hours support available at priority rates.{" "}
+            <a
+              href="tel:+17198380435"
+              className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            >
+              Call us directly for details.
+            </a>
+          </p>
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40">
             Serving South Park &amp; Summit County, Colorado
           </p>
