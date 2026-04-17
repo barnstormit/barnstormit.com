@@ -186,19 +186,32 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Barnstorm Computer Services. All
             rights reserved.
           </p>
-          <div className="flex gap-8 text-xs font-mono tracking-wider text-frost-gray/60">
-            <Link
-              href="/privacy-policy"
-              className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              PRIVACY POLICY
-            </Link>
-            <Link
-              href="/terms"
-              className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              TERMS OF SERVICE
-            </Link>
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-xs font-mono tracking-wider text-frost-gray/60">
+            <div className="flex gap-8">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+              >
+                PRIVACY POLICY
+              </Link>
+              <Link
+                href="/terms"
+                className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+              >
+                TERMS OF SERVICE
+              </Link>
+            </div>
+            <span>
+              Built by{" "}
+              <a
+                href="https://barnstormit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+              >
+                barnstormit.com
+              </a>
+            </span>
           </div>
         </div>
       </div>
