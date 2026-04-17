@@ -284,13 +284,13 @@ function ColoradoMap() {
         {/* Local — Free */}
         <circle cx="22" cy="46" r="6" fill="#FFFFFF" />
         <text x="36" y="50" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Local </tspan>
+          <tspan fill="#0D1B2A">Local </tspan>
           <tspan fill="#3A9BD5" fontWeight="bold">Free</tspan>
         </text>
         {/* Regional — $50 → $25 */}
         <circle cx="22" cy="66" r="6" fill="#F0A500" />
         <text x="36" y="70" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Regional </tspan>
+          <tspan fill="#0D1B2A">Regional </tspan>
           <tspan fill="#8AA0B4">$50</tspan>
           <tspan fill="#F7F9FC"> </tspan>
           <tspan fill="#F0A500" fontWeight="bold">$25</tspan>
@@ -299,7 +299,7 @@ function ColoradoMap() {
         {/* Extended — $75 → $38 */}
         <circle cx="22" cy="86" r="6" fill="#5CE0D6" />
         <text x="36" y="90" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Extended </tspan>
+          <tspan fill="#0D1B2A">Extended </tspan>
           <tspan fill="#8AA0B4">$75</tspan>
           <tspan fill="#F7F9FC"> </tspan>
           <tspan fill="#F0A500" fontWeight="bold">$38</tspan>
@@ -308,7 +308,7 @@ function ColoradoMap() {
         {/* Remote — $100+ → $50 */}
         <circle cx="22" cy="106" r="6" fill="#DC2626" />
         <text x="36" y="110" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Remote </tspan>
+          <tspan fill="#0D1B2A">Remote </tspan>
           <tspan fill="#8AA0B4">$100+</tspan>
           <tspan fill="#F7F9FC"> </tspan>
           <tspan fill="#F0A500" fontWeight="bold">$50</tspan>
