@@ -88,13 +88,33 @@ export default function Contact() {
             {/* Hours */}
             <div>
               <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-3 block">
-                Operational Hours
+                Business Hours
               </span>
-              <p className="text-frost-gray leading-relaxed">
-                Monday &ndash; Friday
-                <br />
-                9:00 AM &ndash; 5:00 PM
+              <p className="text-snow-white font-medium leading-relaxed mb-3">
+                Monday&ndash;Friday, 9 AM &ndash; 5 PM Mountain Time
               </p>
+              <div className="glass-card rounded-lg p-4 space-y-2">
+                <p className="text-alpine-gold text-sm font-bold flex items-center gap-2">
+                  <span className="material-symbols-outlined text-base" aria-hidden="true">
+                    nights_stay
+                  </span>
+                  Need help outside business hours?
+                </p>
+                <p className="text-frost-gray text-sm leading-relaxed">
+                  We offer emergency and after-hours support for urgent issues.
+                  Call{" "}
+                  <a
+                    href="tel:+17198380435"
+                    className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+                  >
+                    (719) 838-0435
+                  </a>{" "}
+                  and leave a message &mdash; we&apos;ll get back to you promptly.
+                </p>
+                <p className="text-frost-gray/60 text-xs">
+                  Priority rates apply for same-day and after-hours visits.
+                </p>
+              </div>
             </div>
           </div>
 
