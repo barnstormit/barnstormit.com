@@ -349,7 +349,7 @@ function ResidentialTab() {
                 ACH Transfer
               </span>
               <span className="font-mono text-xs text-alpine-gold bg-alpine-gold/10 px-3 py-1 rounded-full">
-                +1% fee
+                +3% fee
               </span>
             </div>
 
@@ -365,7 +365,7 @@ function ResidentialTab() {
           </div>
 
           <p className="text-frost-gray/40 text-xs mt-6 leading-relaxed">
-            Card payments welcome — a small processing fee applies to help cover
+            Card and ACH payments welcome — a small processing fee applies to help cover
             network costs.
           </p>
         </div>
