@@ -76,7 +76,7 @@ const jsonLd = {
     "On-site computer repair, IT support, networking, data recovery, and 3D printing for Colorado mountain communities.",
   url: "https://barnstormit.com",
   telephone: "+1-719-838-0435",
-  email: "jeff@barnstormit.com",
+  email: "info@barnstormit.com",
   address: {
     "@type": "PostalAddress",
     postOfficeBoxNumber: "371",

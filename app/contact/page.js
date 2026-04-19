@@ -66,10 +66,10 @@ export default function Contact() {
                 Direct Email
               </span>
               <a
-                href="mailto:jeff@barnstormit.com"
+                href="mailto:info@barnstormit.com"
                 className="text-lg text-snow-white hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
-                jeff@barnstormit.com
+                info@barnstormit.com
               </a>
             </div>
 
