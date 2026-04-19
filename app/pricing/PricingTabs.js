@@ -343,24 +343,16 @@ function ResidentialTab() {
               </p>
             </div>
 
-            {/* ACH */}
-            <div className="py-4 flex items-center justify-between">
-              <span className="font-heading font-bold text-snow-white">
-                ACH Transfer
-              </span>
-              <span className="font-mono text-xs text-alpine-gold bg-alpine-gold/10 px-3 py-1 rounded-full">
-                +3% fee
-              </span>
-            </div>
-
-            {/* Card */}
-            <div className="py-4 flex items-center justify-between">
-              <span className="font-heading font-bold text-snow-white">
-                Credit / Debit Card
-              </span>
-              <span className="font-mono text-xs text-alpine-gold bg-alpine-gold/10 px-3 py-1 rounded-full">
-                +3% fee
-              </span>
+            {/* ACH or Card */}
+            <div className="py-4">
+              <div className="flex items-center justify-between flex-wrap gap-y-2">
+                <span className="font-heading font-bold text-snow-white">
+                  ACH Transfer or Credit / Debit Card
+                </span>
+                <span className="font-mono text-xs text-alpine-gold bg-alpine-gold/10 px-3 py-1 rounded-full">
+                  +3% fee
+                </span>
+              </div>
             </div>
           </div>
 
