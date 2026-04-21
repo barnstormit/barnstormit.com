@@ -163,7 +163,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Describe your issue or question\u2026"
+            placeholder="Describe your issue or question…"
             className="w-full bg-deep-navy border border-steel-blue/30 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal focus:border-vivid-teal transition-colors resize-none"
           />
         </div>
