@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactForm() {
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
   const [errorMsg, setErrorMsg] = useState("");
+  const [formLoadedAt] = useState(() => Date.now());
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,6 +18,8 @@ export default function ContactForm() {
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
       message: form.message.value.trim(),
+      website: form.website.value,
+      form_loaded_at: form.form_loaded_at.value,
     };
 
     try {
@@ -75,6 +78,25 @@ export default function ContactForm() {
   return (
     <div className="glass-card rounded-xl p-8 md:p-10">
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Honeypot — bots fill this, humans never see it */}
+        <div
+          style={{ position: "absolute", left: "-9999px", top: "-9999px" }}
+          aria-hidden="true"
+        >
+          <label htmlFor="website">Website (leave blank)</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+        <input
+          type="hidden"
+          name="form_loaded_at"
+          defaultValue={formLoadedAt}
+        />
         <div>
           <label
             htmlFor="name"

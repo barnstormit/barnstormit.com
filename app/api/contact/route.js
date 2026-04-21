@@ -5,7 +5,24 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const { name, email, phone, message, website, form_loaded_at } =
+      await request.json();
+
+    // Spam filter: honeypot. Bots fill hidden fields; humans never see them.
+    if (website) {
+      console.log("[spam filter] Dropped submission:", "honeypot filled");
+      return NextResponse.json({ success: true });
+    }
+
+    // Spam filter: time-trap. Humans can't fill four fields in under 2.5s.
+    const elapsed = Date.now() - parseInt(form_loaded_at, 10);
+    if (elapsed < 2500) {
+      console.log(
+        "[spam filter] Dropped submission:",
+        `submitted in ${elapsed}ms`
+      );
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !email || !message) {
       return NextResponse.json(
