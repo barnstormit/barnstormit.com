@@ -113,6 +113,34 @@ const jsonLd = {
   },
   priceRange: "$$",
   image: "https://barnstormit.com/hero_bg.jpg",
+  founder: {
+    "@type": "Person",
+    "@id": "https://barnstormit.com/#jeff",
+    name: "Jeff Barnstorf",
+    jobTitle: "Founder & Lead Technician",
+    worksFor: { "@id": "https://barnstormit.com/#localbusiness" },
+    url: "https://barnstormit.com/about",
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "D'Youville University",
+    },
+    hasCredential: [
+      { "@type": "EducationalOccupationalCredential", name: "BS, Information Technology" },
+      { "@type": "EducationalOccupationalCredential", name: "MCSE NT 4.0" },
+      { "@type": "EducationalOccupationalCredential", name: "Microsoft Certified Professional (MCP)" },
+      { "@type": "EducationalOccupationalCredential", name: "Microsoft Certified Trainer (MCT)" },
+      { "@type": "EducationalOccupationalCredential", name: "CompTIA A+" },
+    ],
+    knowsAbout: [
+      "Computer repair",
+      "Network administration",
+      "Datacenter management",
+      "Workflow automation",
+      "3D printing",
+    ],
+    sameAs: ["https://www.linkedin.com/in/jbarnstorf"],
+  },
+  employee: { "@id": "https://barnstormit.com/#jeff" },
 };
 
 export default function RootLayout({ children }) {
