@@ -126,9 +126,85 @@ const services = [
   },
 ];
 
+const PROVIDER_REF = { "@id": "https://barnstormit.com/#localbusiness" };
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Hardware Repair",
+      "description": "Laptop screen, SSD/HDD, RAM, motherboard, battery, keyboard/hinge, cooling system, and DC jack repair.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Computer hardware repair",
+    },
+    {
+      "@type": "Service",
+      "name": "Software Services",
+      "description": "OS installation, virus and malware removal, system optimization, and software and driver updates.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Computer software services",
+    },
+    {
+      "@type": "Service",
+      "name": "Data Services",
+      "description": "Data recovery, backup solutions, data transfer, and cloud storage setup.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Data recovery and backup",
+    },
+    {
+      "@type": "Service",
+      "name": "Networking",
+      "description": "Home and business WiFi setup, router and modem configuration, WiFi troubleshooting, network security, and Starlink installation.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Network and WiFi setup",
+    },
+    {
+      "@type": "Service",
+      "name": "Business IT",
+      "description": "Managed IT services, consulting and strategy, technology planning, POS system installation, workflow automation, remote support, and service contracts.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Managed IT services",
+    },
+    {
+      "@type": "Service",
+      "name": "Training & Education",
+      "description": "One-on-one computer training, email and productivity setup, safe browsing and security awareness, and business software training.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Computer training",
+    },
+    {
+      "@type": "Service",
+      "name": "Web & Digital",
+      "description": "Website design and development, SEO and local search optimization, Google Business Profile setup, and domain and email setup.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Web design and SEO",
+    },
+    {
+      "@type": "Service",
+      "name": "AI & Automation",
+      "description": "AI tool setup and integration, workflow automation (n8n, Make, Zapier), local AI server deployment, chatbot and AI assistant setup, business process automation, and AI strategy consulting.",
+      "provider": PROVIDER_REF,
+      "serviceType": "AI integration and workflow automation",
+    },
+    {
+      "@type": "Service",
+      "name": "3D Printing",
+      "description": "Custom parts, replacement components, prototypes, mounts and brackets, cable management, and enclosures.",
+      "provider": PROVIDER_REF,
+      "serviceType": "Custom 3D printing",
+      "url": "https://barnstormit.com/3d-printing",
+    },
+  ],
+};
+
 export default function Services() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto text-center">

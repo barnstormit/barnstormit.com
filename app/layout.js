@@ -74,6 +74,7 @@ export const viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://barnstormit.com/#localbusiness",
   name: "Barnstorm Computer Services LLC",
   description:
     "On-site computer repair, IT support, networking, data recovery, and 3D printing for Colorado mountain communities.",
