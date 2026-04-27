@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "../lib/posts";
 
 export const metadata = {
-  title: "IT Support & Repair in Fairplay, CO",
+  title: "Mountain IT Support, Fairplay",
   description:
     "On-site and remote computer repair, IT support, and networking for Fairplay, Breckenridge, and Colorado mountain communities. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com" },
