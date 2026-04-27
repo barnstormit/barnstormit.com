@@ -205,14 +205,12 @@ export default function Footer() {
             </div>
             <span>
               Built by{" "}
-              <a
-                href="https://barnstormit.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/"
                 className="hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
               >
                 barnstormit.com
-              </a>
+              </Link>
             </span>
           </div>
         </div>
