@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
 
@@ -159,12 +160,12 @@ export default function Contact() {
       <section className="py-16 md:py-20 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/hero-bg.jpg"
+            <Image
+              src="/hero_bg.jpg"
               alt="Colorado mountain landscape"
-              className="w-full h-full object-cover"
-              loading="lazy"
+              fill
+              sizes="100vw"
+              className="object-cover"
             />
           </div>
           <div className="relative z-10">
