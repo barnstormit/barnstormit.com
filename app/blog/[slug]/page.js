@@ -11,13 +11,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const description = post.seoDescription || post.excerpt;
   return {
     title: post.title,
-    description: post.excerpt,
+    description,
     alternates: { canonical: `https://barnstormit.com/blog/${slug}` },
     openGraph: {
       title: `${post.title} | Barnstorm Computer Services`,
-      description: post.excerpt,
+      description,
       url: `https://barnstormit.com/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
