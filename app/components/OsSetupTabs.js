@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import Image from "next/image";
 import CopyField from "./CopyField";
 
 const SERVER_CONFIG = [
@@ -97,8 +98,7 @@ function WindowsSteps() {
           open the settings.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/rustdesk-step1-dots.png"
             alt="RustDesk main screen — click the three-dot menu next to your ID"
             width={776}
@@ -131,8 +131,7 @@ function WindowsSteps() {
           <span className="text-snow-white font-bold">Yes</span>.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/rustdesk-step2-network.png"
             alt="RustDesk settings — click Unlock Network Settings circled in red"
             width={778}
@@ -156,8 +155,7 @@ function WindowsSteps() {
           (circled in red) to open the connection settings.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/rustdesk-step3-unlock.png"
             alt="RustDesk Network settings — click ID/Relay Server circled in red"
             width={771}
@@ -188,14 +186,12 @@ function WindowsSteps() {
           Here&apos;s what it should look like when filled in:
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/rustdesk-settings.png"
             alt="RustDesk ID/Relay Server configuration screen with fields filled in"
             width={779}
             height={591}
             className="w-full"
-            loading="lazy"
           />
         </div>
       </div>
@@ -222,8 +218,7 @@ function WindowsSteps() {
           &mdash; you&apos;re all set!
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/rustdesk-step5-ready.png"
             alt="RustDesk home screen showing your ID and one-time password circled in green"
             width={773}
@@ -304,8 +299,7 @@ function MacSteps() {
           <span className="text-snow-white font-bold">Applications</span> folder.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/mac1.png"
             alt="Drag RustDesk into the Applications folder"
             width={661}
@@ -326,8 +320,7 @@ function MacSteps() {
           bar and quit the RustDesk service if you see it.
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/mac2.png"
             alt="Quit RustDesk from the menu bar"
             width={279}
@@ -353,8 +346,7 @@ function MacSteps() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac3.png"
               alt="macOS blocked RustDesk prompt"
               width={667}
@@ -363,8 +355,7 @@ function MacSteps() {
             />
           </div>
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac4.png"
               alt="Security & Privacy — click Allow to unblock RustDesk"
               width={667}
@@ -400,8 +391,7 @@ function MacSteps() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac5.png"
               alt="Accessibility permission settings for RustDesk"
               width={218}
@@ -410,8 +400,7 @@ function MacSteps() {
             />
           </div>
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac7.png"
               alt="Screen Recording permission settings for RustDesk"
               width={666}
@@ -438,8 +427,7 @@ function MacSteps() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac8.png"
               alt="Remove RustDesk from the permissions list"
               width={674}
@@ -448,8 +436,7 @@ function MacSteps() {
             />
           </div>
           <div className="glass-card rounded-xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/mac9.png"
               alt="Re-add RustDesk to the permissions list"
               width={799}
@@ -476,8 +463,7 @@ function MacSteps() {
           .
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/mac10.png"
             alt="Screen Recording permission confirmed for RustDesk"
             width={665}
@@ -511,14 +497,12 @@ function MacSteps() {
           Here&apos;s what it should look like when filled in:
         </p>
         <div className="glass-card rounded-xl overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/rustdesk-settings.png"
             alt="RustDesk server configuration screen with fields filled in"
             width={779}
             height={591}
             className="w-full"
-            loading="lazy"
           />
         </div>
       </div>
