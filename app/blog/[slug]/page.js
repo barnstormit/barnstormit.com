@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
       publishedTime: post.date,
       authors: ["Jeff Barnstorf"],
       ...(post.image
-        ? { images: [{ url: `https://barnstormit.com${post.image}`, width: 1200, height: 630 }] }
+        ? { images: [{ url: `https://barnstormit.com${post.image}`, width: 1200, height: 630, alt: post.title }] }
         : {}),
     },
   };
@@ -57,11 +57,25 @@ export default async function BlogPost({ params }) {
     ...(post.image ? { "image": "https://barnstormit.com" + post.image } : {}),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://barnstormit.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://barnstormit.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://barnstormit.com/blog/${slug}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <article className="pt-20 md:pt-28 pb-16 md:pb-24 px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
