@@ -219,6 +219,14 @@ export default function Home() {
 
     {/* Services Overview */}
     <section className="bg-midnight-slate/50 py-20 md:py-24 px-6 md:px-8">
+      <div className="max-w-[1200px] mx-auto text-center mb-12">
+        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+          Services
+        </span>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-snow-white tracking-tight text-balance">
+          Mountain IT, End to End
+        </h2>
+      </div>
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* On-Site Support */}
         <div className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500">
@@ -227,9 +235,9 @@ export default function Home() {
               speed
             </span>
           </div>
-          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
             On-Site Support
-          </h2>
+          </h3>
           <p className="text-frost-gray text-sm leading-relaxed">
             We come to you. Professional troubleshooting for home offices,
             vacation rentals, and local businesses across the high country.
@@ -243,9 +251,9 @@ export default function Home() {
               wifi
             </span>
           </div>
-          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Network &amp; WiFi
-          </h2>
+          </h3>
           <p className="text-frost-gray text-sm leading-relaxed">
             Secure networks, strong WiFi coverage, firewalls, and encrypted
             VPNs for homes and businesses.
@@ -259,9 +267,9 @@ export default function Home() {
               cloud_sync
             </span>
           </div>
-          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Remote Support
-          </h2>
+          </h3>
           <p className="text-frost-gray text-sm leading-relaxed">
             Instant assistance via secure screen sharing. Resolving software
             issues without the drive time.
@@ -278,9 +286,9 @@ export default function Home() {
               business_center
             </span>
           </div>
-          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
             Business IT
-          </h2>
+          </h3>
           <p className="text-frost-gray text-sm leading-relaxed">
             Managed services, consulting, and service contracts tailored for
             local businesses.
@@ -299,9 +307,9 @@ export default function Home() {
               New
             </span>
           </div>
-          <h2 className="font-heading text-xl font-bold mb-3 text-snow-white">
+          <h3 className="font-heading text-xl font-bold mb-3 text-snow-white">
             3D Printing
-          </h2>
+          </h3>
           <p className="text-frost-gray text-sm leading-relaxed">
             Need a part that doesn&apos;t exist? We can probably print it.
             Bring us your file or your idea and we&apos;ll make it real.
