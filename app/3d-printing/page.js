@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "3D Printing",
   description:
-    "Custom 3D printing in Fairplay, CO. Replacement parts, mounts, prototypes, and enclosures. Most parts ready in 24–48 hours.",
+    "Custom 3D printing in Fairplay, CO. Replacement parts, mounts, prototypes, and enclosures. Most parts ready in 24–48 hours. Call (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/3d-printing" },
   openGraph: {
     title: "3D Printing | Barnstorm Computer Services",
