@@ -41,7 +41,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/barnstorm_cover_v2.png",
+        url: "/barnstorm_cover_v2.jpg",
         width: 1200,
         height: 630,
         alt: "Barnstorm Computer Services — Mountain Tech, Done Right",
@@ -54,18 +54,21 @@ export const metadata = {
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",
     description:
       "On-site computer repair and IT support for Colorado's mountain communities.",
-    images: ["/barnstorm_cover_v2.png"],
+    images: ["/barnstorm_cover_v2.jpg"],
   },
   alternates: {
     canonical: "https://barnstormit.com",
   },
-  themeColor: "#0D1B2A",
   other: {
     "geo.region": "US-CO",
     "geo.placename": "Fairplay",
     "geo.position": "39.2247;-105.9989",
     "ICBM": "39.2247, -105.9989",
   },
+};
+
+export const viewport = {
+  themeColor: "#0D1B2A",
 };
 
 const jsonLd = {
