@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -618,14 +619,12 @@ export default function Home() {
     <section className="relative py-20 md:py-28 px-6 md:px-8 overflow-hidden border-t border-steel-blue/15">
       {/* Background image + overlays */}
       <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMljnSJ6mCIiIsZmdh9PlhS7pa6yGsKlfTwq3VnhCR6ts8QSyrXbPWbhgNaZiD1dxCi0mIVbqBtc9YSRgjaPuSqUZKSNslJp03EJlIGZR2oOvHRxoIhL0gO_9kTBxf5HBl14lHBta8yd_XSsfUNfv63Z__yri3oDS1XsBhHANlLyAHwvSSnZwK75mniosNN2E0mn4gVE8DTlxypan6b8MsPEqptOAKqdoDbjDS6itYoHCaHww7Don3SyGAEC5G_PCFWaKO_wcWM8g"
-          alt="Server circuit boards with teal fiber optic lights"
-          className="w-full h-full object-cover opacity-10"
-          width={1200}
-          height={800}
-          loading="lazy"
+        <Image
+          src="/cta-circuits.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-10"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/90 to-deep-navy/70" />
         <div className="absolute inset-0 atmospheric-bg opacity-40" />
