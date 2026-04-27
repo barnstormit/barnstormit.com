@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getAllPosts } from "../lib/posts";
 
 export const metadata = {
   title: "IT Support & Repair in Fairplay, CO",
@@ -16,6 +17,8 @@ export const metadata = {
 };
 
 export default function Home() {
+  const latestPost = getAllPosts()[0];
+
   return (
     <>
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 px-6 text-center">
@@ -689,29 +692,31 @@ export default function Home() {
         </div>
 
         <Link
-          href="/blog/tailscale-mesh-vpn"
+          href={`/blog/${latestPost.slug}`}
           className="glass-card group block overflow-hidden hover:border-vivid-teal/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="relative h-56 md:h-auto md:min-h-[300px]">
-              <Image
-                src="/blog/tailscale-mesh-vpn-header.jpg"
-                alt="How I Use Tailscale to Run My Business From Anywhere in the Mountains"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover object-left"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-midnight-slate/60 hidden md:block" />
-            </div>
+            {latestPost.image && (
+              <div className="relative h-56 md:h-auto md:min-h-[300px]">
+                <Image
+                  src={latestPost.image}
+                  alt={latestPost.title}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover object-left"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-midnight-slate/60 hidden md:block" />
+              </div>
+            )}
             <div className="p-6 sm:p-10 md:p-12 flex flex-col justify-center">
               <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold px-3 py-1 rounded-full border text-vivid-teal bg-vivid-teal/10 border-vivid-teal/30 w-fit mb-4">
-                Tech Tips
+                {latestPost.category}
               </span>
               <h3 className="font-heading text-2xl md:text-3xl font-bold text-snow-white tracking-tight leading-tight mb-4 group-hover:text-vivid-teal transition-colors text-balance">
-                How I Use Tailscale to Run My Business From Anywhere in the Mountains
+                {latestPost.title}
               </h3>
               <p className="text-frost-gray leading-relaxed mb-6">
-                How a mesh VPN connects my entire infrastructure — from a Raspberry Pi in Fairplay to a VPS in Los Angeles — and why you might want one too.
+                {latestPost.excerpt}
               </p>
               <span className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
                 Read more
