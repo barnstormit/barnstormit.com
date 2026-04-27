@@ -28,49 +28,51 @@ export default function Footer() {
             <div className="h-1 w-12 bg-vivid-teal" />
           </div>
           <div className="space-y-4 text-frost-gray">
-            <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-vivid-teal mt-0.5" aria-hidden="true">
-                location_on
-              </span>
-              <address className="not-italic leading-relaxed">
-                Barnstorm Computer Services LLC
-                <br />
-                PO Box 371
-                <br />
-                Fairplay, CO 80440
-              </address>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
-                call
-              </span>
-              <a
-                href="tel:+17198380435"
-                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                (719) 838-0435
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
-                mail
-              </span>
-              <a
-                href="mailto:info@barnstormit.com"
-                className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                info@barnstormit.com
-              </a>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-vivid-teal mt-0.5" aria-hidden="true">
-                schedule
-              </span>
-              <div className="leading-relaxed">
-                <p>Mon&ndash;Fri, 9 AM &ndash; 5 PM MT</p>
-                <p className="text-xs text-frost-gray/70 mt-1">Emergency &amp; after-hours support available &mdash; call for priority rates.</p>
+            <address className="not-italic space-y-4">
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-vivid-teal mt-0.5" aria-hidden="true">
+                  location_on
+                </span>
+                <span className="leading-relaxed">
+                  Barnstorm Computer Services LLC
+                  <br />
+                  PO Box 371
+                  <br />
+                  Fairplay, CO 80440
+                </span>
               </div>
-            </div>
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
+                  call
+                </span>
+                <a
+                  href="tel:+17198380435"
+                  className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+                >
+                  (719) 838-0435
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
+                  mail
+                </span>
+                <a
+                  href="mailto:info@barnstormit.com"
+                  className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+                >
+                  info@barnstormit.com
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-vivid-teal mt-0.5" aria-hidden="true">
+                  schedule
+                </span>
+                <div className="leading-relaxed">
+                  <p>Mon&ndash;Fri, 9 AM &ndash; 5 PM MT</p>
+                  <p className="text-xs text-frost-gray/70 mt-1">Emergency &amp; after-hours support available &mdash; call for priority rates.</p>
+                </div>
+              </div>
+            </address>
             <div className="flex items-center gap-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61573305336720"
