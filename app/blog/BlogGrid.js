@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const CATEGORY_COLORS = {
@@ -60,12 +61,12 @@ export default function BlogGrid({ posts }) {
             >
               {/* Post Image */}
               <div className="h-48 bg-midnight-slate relative overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={post.image || "/hero_bg.jpg"}
                   alt={post.title}
-                  className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
-                  loading="lazy"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover opacity-40 group-hover:opacity-60 transition-opacity"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-slate/80 to-transparent" />
               </div>
