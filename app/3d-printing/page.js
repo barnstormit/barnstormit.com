@@ -1,198 +1,374 @@
 import Link from "next/link";
+import PricingCalculator from "./PricingCalculator";
 
 export const metadata = {
-  title: "3D Printing",
+  title: "Custom 3D Printing",
   description:
-    "Custom 3D printing in Fairplay, CO. Replacement parts, mounts, prototypes, and enclosures. Most parts ready in 24–48 hours. Call (719) 838-0435.",
+    "Custom FDM 3D printing in Fairplay, CO. Bambu X2D dual-nozzle, multi-material AMS. Fair pricing, no minimums on quotes. Call (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/3d-printing" },
   openGraph: {
-    title: "3D Printing | Barnstorm Computer Services",
+    title: "Custom 3D Printing | Barnstorm Computer Services",
     description:
-      "Custom 3D printing — replacement parts, mounts, prototypes, and more. Most parts ready in 24–48 hours.",
+      "Professional FDM printing on a Bambu Lab X2D — prototypes, parts, props, and production runs. Printed locally in Fairplay, CO.",
     url: "https://barnstormit.com/3d-printing",
     type: "website",
   },
 };
 
-const services = [
+const materials = [
   {
-    icon: "settings_suggest",
-    title: "Replacement Parts",
-    description:
-      "Broken plastic clip, missing knob, cracked bracket? If you've got the file or a sample, we'll print a new one.",
+    name: "PLA",
+    rate: "$0.15/g",
+    tag: "Most popular",
+    icon: "category",
+    desc: "Great for prototypes, cosplay props, decorative items, and gifts. Rigid, smooth finish, tons of color options.",
+    not: "Not great for outdoor use or high heat.",
   },
   {
-    icon: "wall_art",
-    title: "Custom Mounts & Brackets",
-    description:
-      "Wall mounts, desk organizers, equipment brackets. Bring your design file or we'll help you find one.",
+    name: "PETG",
+    rate: "$0.18/g",
+    tag: "Functional",
+    icon: "build",
+    desc: "Stronger and more flexible than PLA. Good for functional parts, phone cases, brackets — anything that needs to handle some stress.",
+    not: "Food-safe options available.",
+  },
+  {
+    name: "ABS / ASA",
+    rate: "$0.22/g",
+    tag: "Tough & weatherproof",
+    icon: "wb_sunny",
+    desc: "Tough and heat-resistant. ASA is UV-stable for outdoor use. Think automotive parts, enclosures, anything that lives outside or near heat.",
+    not: null,
+  },
+  {
+    name: "TPU",
+    rate: "$0.28/g",
+    tag: "Flexible",
+    icon: "waves",
+    desc: "Flexible rubber-like material. Phone cases, gaskets, grips, vibration dampeners. Stretchy and durable.",
+    not: null,
+  },
+  {
+    name: "PLA-CF / PETG-CF",
+    rate: "$0.35/g",
+    tag: "Premium",
+    icon: "auto_awesome",
+    desc: "Carbon fiber reinforced — extremely stiff and lightweight. Drone frames, structural parts, engineering prototypes.",
+    not: "Premium material for demanding applications.",
     highlight: true,
   },
+];
+
+const steps = [
   {
-    icon: "lightbulb",
-    title: "Prototypes",
-    description:
-      "Got a 3D file for a product idea? We'll print it so you can hold it in your hands.",
+    title: "Send us your file",
+    body: (
+      <>
+        STL, STEP, or 3MF format. Email{" "}
+        <a
+          href="mailto:quotes@ops.barnstormit.com"
+          className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+        >
+          quotes@ops.barnstormit.com
+        </a>{" "}
+        or call{" "}
+        <a
+          href="tel:+17198380435"
+          className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+        >
+          (719) 838-0435
+        </a>{" "}
+        to discuss your project.
+      </>
+    ),
   },
   {
-    icon: "cable",
-    title: "Cable Management",
-    description:
-      "Custom cable clips, routing brackets, and organizers. Tons of ready-made designs available.",
+    title: "Get a quote",
+    body: (
+      <>
+        We review your file, recommend the right material, and send you a price. Use the calculator below for a quick estimate.
+      </>
+    ),
   },
   {
-    icon: "package_2",
-    title: "Enclosures & Cases",
-    description:
-      "Raspberry Pi cases, project boxes, protective housings. Huge library of existing designs to choose from.",
-  },
-  {
-    icon: "emoji_objects",
-    title: "One-Off Solutions",
-    description:
-      "If it exists as a 3D file, we can print it. Don't have a file? We'll help you find one or connect you with a designer.",
+    title: "We print it",
+    body: (
+      <>
+        Standard turnaround is 3–5 business days. Rush and same-day options available. Pickup in Fairplay or shipping available.
+      </>
+    ),
   },
 ];
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Custom 3D Printing",
+  name: "Custom 3D Printing",
+  description:
+    "Professional FDM 3D printing on a Bambu Lab X2D dual-nozzle printer with AMS multi-material. Printed locally in Fairplay, Colorado.",
+  provider: { "@id": "https://barnstormit.com/#localbusiness" },
+  areaServed: [
+    "Fairplay",
+    "Alma",
+    "Breckenridge",
+    "Frisco",
+    "Dillon",
+    "Silverthorne",
+    "Leadville",
+    "Buena Vista",
+  ],
+  url: "https://barnstormit.com/3d-printing",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "USD",
+    lowPrice: "20",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "USD",
+      minPrice: "20",
+      description: "Minimum charge per job. Material starts at $0.15/g; machine time billed at $2/hr.",
+    },
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "3D Printing Materials",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "PLA" }, price: "0.15", priceCurrency: "USD" },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "PETG" }, price: "0.18", priceCurrency: "USD" },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "ABS / ASA" }, price: "0.22", priceCurrency: "USD" },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "TPU" }, price: "0.28", priceCurrency: "USD" },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "PLA-CF / PETG-CF" }, price: "0.35", priceCurrency: "USD" },
+    ],
+  },
+};
 
 export default function ThreeDPrinting() {
   return (
     <>
-      {/* Page Header */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
+      {/* Hero */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto text-center">
           <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
-            3D PRINTING
+            3D Printing
           </span>
-          <div className="flex items-center gap-4 mb-6 flex-wrap">
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] text-balance">
-              Custom 3D Printing
-            </h1>
-            <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-deep-navy px-4 py-1.5 rounded-full self-start mt-2 md:mt-4">
-              NEW
-            </span>
-          </div>
-          <p className="text-lg md:text-xl text-frost-gray max-w-2xl mx-auto leading-relaxed">
-            Need a part that doesn&apos;t exist? We can probably print it.
-            Bring us your file or your idea and we&apos;ll make it real.
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
+            Custom 3D Printing
+          </h1>
+          <p className="text-lg md:text-xl text-vivid-teal max-w-2xl mx-auto leading-relaxed mb-6">
+            From prototype to finished product — printed locally in Fairplay, CO.
+          </p>
+          <p className="text-base md:text-lg text-frost-gray max-w-3xl mx-auto leading-relaxed">
+            Professional FDM printing on a Bambu Lab X2D with dual nozzles and AMS multi-material. Fast turnaround, fair pricing, no minimums on quotes.
           </p>
         </div>
       </section>
 
-      {/* Service Cards */}
-      <section className="pb-12 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((svc) => (
-            <div
-              key={svc.title}
-              className={`glass-card rounded-xl p-8 flex flex-col ${
-                svc.highlight ? "border-alpine-gold/40" : ""
-              }`}
-              style={
-                svc.highlight
-                  ? { background: "rgba(240, 165, 0, 0.06)" }
-                  : undefined
-              }
-            >
-              <span
-                aria-hidden="true"
-                className={`material-symbols-outlined text-3xl mb-6 ${
-                  svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
+      {/* Materials */}
+      <section className="py-12 md:py-16 px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-3 block">
+              Materials
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white text-balance">
+              Pick the right plastic for the job
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {materials.map((m) => (
+              <div
+                key={m.name}
+                className={`glass-card rounded-xl p-7 flex flex-col ${
+                  m.highlight ? "border-alpine-gold/40" : ""
                 }`}
-                style={{ fontVariationSettings: "'FILL' 1" }}
+                style={
+                  m.highlight
+                    ? { background: "rgba(240, 165, 0, 0.06)" }
+                    : undefined
+                }
               >
-                {svc.icon}
-              </span>
-              <h2 className="font-heading text-xl font-bold text-snow-white mb-3">
-                {svc.title}
-              </h2>
-              <p className="text-frost-gray text-sm leading-relaxed">
-                {svc.description}
-              </p>
-            </div>
-          ))}
+                <div className="flex items-center justify-between mb-5">
+                  <span
+                    aria-hidden="true"
+                    className={`material-symbols-outlined text-3xl ${
+                      m.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                    }`}
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    {m.icon}
+                  </span>
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-frost-gray">
+                    {m.tag}
+                  </span>
+                </div>
+                <div className="flex items-baseline justify-between mb-3 gap-3 flex-wrap">
+                  <h3 className="font-heading text-xl font-bold text-snow-white">
+                    {m.name}
+                  </h3>
+                  <span
+                    className={`font-mono text-sm font-bold tabular-nums ${
+                      m.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                    }`}
+                  >
+                    {m.rate}
+                  </span>
+                </div>
+                <p className="text-frost-gray text-sm leading-relaxed">
+                  {m.desc}
+                </p>
+                {m.not && (
+                  <p className="text-frost-gray/80 text-xs leading-relaxed mt-3 italic">
+                    {m.not}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-12 px-6 md:px-8">
+      {/* How it works */}
+      <section className="py-12 md:py-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="glass-card rounded-xl p-6 sm:p-10 md:p-14">
-            <h2 className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
               How It Works
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-10 text-balance">
+              Three steps from idea to finished part
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex gap-4 items-start">
-                <span className="font-heading text-4xl font-black text-vivid-teal/20">
-                  1
-                </span>
-                <div>
-                  <h3 className="font-heading font-bold text-snow-white mb-1">
-                    Share Your File or Idea
-                  </h3>
-                  <p className="text-frost-gray text-sm leading-relaxed">
-                    Send us a .STL, .OBJ, or .3MF file. Don&apos;t have one? We
-                    can help you find a design or connect you with someone who
-                    can create one.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {steps.map((s, i) => (
+                <div key={s.title} className="flex gap-4 items-start">
+                  <span className="font-heading text-5xl font-black text-vivid-teal/20 leading-none">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-heading font-bold text-snow-white mb-2 text-lg">
+                      {s.title}
+                    </h3>
+                    <p className="text-frost-gray text-sm leading-relaxed">
+                      {s.body}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4 items-start">
-                <span className="font-heading text-4xl font-black text-vivid-teal/20">
-                  2
-                </span>
-                <div>
-                  <h3 className="font-heading font-bold text-snow-white mb-1">
-                    We Print It
-                  </h3>
-                  <p className="text-frost-gray text-sm leading-relaxed">
-                    We handle material selection, settings, and quality control.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4 items-start">
-                <span className="font-heading text-4xl font-black text-vivid-teal/20">
-                  3
-                </span>
-                <div>
-                  <h3 className="font-heading font-bold text-snow-white mb-1">
-                    Pick Up or Delivery
-                  </h3>
-                  <p className="text-frost-gray text-sm leading-relaxed">
-                    Most parts ready in 24&ndash;48 hours. Local pickup or
-                    delivery available.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="py-16 md:py-20 px-6 md:px-8 mt-4">
+      {/* Calculator */}
+      <section className="py-12 md:py-16 px-6 md:px-8" id="calculator">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-8">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-3 block">
+              Pricing Calculator
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
+              Get an instant estimate
+            </h2>
+            <p className="text-frost-gray max-w-2xl mx-auto">
+              Plug in your specs or pick a size — we&apos;ll do the math.
+            </p>
+          </div>
+          <PricingCalculator />
+        </div>
+      </section>
+
+      {/* Notes */}
+      <section className="py-12 md:py-16 px-6 md:px-8">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass-card rounded-xl p-7">
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+                Turnaround
+              </span>
+              <ul className="space-y-3 text-frost-gray text-sm">
+                <li className="flex justify-between gap-4">
+                  <span><strong className="text-snow-white font-heading">Standard</strong> — 3–5 business days</span>
+                  <span className="font-mono text-vivid-teal whitespace-nowrap">included</span>
+                </li>
+                <li className="flex justify-between gap-4">
+                  <span><strong className="text-snow-white font-heading">Rush</strong> — 24–48 hours</span>
+                  <span className="font-mono text-alpine-gold whitespace-nowrap">+50%</span>
+                </li>
+                <li className="flex justify-between gap-4">
+                  <span><strong className="text-snow-white font-heading">Same-day</strong> — when machine is available</span>
+                  <span className="font-mono text-alpine-gold whitespace-nowrap">+100%</span>
+                </li>
+              </ul>
+            </div>
+            <div className="glass-card rounded-xl p-7">
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+                Pricing notes
+              </span>
+              <ul className="space-y-3 text-frost-gray text-sm">
+                <li className="flex gap-3">
+                  <span className="material-symbols-outlined text-vivid-teal text-base leading-snug" aria-hidden="true">
+                    payments
+                  </span>
+                  <span><strong className="text-snow-white font-heading">$20 minimum</strong> per job.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="material-symbols-outlined text-vivid-teal text-base leading-snug" aria-hidden="true">
+                    palette
+                  </span>
+                  <span><strong className="text-snow-white font-heading">1–2 colors</strong> included thanks to our dual-nozzle setup. <strong className="text-snow-white font-heading">3+ colors</strong> have a small surcharge for material waste.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="material-symbols-outlined text-vivid-teal text-base leading-snug" aria-hidden="true">
+                    schedule
+                  </span>
+                  <span>Machine time billed at <strong className="text-snow-white font-heading">$2/hour</strong>.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-20 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
-            Got a file or an idea?
+            Ready to get started?
           </h2>
-          <p className="text-frost-gray text-lg mb-10">
-            Call us or use our contact form.
+          <p className="text-frost-gray text-lg mb-10 max-w-2xl mx-auto">
+            Send us your STL, STEP, or 3MF file and we&apos;ll get you a quote — usually within a few hours.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+            <a
+              href="mailto:quotes@ops.barnstormit.com"
+              className="w-full md:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">mail</span>
+              quotes@ops.barnstormit.com
+            </a>
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full md:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">call</span>
-              Call (719) 838-0435
+              (719) 838-0435
             </a>
             <Link
               href="/contact"
-              className="w-full sm:w-auto border-2 border-frost-gray/20 hover:border-alpine-gold text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full md:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
-              <span className="material-symbols-outlined" aria-hidden="true">mail</span>
-              Request a Print
+              <span className="material-symbols-outlined" aria-hidden="true">forum</span>
+              Contact form
             </Link>
           </div>
+          <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40">
+            Bambu Lab X2D · AMS 2 Pro · Printed in Fairplay, CO
+          </p>
         </div>
       </section>
     </>
