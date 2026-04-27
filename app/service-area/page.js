@@ -15,9 +15,60 @@ export const metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas does Barnstorm Computer Services cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barnstorm is based in Fairplay, Colorado and serves Park, Summit, Lake, and Chaffee counties. Towns covered include Fairplay, Alma, Como, Breckenridge, Blue River, Buena Vista, Jefferson, Grant, Frisco, Bailey, Dillon, Silverthorne, Leadville, and Salida.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How are service zones priced?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local zone (Fairplay, Alma, Como) has no service call fee. Regional zone (Breckenridge, Blue River, Buena Vista, Jefferson, Grant) is $25. Extended zone (Frisco, Bailey) is $38. Remote zone (Dillon, Silverthorne, Leadville, Salida) is $50. Launch pricing through July 4, 2026.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "What if I'm outside your on-site service area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you're in the mountains and need help, call (719) 838-0435. If we can't get to you on-site, we can almost always help remotely via screen-sharing — no travel fee.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can Barnstorm respond to a service call?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same-day on-site for the local zone, next-day for the regional zone, and scheduled visits for extended and remote zones. Remote support is available year-round.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer remote support across Colorado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Remote screen-sharing support works anywhere with internet, with no travel fee. Most software issues can be resolved remotely without an on-site visit.",
+      },
+    },
+  ],
+};
+
 export default function ServiceArea() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto text-center">
