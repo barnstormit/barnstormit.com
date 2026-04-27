@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -21,6 +22,8 @@ const timeline = [
     description:
       "The foundation of a 27-year IT career. Help desk support, network administration, and the early days of enterprise computing. BS in Information Technology from D'Youville University.",
     image: "/about-buffalo.jpg",
+    width: 2000,
+    height: 1500,
     fit: "contain",
   },
   {
@@ -29,6 +32,8 @@ const timeline = [
     description:
       "Datacenter management, MCSE certification, and Microsoft Certified Trainer roles.",
     image: "/about-summit.jpg",
+    width: 768,
+    height: 1024,
     fit: "center 60%",
   },
   {
@@ -37,6 +42,8 @@ const timeline = [
     description:
       "Managing Robbie's Tavern, Bird and Cow, South Park Saloon, Colorado Cantina. Rooting into the mountain community.",
     image: "/about-waterfall.jpg",
+    width: 1451,
+    height: 2000,
     fit: "center 70%",
   },
   {
@@ -45,6 +52,8 @@ const timeline = [
     description:
       "Combining 27 years of IT expertise with deep local roots. On-site repair, remote support, business IT, 3D printing, and AI automation.",
     image: "/about-snowboard.jpg",
+    width: 2000,
+    height: 2000,
     fit: "contain",
   },
 ];
@@ -70,12 +79,13 @@ export default function About() {
           {/* Photo */}
           <div className="relative">
             <div className="glass-card rounded-xl overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/about-hero.jpg"
                 alt="Jeff Barnstorf — Founder of Barnstorm Computer Services"
+                width={1440}
+                height={1440}
+                sizes="(min-width: 1024px) 600px, 100vw"
                 className="w-full object-cover"
-                loading="lazy"
               />
             </div>
             {/* Cert Badge */}
@@ -156,13 +166,14 @@ export default function About() {
                 >
                   {item.image ? (
                     <div className={`glass-card rounded-xl overflow-hidden ${item.fit === "contain" ? "" : "h-80 md:h-96"}`}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.title}
+                        width={item.width}
+                        height={item.height}
+                        sizes="(min-width: 768px) 50vw, 100vw"
                         className={`w-full ${item.fit === "contain" ? "object-contain" : "h-full object-cover"}`}
                         style={item.fit && item.fit !== "contain" ? { objectPosition: item.fit } : undefined}
-                        loading="lazy"
                       />
                     </div>
                   ) : (
