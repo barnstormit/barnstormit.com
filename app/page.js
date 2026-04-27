@@ -20,10 +20,15 @@ export default function Home() {
     <>
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-24 px-6 text-center">
       {/* Background Image + Overlays */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero_bg.jpg')" }}
-      >
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero_bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-[rgba(13,27,42,0.7)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-transparent to-deep-navy" />
         <div className="absolute inset-0 topo-pattern opacity-10" />
@@ -344,13 +349,13 @@ export default function Home() {
         <div className="flex flex-col gap-6">
           {/* Photo */}
           <div className="relative rounded-xl overflow-hidden border border-steel-blue/20">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/TempHeadshot.jpg"
               alt="Jeff Barnstorf — Founder of Barnstorm Computer Services"
-              className="w-full aspect-[3/4] object-cover object-center"
               width={600}
               height={800}
+              sizes="(min-width: 1024px) 600px, 100vw"
+              className="w-full aspect-[3/4] object-cover object-center"
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-deep-navy via-deep-navy/80 to-transparent">
               <h3 className="text-xl font-heading font-bold text-snow-white">
@@ -688,15 +693,13 @@ export default function Home() {
           className="glass-card group block overflow-hidden hover:border-vivid-teal/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="relative h-56 md:h-auto">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+            <div className="relative h-56 md:h-auto md:min-h-[300px]">
+              <Image
                 src="/blog/tailscale-mesh-vpn-header.jpg"
                 alt="How I Use Tailscale to Run My Business From Anywhere in the Mountains"
-                className="w-full h-full object-cover object-left"
-                width={600}
-                height={400}
-                loading="lazy"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover object-left"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-midnight-slate/60 hidden md:block" />
             </div>

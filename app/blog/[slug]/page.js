@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from "../../../lib/posts";
 import { remark } from "remark";
 import html from "remark-html";
+import Image from "next/image";
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -77,13 +78,14 @@ export default async function BlogPost({ params }) {
 
         {/* Featured Image */}
         {post.image && (
-          <div className="rounded-xl overflow-hidden mb-10 -mx-2 md:-mx-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="relative rounded-xl overflow-hidden mb-10 -mx-2 md:-mx-8 h-52 sm:h-64 md:h-96">
+            <Image
               src={post.image}
               alt={post.title}
-              className="w-full h-52 sm:h-64 md:h-96 object-cover object-bottom"
-              loading="lazy"
+              fill
+              priority
+              sizes="(min-width: 768px) 800px, 100vw"
+              className="object-cover object-bottom"
             />
           </div>
         )}
