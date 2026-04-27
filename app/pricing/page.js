@@ -16,9 +16,60 @@ export const metadata = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Barnstorm price service calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is zone-based. The local Fairplay area has no service call fee. Regional zones (Breckenridge, Buena Vista) start at $25, extended zones (Frisco, Bailey) at $38, and remote zones (Dillon, Silverthorne, Leadville, Salida) at $50. Hourly labor is added on top.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Do you charge for an estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every job gets a clear estimate before we start work — no hidden fees and no hourly creep.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer remote support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Remote screen-sharing support is available anywhere in Colorado with no travel fee, and most software issues can be resolved without an on-site visit.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Are there emergency or after-hours rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Emergency and after-hours support is available at priority rates. Call (719) 838-0435 for details.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing IT support contracts for businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Business service contracts cover scheduled maintenance, monitoring, and priority response for local businesses across Park and Summit counties.",
+      },
+    },
+  ],
+};
+
 export default function Pricing() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto text-center">
