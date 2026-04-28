@@ -1,4 +1,5 @@
 import PricingCalculator from "./PricingCalculator";
+import QuoteForm from "./QuoteForm";
 
 export const metadata = {
   title: "Custom 3D Printing",
@@ -333,32 +334,42 @@ export default function ThreeDPrinting() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA / Quote Form */}
       <section className="py-16 md:py-20 px-6 md:px-8">
-        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
-            Ready to get started?
-          </h2>
-          <p className="text-frost-gray text-lg mb-10 max-w-2xl mx-auto">
-            Send your STL, STEP, or 3MF file and we&apos;ll get you a quote — usually within a few hours.
-          </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-            <a
-              href="mailto:3d@barnstormit.com"
-              className="w-full md:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              <span className="material-symbols-outlined" aria-hidden="true">mail</span>
-              3d@barnstormit.com
-            </a>
-            <a
-              href="tel:+17198380435"
-              className="w-full md:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
-            >
-              <span className="material-symbols-outlined" aria-hidden="true">call</span>
-              (719) 838-0435
-            </a>
+        <div className="max-w-[1200px] mx-auto glass-card rounded-xl p-6 sm:p-10 md:p-16">
+          <div className="text-center mb-10">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
+              Ready to get started?
+            </h2>
+            <p className="text-frost-gray text-lg max-w-2xl mx-auto">
+              Send your STL, STEP, or 3MF file and we&apos;ll get you a quote — usually within a few hours.
+            </p>
           </div>
-          <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40">
+
+          <div className="max-w-2xl mx-auto">
+            <QuoteForm />
+          </div>
+
+          <div className="mt-10 pt-8 border-t border-frost-gray/10 text-center">
+            <p className="text-frost-gray text-sm">
+              Or email your file directly to{" "}
+              <a
+                href="mailto:3d@barnstormit.com"
+                className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+              >
+                3d@barnstormit.com
+              </a>{" "}
+              &mdash; or call{" "}
+              <a
+                href="tel:+17198380435"
+                className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+              >
+                (719) 838-0435
+              </a>
+            </p>
+          </div>
+
+          <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40 mt-8 text-center">
             Bambu Lab X2D · AMS 2 Pro · Printed in Fairplay, CO
           </p>
         </div>
