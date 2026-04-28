@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: "Remote Support | Barnstorm Computer Services",
     description:
-      "No service call fee. Download the app, share your ID, and we fix your computer while you watch.",
+      "Skip the house call. Download the app, share your ID, and we fix your computer while you watch.",
     url: "https://barnstormit.com/remote-support",
     type: "website",
   },
@@ -37,7 +37,7 @@ export default function RemoteSupport() {
             the <span className="text-vivid-teal">House Call</span>
           </h1>
           <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed">
-            No service call fee. No waiting. We connect to your screen and fix it
+            No drive time. No waiting. We connect to your screen and fix it
             while you watch.
           </p>
         </div>
@@ -251,8 +251,8 @@ export default function RemoteSupport() {
                 </span>
               </summary>
               <div className="px-6 md:px-8 pb-6 md:pb-8 text-frost-gray leading-relaxed">
-                $100/hour, same as on-site — but with no service call fee. Most common
-                fixes are handled within 30&ndash;60 minutes.
+                $100/hour, same as on-site — and no drive time means we get to
+                work right away. Most common fixes are handled within 30&ndash;60 minutes.
               </div>
             </details>
 

@@ -6,7 +6,6 @@ export function GET() {
 
 - [Home](https://barnstormit.com/)
 - [Services](https://barnstormit.com/services)
-- [Pricing](https://barnstormit.com/pricing)
 - [Service Area](https://barnstormit.com/service-area)
 - [About](https://barnstormit.com/about)
 - [Contact](https://barnstormit.com/contact)

@@ -4,7 +4,7 @@ import countyData from "./colorado-counties.json";
 export const metadata = {
   title: "Service Area",
   description:
-    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, and Buena Vista. Zone-based service fees starting at $25.",
+    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, and Buena Vista. Zone-based service across Park, Summit, Lake, and Chaffee counties.",
   alternates: { canonical: "https://barnstormit.com/service-area" },
   openGraph: {
     title: "Service Area | Barnstorm Computer Services",
@@ -29,10 +29,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      "name": "How are service zones priced?",
+      "name": "How are service zones organized?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Local zone (Fairplay, Alma, Como) has no service call fee. Regional zone (Breckenridge, Blue River, Buena Vista, Jefferson, Grant) is $25. Extended zone (Frisco, Bailey) is $38. Remote zone (Dillon, Silverthorne, Leadville, Salida) is $50. Launch pricing through July 4, 2026.",
+        "text": "We organize our service area into four zones: Local (Fairplay, Alma, Como), Regional (Breckenridge, Blue River, Buena Vista, Jefferson, Grant), Extended (Frisco, Bailey), and Remote (Dillon, Silverthorne, Leadville, Salida). Every job starts with a free estimate. Call (719) 838-0435 for details.",
       },
     },
     {
@@ -40,7 +40,7 @@ const faqJsonLd = {
       "name": "What if I'm outside your on-site service area?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If you're in the mountains and need help, call (719) 838-0435. If we can't get to you on-site, we can almost always help remotely via screen-sharing — no travel fee.",
+        "text": "If you're in the mountains and need help, call (719) 838-0435. If we can't get to you on-site, we can almost always help remotely via secure screen-sharing — no travel required.",
       },
     },
     {
@@ -56,7 +56,7 @@ const faqJsonLd = {
       "name": "Do you offer remote support across Colorado?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Remote screen-sharing support works anywhere with internet, with no travel fee. Most software issues can be resolved remotely without an on-site visit.",
+        "text": "Yes. Remote screen-sharing support works anywhere with internet — no travel required. Most software issues can be resolved remotely without an on-site visit.",
       },
     },
   ],
@@ -102,47 +102,28 @@ export default function ServiceArea() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <ZoneCard
               name="Local Zone"
-              fee="Free"
               towns="Fairplay, Alma, Como"
               note="Our home base."
               icon="home_pin"
-              feeColor="text-vivid-teal"
             />
             <ZoneCard
               name="Regional Zone"
-              fee="$25"
-              oldFee="$50"
               towns="Breckenridge, Blue River, Buena Vista, Jefferson, Grant"
               note="Just over the pass."
               icon="distance"
             />
             <ZoneCard
               name="Extended Zone"
-              fee="$38"
-              oldFee="$75"
               towns="Frisco, Bailey"
               note="Worth the drive."
               icon="explore"
             />
             <ZoneCard
               name="Remote Zone"
-              fee="$50"
-              oldFee="$100+"
               towns="Dillon, Silverthorne, Leadville, Salida"
               note="We&apos;ll come to you."
               icon="landscape"
             />
-          </div>
-          <p className="mt-6 text-center text-frost-gray text-sm italic">
-            Launch special pricing through July 4, 2026
-          </p>
-          <div className="mt-3 text-center">
-            <Link
-              href="/pricing"
-              className="text-vivid-teal hover:text-alpine-gold transition-colors font-heading font-bold text-sm focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              See pricing by zone &rarr;
-            </Link>
           </div>
         </div>
       </section>
@@ -159,11 +140,11 @@ export default function ServiceArea() {
               settings_remote
             </span>
             <p className="text-frost-gray text-sm md:text-base">
-              Remote support available anywhere &mdash;{" "}
+              Remote support available{" "}
               <span className="text-alpine-gold font-bold">
-                no travel fee
+                anywhere with internet
               </span>{" "}
-              for screen-sharing sessions.
+              &mdash; secure screen-sharing, no drive time.
             </p>
           </div>
         </div>
@@ -192,21 +173,13 @@ export default function ServiceArea() {
   );
 }
 
-function ZoneCard({ name, fee, oldFee, towns, note, icon, feeColor }) {
+function ZoneCard({ name, towns, note, icon }) {
   return (
     <div className="glass-card rounded-xl p-8 flex flex-col h-full">
       <div className="flex justify-between items-start mb-6">
         <span className="p-3 rounded-lg bg-vivid-teal/10 text-vivid-teal">
           <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
         </span>
-        <div className="text-right">
-          {oldFee && (
-            <span className="text-frost-gray text-sm line-through mr-2">{oldFee}</span>
-          )}
-          <span className={`font-heading text-xl font-bold ${feeColor || "text-alpine-gold"}`}>
-            {fee}
-          </span>
-        </div>
       </div>
       <h2 className="font-heading text-xl font-bold text-snow-white mb-2">
         {name}
@@ -309,12 +282,12 @@ function ColoradoMap() {
         );
       })}
 
-      {/* Legend — pricing zones by label color */}
+      {/* Legend — service zones by label color */}
       <g transform="translate(480, 350)">
         <rect
           x="0"
           y="0"
-          width="230"
+          width="180"
           height="115"
           rx="8"
           fill="#0D1B2A"
@@ -330,41 +303,24 @@ function ColoradoMap() {
           fontWeight="bold"
           fontFamily="sans-serif"
         >
-          Pricing Zones
+          Service Zones
         </text>
-        {/* Local — Free */}
         <circle cx="22" cy="46" r="6" fill="#22D3EE" />
-        <text x="36" y="50" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Local — </tspan>
-          <tspan fill="#3A9BD5" fontWeight="bold">Free</tspan>
+        <text x="36" y="50" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+          Local
         </text>
-        {/* Regional — $50 → $25 */}
         <circle cx="22" cy="66" r="6" fill="#F0A500" />
-        <text x="36" y="70" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Regional — </tspan>
-          <tspan fill="#8AA0B4">$50</tspan>
-          <tspan fill="#F7F9FC"> </tspan>
-          <tspan fill="#F0A500" fontWeight="bold">$25</tspan>
+        <text x="36" y="70" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+          Regional
         </text>
-        <line x1="118" y1="67" x2="138" y2="67" stroke="#8AA0B4" strokeWidth="1" />
-        {/* Extended — $75 → $38 */}
         <circle cx="22" cy="86" r="6" fill="#5CE0D6" />
-        <text x="36" y="90" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Extended — </tspan>
-          <tspan fill="#8AA0B4">$75</tspan>
-          <tspan fill="#F7F9FC"> </tspan>
-          <tspan fill="#F0A500" fontWeight="bold">$38</tspan>
+        <text x="36" y="90" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+          Extended
         </text>
-        <line x1="120" y1="87" x2="140" y2="87" stroke="#8AA0B4" strokeWidth="1" />
-        {/* Remote — $100+ → $50 */}
         <circle cx="22" cy="106" r="6" fill="#DC2626" />
-        <text x="36" y="110" fontSize="12" fontFamily="sans-serif">
-          <tspan fill="#F7F9FC">Remote — </tspan>
-          <tspan fill="#8AA0B4">$100+</tspan>
-          <tspan fill="#F7F9FC"> </tspan>
-          <tspan fill="#F0A500" fontWeight="bold">$50</tspan>
+        <text x="36" y="110" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+          Remote
         </text>
-        <line x1="113" y1="107" x2="148" y2="107" stroke="#8AA0B4" strokeWidth="1" />
       </g>
     </svg>
   );

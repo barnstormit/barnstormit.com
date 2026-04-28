@@ -72,7 +72,7 @@ export default function TermsOfService() {
                 </span>
                 <span>
                   <strong className="text-snow-white">Service call fee:</strong>{" "}
-                  Varies by zone (see Pricing page).
+                  Varies by zone. Quoted before any work begins.
                 </span>
               </li>
               <li className="flex gap-3">

@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/services", label: "Services", icon: "settings" },
-  { href: "/pricing", label: "Pricing", icon: "payments" },
   { href: "/service-area", label: "Service Area", icon: "map" },
   { href: "/remote-support", label: "Remote Support", icon: "terminal" },
   { href: "/3d-printing", label: "3D Printing", icon: "deployed_code" },

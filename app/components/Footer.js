@@ -4,7 +4,6 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/service-area", label: "Service Area" },
   { href: "/remote-support", label: "Remote Support" },
   { href: "/3d-printing", label: "3D Printing" },

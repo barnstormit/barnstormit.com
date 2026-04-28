@@ -39,35 +39,6 @@ export default function Home() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
-        {/* Grand Opening Banner */}
-        <div
-          className="w-full rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-fade-in-up"
-          style={{
-            background: "#1B2838",
-            border: "2px solid #F0A500",
-            boxShadow: "0 0 20px rgba(240,165,0,0.1)",
-          }}
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-alpine-gold text-2xl" aria-hidden="true">&#10022;</span>
-            <span className="font-heading text-lg sm:text-xl font-bold text-snow-white">
-              Grand Opening Special
-            </span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
-            <span className="text-snow-white text-sm">
-              50% off service call fees through July 4th
-            </span>
-            <Link
-              href="/pricing"
-              className="text-vivid-teal font-heading font-bold text-sm flex items-center gap-1 hover:text-alpine-gold transition-colors shrink-0 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              See Pricing
-              <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
-            </Link>
-          </div>
-        </div>
-
         {/* Eyebrow Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-frost-gray/20 animate-fade-in-up">
           <span
@@ -326,6 +297,9 @@ export default function Home() {
         </Link>{" "}
         to get started.
       </p>
+      <p className="mt-4 max-w-[1200px] mx-auto text-center text-frost-gray/70 text-xs md:text-sm">
+        On-site rates starting at $150 &middot; Remote support at $100/hr &middot; Every job starts with a free estimate.
+      </p>
     </section>
 
     {/* Why Barnstorm — Trust Section */}
@@ -476,12 +450,6 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Fairplay, Alma, Como
             </p>
-            <div className="text-3xl font-heading font-bold mb-8 text-vivid-teal">
-              Free{" "}
-              <span className="text-sm font-normal text-frost-gray">
-                Service Call Fee
-              </span>
-            </div>
             <ul className="space-y-3 mb-8 text-sm flex-1">
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
@@ -516,13 +484,6 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Breckenridge, Blue River, Buena Vista, Jefferson, Grant
             </p>
-            <div className="mb-8">
-              <span className="text-sm font-heading text-frost-gray line-through mr-2">$50</span>
-              <span className="text-3xl font-heading font-bold text-alpine-gold">$25</span>
-              <span className="text-sm font-normal text-frost-gray ml-2">
-                Service Call Fee
-              </span>
-            </div>
             <ul className="space-y-3 mb-8 text-sm flex-1">
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
@@ -557,13 +518,6 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Frisco, Bailey
             </p>
-            <div className="mb-8">
-              <span className="text-sm font-heading text-frost-gray line-through mr-2">$75</span>
-              <span className="text-3xl font-heading font-bold text-alpine-gold">$38</span>
-              <span className="text-sm font-normal text-frost-gray ml-2">
-                Service Call Fee
-              </span>
-            </div>
             <ul className="space-y-3 mb-8 text-sm flex-1">
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
@@ -598,13 +552,6 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               Dillon, Silverthorne, Leadville, Salida
             </p>
-            <div className="mb-8">
-              <span className="text-sm font-heading text-frost-gray line-through mr-2">$100+</span>
-              <span className="text-3xl font-heading font-bold text-alpine-gold">$50</span>
-              <span className="text-sm font-normal text-frost-gray ml-2">
-                Service Call Fee
-              </span>
-            </div>
             <ul className="space-y-3 mb-8 text-sm flex-1">
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">

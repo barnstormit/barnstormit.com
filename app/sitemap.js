@@ -23,7 +23,6 @@ export default function sitemap() {
   const pages = [
     { path: "/", file: "app/page.js", priority: 1.0, changeFrequency: "weekly" },
     { path: "/services", file: "app/services/page.js", priority: 0.9, changeFrequency: "monthly" },
-    { path: "/pricing", file: "app/pricing/page.js", priority: 0.9, changeFrequency: "monthly" },
     { path: "/service-area", file: "app/service-area/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/about", file: "app/about/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", file: "app/contact/page.js", priority: 0.8, changeFrequency: "monthly" },
