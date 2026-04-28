@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const ALLOWED_EXTENSIONS = ["stl", "step", "stp", "3mf", "obj"];
-const MAX_FILE_SIZE = 25 * 1024 * 1024;
+const MAX_FILE_SIZE = 4 * 1024 * 1024;
 
 export async function POST(request) {
   try {
@@ -56,7 +56,7 @@ export async function POST(request) {
 
     if (file.size > MAX_FILE_SIZE) {
       return NextResponse.json(
-        { error: "File must be 25MB or smaller." },
+        { error: "File must be 4MB or smaller." },
         { status: 400 }
       );
     }

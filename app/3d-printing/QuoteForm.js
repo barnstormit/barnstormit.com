@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const ALLOWED_EXTENSIONS = ["stl", "step", "stp", "3mf", "obj"];
-const MAX_FILE_SIZE = 25 * 1024 * 1024;
+const MAX_FILE_SIZE = 4 * 1024 * 1024;
 
 const inputClass =
   "w-full bg-deep-navy/50 border border-frost-gray/20 rounded-lg px-4 py-3 text-snow-white placeholder:text-frost-gray/40 focus:border-vivid-teal focus:outline-none focus:ring-2 focus:ring-vivid-teal/30";
@@ -17,7 +17,7 @@ function validateFile(f) {
     return "File must be .stl, .step, .stp, .3mf, or .obj.";
   }
   if (f.size > MAX_FILE_SIZE) {
-    return "File must be 25MB or smaller.";
+    return "File must be 4MB or smaller.";
   }
   return null;
 }
@@ -205,11 +205,22 @@ export default function QuoteForm() {
                 Drop your file here, or click to browse
               </p>
               <p className="text-frost-gray text-sm mt-1">
-                .stl &middot; .step &middot; .stp &middot; .3mf &middot; .obj &mdash; max 25MB
+                .stl &middot; .step &middot; .stp &middot; .3mf &middot; .obj &mdash; max 4MB
               </p>
             </div>
           )}
         </label>
+        <p className="text-frost-gray/70 text-xs mt-2">
+          File over 4MB? No problem &mdash; email it to{" "}
+          <a
+            href="mailto:3d@barnstormit.com"
+            className="text-vivid-teal hover:underline"
+          >
+            3d@barnstormit.com
+          </a>{" "}
+          with your name, material, color, and quantity so we can get your
+          quote started.
+        </p>
       </div>
 
       <div>
