@@ -350,6 +350,16 @@ export default function ThreeDPrinting() {
             <QuoteForm />
           </div>
 
+          <p className="text-frost-gray/70 text-xs mt-6 text-center">
+            Or call{" "}
+            <a
+              href="tel:+17198380435"
+              className="text-vivid-teal hover:underline"
+            >
+              (719) 838-0435
+            </a>
+          </p>
+
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40 mt-8 text-center">
             Bambu Lab X2D · AMS 2 Pro · Printed in Fairplay, CO
           </p>
