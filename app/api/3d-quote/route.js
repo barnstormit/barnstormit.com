@@ -66,7 +66,7 @@ export async function POST(request) {
 
     await resend.emails.send({
       from: "Barnstorm 3D Quote <noreply@barnstormit.com>",
-      to: "3d@barnstormit.com",
+      to: "support@barnstormit.com",
       replyTo: email,
       subject: `New 3D Print Quote Request from ${name}`,
       html: `
