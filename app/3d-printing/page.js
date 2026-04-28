@@ -350,25 +350,6 @@ export default function ThreeDPrinting() {
             <QuoteForm />
           </div>
 
-          <div className="mt-10 pt-8 border-t border-frost-gray/10 text-center">
-            <p className="text-frost-gray text-sm">
-              Or email your file directly to{" "}
-              <a
-                href="mailto:3d@barnstormit.com"
-                className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                3d@barnstormit.com
-              </a>{" "}
-              &mdash; or call{" "}
-              <a
-                href="tel:+17198380435"
-                className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-              >
-                (719) 838-0435
-              </a>
-            </p>
-          </div>
-
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40 mt-8 text-center">
             Bambu Lab X2D · AMS 2 Pro · Printed in Fairplay, CO
           </p>

@@ -301,6 +301,7 @@ export default function QuoteForm() {
         </p>
       )}
 
+      <div className="flex justify-center">
       <button
         type="submit"
         disabled={status === "submitting"}
@@ -325,6 +326,7 @@ export default function QuoteForm() {
           </>
         )}
       </button>
+      </div>
     </form>
   );
 }
