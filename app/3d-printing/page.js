@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PricingCalculator from "./PricingCalculator";
 
 export const metadata = {
