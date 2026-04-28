@@ -308,7 +308,7 @@ export default function Home() {
             Why Barnstorm
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-snow-white tracking-tight leading-tight mb-8 text-balance">
-            20+ Years of IT.
+            Over 20 Years of IT.
             <br />
             <span className="text-vivid-teal">Actually Lives Here.</span>
           </h2>

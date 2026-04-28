@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata = {
   title: "About",
   description:
-    "Meet Jeff Barnstorf — 20+ years of IT experience, MCSE certified, based in Fairplay. On-site repair and IT support for mountain communities.",
+    "Meet Jeff Barnstorf — over 20 years of IT experience, MCSE certified, based in Fairplay. On-site repair and IT support for mountain communities.",
   alternates: { canonical: "https://barnstormit.com/about" },
   openGraph: {
     title: "About | Barnstorm Computer Services",
     description:
-      "Meet Jeff Barnstorf — 20+ years of IT experience serving Colorado's mountain communities from Fairplay.",
+      "Meet Jeff Barnstorf — over 20 years of IT experience serving Colorado's mountain communities from Fairplay.",
     url: "https://barnstormit.com/about",
     type: "website",
   },
@@ -50,7 +50,7 @@ const timeline = [
     year: "2026",
     title: "Barnstorm Launch",
     description:
-      "Combining 20+ years of IT expertise with deep local roots. On-site repair, remote support, business IT, 3D printing, and AI automation.",
+      "Combining over 20 years of IT expertise with deep local roots. On-site repair, remote support, business IT, 3D printing, and AI automation.",
     image: "/about-snowboard.jpg",
     width: 2000,
     height: 2000,
@@ -111,7 +111,7 @@ export default function About() {
               do, and has been solving tech problems at altitude since 1997.
             </p>
             <p className="text-frost-gray leading-relaxed mb-8">
-              With 20+ years of experience spanning help desks, network
+              With over 20 years of experience spanning help desks, network
               administration, and enterprise datacenter management, he brings a
               level of technical depth rarely found in residential IT support. He
               holds a BS in IT from D&apos;Youville University and
@@ -149,7 +149,7 @@ export default function About() {
             Technical Evolution
           </span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white tracking-tight mb-12 text-balance">
-            20+ Years of Solving Problems
+            Over 20 Years of Solving Problems
           </h2>
 
           <div className="space-y-12">
