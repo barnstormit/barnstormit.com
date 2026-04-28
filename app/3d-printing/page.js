@@ -61,7 +61,7 @@ const materials = [
 
 const steps = [
   {
-    title: "Send us your file",
+    title: "Send your file",
     body: (
       <>
         STL, STEP, or 3MF format. Email{" "}
@@ -341,7 +341,7 @@ export default function ThreeDPrinting() {
             Ready to get started?
           </h2>
           <p className="text-frost-gray text-lg mb-10 max-w-2xl mx-auto">
-            Send us your STL, STEP, or 3MF file and we&apos;ll get you a quote — usually within a few hours.
+            Send your STL, STEP, or 3MF file and we&apos;ll get you a quote — usually within a few hours.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -358,13 +358,6 @@ export default function ThreeDPrinting() {
               <span className="material-symbols-outlined" aria-hidden="true">call</span>
               (719) 838-0435
             </a>
-            <Link
-              href="/contact"
-              className="w-full md:w-auto border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
-            >
-              <span className="material-symbols-outlined" aria-hidden="true">forum</span>
-              Contact form
-            </Link>
           </div>
           <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-frost-gray/40">
             Bambu Lab X2D · AMS 2 Pro · Printed in Fairplay, CO
