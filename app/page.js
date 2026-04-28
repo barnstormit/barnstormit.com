@@ -132,7 +132,7 @@ export default function Home() {
               workspace_premium
             </span>
             <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
-              27+ Years IT Experience
+              20+ Years IT Experience
             </span>
           </div>
           <div className="flex items-center gap-2 text-snow-white">
@@ -308,7 +308,7 @@ export default function Home() {
             Why Barnstorm
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-snow-white tracking-tight leading-tight mb-8 text-balance">
-            27 Years of IT.
+            20+ Years of IT.
             <br />
             <span className="text-vivid-teal">Actually Lives Here.</span>
           </h2>
@@ -396,7 +396,7 @@ export default function Home() {
                 workspace_premium
               </span>
               <span className="font-heading font-bold text-snow-white text-sm">
-                27+ Years IT Experience
+                20+ Years IT Experience
               </span>
             </div>
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
