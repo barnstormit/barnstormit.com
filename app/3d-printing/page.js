@@ -66,10 +66,10 @@ const steps = [
       <>
         STL, STEP, or 3MF format. Email{" "}
         <a
-          href="mailto:quotes@ops.barnstormit.com"
+          href="mailto:3d@barnstormit.com"
           className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
-          quotes@ops.barnstormit.com
+          3d@barnstormit.com
         </a>{" "}
         or call{" "}
         <a
@@ -345,11 +345,11 @@ export default function ThreeDPrinting() {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <a
-              href="mailto:quotes@ops.barnstormit.com"
+              href="mailto:3d@barnstormit.com"
               className="w-full md:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">mail</span>
-              quotes@ops.barnstormit.com
+              3d@barnstormit.com
             </a>
             <a
               href="tel:+17198380435"
