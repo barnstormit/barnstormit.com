@@ -297,9 +297,6 @@ export default function Home() {
         </Link>{" "}
         to get started.
       </p>
-      <p className="mt-4 max-w-[1200px] mx-auto text-center text-frost-gray/70 text-xs md:text-sm">
-        On-site rates starting at $150 &middot; Remote support at $100/hr &middot; Every job starts with a free estimate.
-      </p>
     </section>
 
     {/* Why Barnstorm — Trust Section */}
