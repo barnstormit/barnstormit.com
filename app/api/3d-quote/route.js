@@ -91,7 +91,8 @@ export async function POST(request) {
         article: {
           subject: `New 3D Print Quote Request from ${name}`,
           body,
-          type: "web",
+          type: "email",
+          from: email,
           internal: false,
           sender: "Customer",
           attachments: [
