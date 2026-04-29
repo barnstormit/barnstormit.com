@@ -56,6 +56,7 @@ export async function POST(request) {
           body,
           type: "email",
           from: email,
+          to: "support@barnstormit.com",
           internal: false,
           sender: "Customer",
         },
