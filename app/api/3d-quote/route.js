@@ -1,7 +1,4 @@
-import { Resend } from "resend";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const ALLOWED_EXTENSIONS = ["stl", "step", "stp", "3mf", "obj"];
 const MAX_FILE_SIZE = 4 * 1024 * 1024;
@@ -62,57 +59,60 @@ export async function POST(request) {
     }
 
     const arrayBuffer = await file.arrayBuffer();
-    const fileBuffer = Buffer.from(arrayBuffer);
+    const fileBase64 = Buffer.from(arrayBuffer).toString("base64");
 
-    await resend.emails.send({
-      from: "Barnstorm 3D Quote <noreply@barnstormit.com>",
-      to: "support@barnstormit.com",
-      replyTo: email,
-      subject: `New 3D Print Quote Request from ${name}`,
-      html: `
-        <h2>New 3D Print Quote Request</h2>
-        <table style="border-collapse:collapse;width:100%;max-width:600px">
-          <tr>
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Name</td>
-            <td style="padding:8px 12px">${escapeHtml(name)}</td>
-          </tr>
-          <tr style="background:#f9f9f9">
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Email</td>
-            <td style="padding:8px 12px"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td>
-          </tr>
-          <tr>
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Phone</td>
-            <td style="padding:8px 12px">${phone ? escapeHtml(phone) : "Not provided"}</td>
-          </tr>
-          <tr style="background:#f9f9f9">
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Material</td>
-            <td style="padding:8px 12px">${material ? escapeHtml(material) : "Not specified"}</td>
-          </tr>
-          <tr>
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Colors</td>
-            <td style="padding:8px 12px;white-space:pre-wrap">${colors ? escapeHtml(colors) : "Not specified"}</td>
-          </tr>
-          <tr style="background:#f9f9f9">
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Quantity</td>
-            <td style="padding:8px 12px">${quantity ? escapeHtml(quantity) : "1"}</td>
-          </tr>
-          <tr>
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Timeline</td>
-            <td style="padding:8px 12px">${timeline ? escapeHtml(timeline) : "Not specified"}</td>
-          </tr>
-          <tr style="background:#f9f9f9">
-            <td style="padding:8px 12px;font-weight:bold;vertical-align:top;color:#555">Notes</td>
-            <td style="padding:8px 12px;white-space:pre-wrap">${notes ? escapeHtml(notes) : "None"}</td>
-          </tr>
-        </table>
-      `,
-      attachments: [
-        {
-          filename,
-          content: fileBuffer,
+    const parts = name.trim().split(/\s+/);
+    const firstname = parts[0];
+    const lastname = parts.slice(1).join(" ");
+
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || "Not provided"}`,
+      `Material: ${material || "Not specified"}`,
+      `Colors: ${colors || "Not specified"}`,
+      `Quantity: ${quantity || "1"}`,
+      `Timeline: ${timeline || "Not specified"}`,
+      ``,
+      `Notes:`,
+      notes || "None",
+    ].join("\n");
+
+    const res = await fetch(`${process.env.ZAMMAD_URL}/api/v1/tickets`, {
+      method: "POST",
+      headers: {
+        Authorization: `Token token=${process.env.ZAMMAD_API_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: `New 3D Print Quote Request from ${name}`,
+        group: "Support",
+        customer: { email, firstname, lastname },
+        article: {
+          subject: `New 3D Print Quote Request from ${name}`,
+          body,
+          type: "web",
+          internal: false,
+          sender: "Customer",
+          attachments: [
+            {
+              filename,
+              data: fileBase64,
+              "mime-type": file.type || "application/octet-stream",
+            },
+          ],
         },
-      ],
+      }),
     });
+
+    if (!res.ok) {
+      const errorText = await res.text().catch(() => "");
+      console.error("Zammad ticket create failed:", res.status, errorText);
+      return NextResponse.json(
+        { error: "Failed to send quote request. Please try again." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
