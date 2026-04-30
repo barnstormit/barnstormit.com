@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Web Design & SEO",
   description:
-    "Modern fast websites, local SEO, Google Business Profile setup, and professional email at your domain. Built for small businesses across the Colorado high country.",
+    "Modern fast websites, local SEO, Google Business Profile setup, and domain email. Built for small businesses across the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/web-design" },
   openGraph: {
     title: "Web Design & SEO | Barnstorm Computer Services",

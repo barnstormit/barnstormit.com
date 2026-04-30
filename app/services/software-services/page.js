@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Software Services",
   description:
-    "OS installs, virus removal, system optimization and software updates. On-site and remote software services across Fairplay, Breckenridge, and the Colorado high country.",
+    "OS installs, virus removal, optimization and updates. On-site and remote software services across Fairplay, Breckenridge, and the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/software-services" },
   openGraph: {
     title: "Software Services | Barnstorm Computer Services",

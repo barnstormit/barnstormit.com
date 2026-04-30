@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Hardware Repair",
   description:
-    "Laptop screens, SSD/RAM upgrades, motherboard repair, batteries and more. On-site computer hardware repair across Fairplay, Breckenridge, and Summit County.",
+    "Laptop screens, SSD/RAM upgrades, motherboard repair, and batteries. On-site computer hardware repair in Fairplay, Breckenridge, and Summit County.",
   alternates: { canonical: "https://barnstormit.com/services/hardware-repair" },
   openGraph: {
     title: "Hardware Repair | Barnstorm Computer Services",

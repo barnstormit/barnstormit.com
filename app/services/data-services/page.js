@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Data Recovery & Backup",
   description:
-    "Data recovery, automated backup setup, computer-to-computer migration, and cloud storage configuration in Fairplay, Breckenridge, and the Colorado high country.",
+    "Data recovery, automated backup setup, and cloud storage configuration in Fairplay, Breckenridge, and the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/data-services" },
   openGraph: {
     title: "Data Recovery & Backup | Barnstorm Computer Services",

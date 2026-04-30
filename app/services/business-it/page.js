@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Business IT Support",
   description:
-    "Managed IT, consulting, POS installation, and workflow automation for small businesses in Fairplay, Breckenridge, and Summit County. Local response, no offshore.",
+    "Managed IT, consulting, POS installation, and workflow automation for small businesses in Fairplay, Breckenridge, and Summit County.",
   alternates: { canonical: "https://barnstormit.com/services/business-it" },
   openGraph: {
     title: "Business IT Support | Barnstorm Computer Services",

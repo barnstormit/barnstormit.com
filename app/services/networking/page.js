@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "WiFi & Networking",
   description:
-    "Home and business WiFi, router configuration, mesh networks, network security, and Starlink installation for Colorado mountain homes and short-term rentals.",
+    "Home and business WiFi, router config, mesh networks, security, and Starlink installation for Colorado mountain homes and short-term rentals.",
   alternates: { canonical: "https://barnstormit.com/services/networking" },
   openGraph: {
     title: "WiFi & Networking | Barnstorm Computer Services",

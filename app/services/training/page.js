@@ -3,7 +3,7 @@ import ServiceLandingLayout from "../../components/ServiceLandingLayout";
 export const metadata = {
   title: "Computer Training",
   description:
-    "One-on-one computer training, email and productivity setup, security awareness, and business software training for Colorado mountain residents and small businesses.",
+    "One-on-one computer training, email and productivity setup, security awareness, and business software training in mountain Colorado.",
   alternates: { canonical: "https://barnstormit.com/services/training" },
   openGraph: {
     title: "Computer Training | Barnstorm Computer Services",
