@@ -18,6 +18,7 @@ const services = [
   {
     icon: "build",
     title: "Hardware Repair",
+    href: "/services/hardware-repair",
     items: [
       "Laptop screen repair",
       "SSD/HDD upgrades",
@@ -32,6 +33,7 @@ const services = [
   {
     icon: "terminal",
     title: "Software Services",
+    href: "/services/software-services",
     items: [
       "OS installation",
       "Virus/malware removal",
@@ -44,6 +46,7 @@ const services = [
   {
     icon: "database",
     title: "Data Services",
+    href: "/services/data-services",
     items: [
       "Data recovery",
       "Backup solutions",
@@ -54,6 +57,7 @@ const services = [
   {
     icon: "wifi",
     title: "Networking",
+    href: "/services/networking",
     items: [
       "Home/business WiFi setup",
       "Router/modem configuration",
@@ -65,6 +69,7 @@ const services = [
   {
     icon: "business_center",
     title: "Business IT",
+    href: "/services/business-it",
     items: [
       "Managed IT services",
       "IT consulting and strategy",
@@ -78,6 +83,7 @@ const services = [
   {
     icon: "school",
     title: "Training & Education",
+    href: "/services/training",
     items: [
       "One-on-one computer training",
       "Email and productivity setup",
@@ -88,6 +94,7 @@ const services = [
   {
     icon: "language",
     title: "Web & Digital",
+    href: "/services/web-design",
     items: [
       "Website design and development",
       "SEO and local search optimization",
@@ -100,6 +107,7 @@ const services = [
     title: "AI & Automation",
     badge: "NEW",
     highlight: true,
+    href: "/services/ai-automation",
     items: [
       "AI tool setup and integration",
       "Workflow automation (n8n, Make, Zapier)",
@@ -227,11 +235,12 @@ export default function Services() {
       <section className="pb-12 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((svc) => (
-            <div
+            <Link
               key={svc.title}
-              className={`glass-card rounded-xl p-8 flex flex-col ${
+              href={svc.href}
+              className={`glass-card rounded-xl p-8 flex flex-col group hover:border-vivid-teal/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none ${
                 svc.highlight
-                  ? "border-alpine-gold/40"
+                  ? "border-alpine-gold/40 hover:border-alpine-gold/60"
                   : ""
               }`}
               style={
@@ -272,18 +281,17 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              {svc.href && (
-                <Link
-                  href={svc.href}
-                  className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 hover:gap-3 transition-[gap] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
-                >
-                  Learn more
-                  <span aria-hidden="true" className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </Link>
-              )}
-            </div>
+              <span
+                className={`mt-6 font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap] ${
+                  svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                }`}
+              >
+                Learn more
+                <span aria-hidden="true" className="material-symbols-outlined text-sm">
+                  arrow_forward
+                </span>
+              </span>
+            </Link>
           ))}
         </div>
       </section>
