@@ -97,7 +97,7 @@ export default function QuoteForm() {
         return;
       }
       setStatus("success");
-      window.gtag?.('event', 'quote_form_submit', { event_category: 'engagement', event_label: '3D Print Quote' });
+      window.dataLayer?.push({ event: 'quote_form_submit', event_category: 'engagement', event_label: '3D Print Quote' });
     } catch (err) {
       setStatus("error");
       setErrorMessage("Failed to send quote request. Please try again.");

@@ -38,7 +38,7 @@ export default function ContactForm() {
       }
 
       setStatus("success");
-      window.gtag?.('event', 'contact_form_submit', { event_category: 'engagement', event_label: 'Contact Form' });
+      window.dataLayer?.push({ event: 'contact_form_submit', event_category: 'engagement', event_label: 'Contact Form' });
       form.reset();
     } catch {
       setStatus("error");
