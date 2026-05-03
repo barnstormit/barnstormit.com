@@ -71,7 +71,7 @@ A note on the SD card: get a high-endurance card, not a standard one. AdGuard Ho
 
 - A computer to flash the SD card
 - Another device already on Tailscale (to verify things are working)
-- About 30 minutes
+- About an hour
 
 ## Flash Raspberry Pi OS Lite
 
@@ -354,7 +354,7 @@ Time to verify everything works.
 
 ## What You End Up With
 
-For about $150 in hardware and 30 minutes of setup, you now have:
+For about $150 in hardware and about an hour of setup, you now have:
 
 - Ad and tracker blocking on every device on your network, including devices that don't support browser extensions (smart TVs, IoT devices, phones, tablets)
 - Encrypted DNS everywhere — your ISP can't snoop on your DNS queries
