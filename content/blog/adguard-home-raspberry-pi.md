@@ -94,7 +94,7 @@ Once it's done, pop the card into your Pi, plug in ethernet and power, and give 
 
 You need to find your Pi's IP address on your local network. Check your router's admin page (usually at 192.168.1.1) and look for the hostname you set. It'll be something like 192.168.1.100.
 
-SSH in from your computer:
+SSH in from your computer. Use the username you set in the Imager's advanced settings:
 
 ```bash
 ssh your-username@192.168.1.100
