@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/service-area", label: "Service Area", icon: "map" },
   { href: "/remote-support", label: "Remote Support", icon: "terminal" },
   { href: "/3d-printing", label: "3D Printing", icon: "deployed_code" },
+  { href: "/blog", label: "Blog", icon: "article" },
   { href: "/contact", label: "Contact", icon: "mail" },
 ];
 
