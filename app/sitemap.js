@@ -1,5 +1,6 @@
 import { execSync } from "node:child_process";
-import { statSync } from "node:fs";
+import { readdirSync, statSync } from "node:fs";
+import { join, relative } from "node:path";
 import { getAllPosts } from "../lib/posts";
 
 // Use git log first — survives Vercel's shallow clone for files touched in the
@@ -17,40 +18,75 @@ function lastModified(file) {
   return new Date();
 }
 
+const APP_DIR = "app";
+
+// Recursively find every page.{js,jsx,ts,tsx} under app/, skipping:
+//  - api/ (route handlers, not crawlable pages)
+//  - [slug] dynamic segments (handled separately, e.g. blog posts via getAllPosts)
+//  - @parallel and _private folders
+function discoverPageFiles(dir = APP_DIR) {
+  const out = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "api") continue;
+      if (entry.name.startsWith("[")) continue;
+      if (entry.name.startsWith("@")) continue;
+      if (entry.name.startsWith("_")) continue;
+      out.push(...discoverPageFiles(full));
+    } else if (/^page\.(jsx?|tsx?)$/.test(entry.name)) {
+      out.push(full);
+    }
+  }
+  return out;
+}
+
+// Convert a page file path to its public URL path.
+//   app/page.js                              -> /
+//   app/services/page.js                     -> /services
+//   app/services/hardware-repair/page.js     -> /services/hardware-repair
+//   app/(marketing)/promo/page.js            -> /promo (route groups stripped)
+function fileToUrlPath(file) {
+  const trimmed = relative(APP_DIR, file)
+    .replace(/page\.(jsx?|tsx?)$/, "")
+    .replace(/\/$/, "");
+  if (trimmed === "") return "/";
+  const segments = trimmed
+    .split("/")
+    .filter((s) => !(s.startsWith("(") && s.endsWith(")")));
+  return "/" + segments.join("/");
+}
+
+const PRIMARY_SERVICE_PATHS = new Set([
+  "/services",
+  "/service-area",
+  "/remote-support",
+  "/3d-printing",
+  "/vacation-help",
+  "/str-partners",
+  "/book",
+]);
+
+function getPriority(path) {
+  if (path === "/") return 1.0;
+  if (PRIMARY_SERVICE_PATHS.has(path)) return 0.8;
+  if (path.startsWith("/services/")) return 0.8;
+  if (/^\/computer-repair-/.test(path)) return 0.8;
+  return 0.5;
+}
+
 export default function sitemap() {
   const baseUrl = "https://barnstormit.com";
 
-  const pages = [
-    { path: "/", file: "app/page.js", priority: 1.0, changeFrequency: "weekly" },
-    { path: "/services", file: "app/services/page.js", priority: 0.9, changeFrequency: "monthly" },
-    { path: "/services/hardware-repair", file: "app/services/hardware-repair/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/software-services", file: "app/services/software-services/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/data-services", file: "app/services/data-services/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/networking", file: "app/services/networking/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/business-it", file: "app/services/business-it/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/training", file: "app/services/training/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/web-design", file: "app/services/web-design/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/services/ai-automation", file: "app/services/ai-automation/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/service-area", file: "app/service-area/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/computer-repair-fairplay-co", file: "app/computer-repair-fairplay-co/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/about", file: "app/about/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/contact", file: "app/contact/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/remote-support", file: "app/remote-support/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/3d-printing", file: "app/3d-printing/page.js", priority: 0.7, changeFrequency: "monthly" },
-    { path: "/book", file: "app/book/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/vacation-help", file: "app/vacation-help/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/str-partners", file: "app/str-partners/page.js", priority: 0.8, changeFrequency: "monthly" },
-    { path: "/blog", file: "app/blog/page.js", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/privacy-policy", file: "app/privacy-policy/page.js", priority: 0.3, changeFrequency: "yearly" },
-    { path: "/terms", file: "app/terms/page.js", priority: 0.3, changeFrequency: "yearly" },
-  ];
-
-  const staticPages = pages.map((page) => ({
-    url: `${baseUrl}${page.path}`,
-    lastModified: lastModified(page.file),
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }));
+  const staticPages = discoverPageFiles().map((file) => {
+    const path = fileToUrlPath(file);
+    return {
+      url: `${baseUrl}${path}`,
+      lastModified: lastModified(file),
+      changeFrequency: "monthly",
+      priority: getPriority(path),
+    };
+  });
 
   const blogPosts = getAllPosts().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
