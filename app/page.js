@@ -450,14 +450,20 @@ export default function Home() {
               Local
             </h3>
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
-              Fairplay, Alma, Como
+              <Link
+                href="/computer-repair-fairplay-co"
+                className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+              >
+                Fairplay
+              </Link>
+              , Alma, Como
             </p>
             <ul className="space-y-3 mb-8 text-sm flex-1">
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
                   check_circle
                 </span>
-                <span className="text-frost-gray">Same-day On-site</span>
+                <span className="text-frost-gray">Fast Response</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
@@ -491,7 +497,7 @@ export default function Home() {
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
                   check_circle
                 </span>
-                <span className="text-frost-gray">Next-day On-site</span>
+                <span className="text-frost-gray">Flexible Scheduling</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-vivid-teal text-lg" aria-hidden="true">
