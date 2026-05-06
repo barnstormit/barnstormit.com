@@ -81,7 +81,7 @@ const localPoints = [
   {
     icon: "distance",
     title: "Alma, Como & South Park",
-    desc: "We also serve Alma, Como, and the entire South Park area without a trip charge.",
+    desc: "We also serve Alma, Como, and the entire South Park area.",
   },
   {
     icon: "store",

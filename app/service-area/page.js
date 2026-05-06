@@ -21,8 +21,8 @@ const faqs = [
     a: "We provide on-site IT support in Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties. Remote support is available anywhere with an internet connection.",
   },
   {
-    q: "Is there a trip fee for on-site service?",
-    a: "We use a tiered zone system based on distance from Fairplay. Local towns like Fairplay, Alma, and Como have no trip fee. Fees increase slightly for Breckenridge, Frisco, Dillon, Buena Vista, Leadville, and other zones. Contact us for details on your location.",
+    q: "How does pricing work for on-site service?",
+    a: "Pricing depends on your location — contact us for a quote. We serve Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties.",
   },
   {
     q: "Can you help with Starlink installation and setup?",
