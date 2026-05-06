@@ -87,7 +87,17 @@ export default function ServiceArea() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <ZoneCard
               name="Local Zone"
-              towns="Fairplay, Alma, Como"
+              towns={
+                <>
+                  <Link
+                    href="/computer-repair-fairplay-co"
+                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                  >
+                    Fairplay
+                  </Link>
+                  , Alma, Como
+                </>
+              }
               note="Our home base."
               icon="home_pin"
             />

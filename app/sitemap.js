@@ -32,6 +32,7 @@ export default function sitemap() {
     { path: "/services/web-design", file: "app/services/web-design/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/services/ai-automation", file: "app/services/ai-automation/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/service-area", file: "app/service-area/page.js", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/computer-repair-fairplay-co", file: "app/computer-repair-fairplay-co/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/about", file: "app/about/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", file: "app/contact/page.js", priority: 0.8, changeFrequency: "monthly" },
     { path: "/remote-support", file: "app/remote-support/page.js", priority: 0.8, changeFrequency: "monthly" },

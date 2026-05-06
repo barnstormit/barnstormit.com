@@ -68,8 +68,8 @@ const reasons = [
   },
   {
     icon: "speed",
-    title: "Same-Day Response",
-    desc: "Most calls answered within the hour. Immediate dispatch when possible.",
+    title: "Fast Response",
+    desc: "Most calls answered within the hour. Book an appointment and we'll be there fast — emergency same-day dispatch available at a premium rate.",
   },
   {
     icon: "handshake",
@@ -178,7 +178,7 @@ export default function VacationHelp() {
 
           {/* Dispatch note */}
           <p className="text-sm text-frost-gray/70 font-mono tracking-wide mt-2 animate-fade-in-up stagger-4">
-            Immediate dispatch available in Summit &amp; Park County.
+            Appointments available across Summit &amp; Park County. Emergency same-day service available.
           </p>
         </div>
       </section>
