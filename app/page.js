@@ -64,12 +64,7 @@ export default function Home() {
         <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed drop-shadow-md animate-fade-in-up stagger-2">
           On-site computer repair and IT support for Colorado&apos;s mountain
           communities. Based in{" "}
-          <Link
-            href="/computer-repair-fairplay-co"
-            className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
-          >
-            Fairplay
-          </Link>,
+          <span className="text-snow-white font-semibold">Fairplay</span>,
           serving Summit, Park, Lake, and Chaffee counties.
         </p>
 
