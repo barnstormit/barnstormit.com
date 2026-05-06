@@ -83,9 +83,45 @@ const reasons = [
   },
 ];
 
+const faqs = [
+  {
+    q: "I'm on vacation and my laptop won't connect to WiFi. Can you help?",
+    a: "Absolutely. Book an appointment and we'll come to you — we serve Fairplay, Alma, Breckenridge, Frisco, Dillon, and Buena Vista. Need us to drop everything and come right now? We offer same-day emergency service at a premium rate. Call (719) 838-0435 and we'll get you sorted.",
+  },
+  {
+    q: "Do you support vacation rentals and short-term rental properties?",
+    a: "Absolutely. We set up and troubleshoot WiFi, smart locks, streaming devices, and guest tech for STR properties in Breckenridge, Frisco, Dillon, Fairplay, Buena Vista, and across Summit and Park counties. Bad WiFi is the number one complaint in guest reviews — we fix that.",
+  },
+  {
+    q: "Can you help with the WiFi at my Airbnb in Breckenridge?",
+    a: "Yes. Whether you're a guest dealing with a dead connection in Breckenridge, Frisco, Dillon, or Buena Vista — or an owner whose property needs a network overhaul — we handle it. Log homes and metal roofs kill WiFi signals and we know how to solve that up here.",
+  },
+  {
+    q: "I'm working remotely from a cabin and need a reliable setup. Can you help?",
+    a: "That's one of our most common calls from visitors in Breckenridge, Fairplay, Buena Vista, and across the high country. We'll assess your internet connection, set up mesh WiFi if needed, configure your VPN, and make sure your work setup is solid for the duration of your stay.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
+    },
+  })),
+};
+
 export default function VacationHelp() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* ── Hero ── */}
       <section className="relative min-h-[50vh] flex flex-col items-center justify-center overflow-hidden py-14 md:py-20 px-6 text-center">
         {/* Background layers */}
@@ -308,6 +344,47 @@ export default function VacationHelp() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-10 md:py-14 px-6 md:px-8" aria-labelledby="vacation-faq-heading">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block">
+              FAQ
+            </span>
+            <h2
+              id="vacation-faq-heading"
+              className="text-4xl md:text-5xl font-heading font-bold text-snow-white tracking-tight text-balance"
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group glass-card rounded-xl overflow-hidden"
+              >
+                <summary className="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal rounded-xl">
+                  <h3 className="font-heading font-bold text-lg pr-4 text-snow-white">
+                    {faq.q}
+                  </h3>
+                  <span
+                    className="material-symbols-outlined group-open:rotate-180 transition-transform text-vivid-teal shrink-0"
+                    aria-hidden="true"
+                  >
+                    expand_more
+                  </span>
+                </summary>
+                <div className="px-6 md:px-8 pb-6 md:pb-8 text-frost-gray leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

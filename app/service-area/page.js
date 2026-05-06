@@ -15,51 +15,36 @@ export const metadata = {
   },
 };
 
+const faqs = [
+  {
+    q: "What areas do you serve?",
+    a: "We provide on-site IT support in Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties. Remote support is available anywhere with an internet connection.",
+  },
+  {
+    q: "Is there a trip fee for on-site service?",
+    a: "We use a tiered zone system based on distance from Fairplay. Local towns like Fairplay, Alma, and Como have no trip fee. Fees increase slightly for Breckenridge, Frisco, Dillon, Buena Vista, Leadville, and other zones. Contact us for details on your location.",
+  },
+  {
+    q: "Can you help with Starlink installation and setup?",
+    a: "Yes. We handle Starlink mounting, router configuration, mesh WiFi extensions, and troubleshooting for homes and businesses in Fairplay, Breckenridge, Buena Vista, Leadville, and across the mountain communities. If Starlink is working but your WiFi doesn't cover your whole house, that's one of our most common calls.",
+  },
+  {
+    q: "Do you serve Leadville and Salida?",
+    a: "Yes — Leadville and Salida are both in our service area. We schedule regular visits to Lake and Chaffee counties, including Buena Vista, Twin Lakes, and surrounding areas. Remote support is also available anytime.",
+  },
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What areas does Barnstorm Computer Services cover?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Barnstorm is based in Fairplay, Colorado and serves Park, Summit, Lake, and Chaffee counties. Towns covered include Fairplay, Alma, Como, Breckenridge, Blue River, Buena Vista, Jefferson, Grant, Frisco, Bailey, Dillon, Silverthorne, Leadville, and Salida.",
-      },
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
     },
-    {
-      "@type": "Question",
-      "name": "How are service zones organized?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We organize our service area into four zones: Local (Fairplay, Alma, Como), Regional (Breckenridge, Blue River, Buena Vista, Jefferson, Grant), Extended (Frisco, Bailey), and Remote (Dillon, Silverthorne, Leadville, Salida). Every job starts with a free estimate. Call (719) 838-0435 for details.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "What if I'm outside your on-site service area?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If you're in the mountains and need help, call (719) 838-0435. If we can't get to you on-site, we can almost always help remotely via secure screen-sharing — no travel required.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "How quickly can Barnstorm respond to a service call?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Same-day on-site for the local zone, next-day for the regional zone, and scheduled visits for extended and remote zones. Remote support is available year-round.",
-      },
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer remote support across Colorado?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Remote screen-sharing support works anywhere with internet — no travel required. Most software issues can be resolved remotely without an on-site visit.",
-      },
-    },
-  ],
+  })),
 };
 
 export default function ServiceArea() {
@@ -146,6 +131,47 @@ export default function ServiceArea() {
               </span>{" "}
               &mdash; secure screen-sharing, no drive time.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-12 md:py-16 px-6 md:px-8" aria-labelledby="service-area-faq-heading">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-3 block">
+              FAQ
+            </span>
+            <h2
+              id="service-area-faq-heading"
+              className="font-heading text-3xl md:text-4xl font-bold text-snow-white text-balance"
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group glass-card rounded-xl overflow-hidden"
+              >
+                <summary className="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal rounded-xl">
+                  <h3 className="font-heading font-bold text-lg pr-4 text-snow-white">
+                    {faq.q}
+                  </h3>
+                  <span
+                    className="material-symbols-outlined group-open:rotate-180 transition-transform text-vivid-teal shrink-0"
+                    aria-hidden="true"
+                  >
+                    expand_more
+                  </span>
+                </summary>
+                <div className="px-6 md:px-8 pb-6 md:pb-8 text-frost-gray leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

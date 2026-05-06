@@ -134,6 +134,46 @@ const services = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Do you come to my location or do I bring my computer to you?",
+    a: "Both! Barnstorm is fully mobile — we come to your home or business in Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties. We also offer remote support sessions for software issues, and we accept drop-offs if you'd rather bring your device to us in Fairplay.",
+  },
+  {
+    q: "How fast can you get to Breckenridge or Buena Vista from Fairplay?",
+    a: "Breckenridge is about 30–35 minutes over Hoosier Pass, and Buena Vista is about 40 minutes south on 285. We're frequently in Breckenridge, Frisco, Dillon, and Buena Vista for other appointments and same-day service is often available.",
+  },
+  {
+    q: "Do you work on Macs or just PCs?",
+    a: "Both. We support Windows, Mac, Linux, and Chromebooks for residents and businesses across Fairplay, Breckenridge, Buena Vista, Leadville, and all of our service areas.",
+  },
+  {
+    q: "How much do you charge?",
+    a: "Pricing depends on the service and your location. Whether you're in Fairplay, Breckenridge, Dillon, Buena Vista, or anywhere in our service area — contact us for a quote. No surprise charges, ever.",
+  },
+  {
+    q: "Do you offer monthly IT support plans?",
+    a: "Yes. We offer monthly plans for businesses in Fairplay, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, and across the mountain communities that want priority response and ongoing maintenance. Contact us for details.",
+  },
+  {
+    q: "Can you set up a network for my small business?",
+    a: "That's one of our specialties. WiFi, wired networking, security, workstation setup, email, backups, and ongoing support for small businesses in Fairplay, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and throughout Park, Summit, Lake, and Chaffee counties.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
+    },
+  })),
+};
+
 const PROVIDER_REF = { "@id": "https://barnstormit.com/#localbusiness" };
 
 const serviceJsonLd = {
@@ -212,6 +252,10 @@ export default function Services() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Page Header */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
@@ -355,6 +399,42 @@ export default function Services() {
                 <span aria-hidden="true" className="material-symbols-outlined text-sm">arrow_forward</span>
               </span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="pb-12 px-6 md:px-8" aria-labelledby="services-faq-heading">
+        <div className="max-w-[900px] mx-auto">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-4 block text-center">
+            FAQ
+          </span>
+          <h2
+            id="services-faq-heading"
+            className="font-heading text-3xl md:text-4xl font-bold text-snow-white text-center mb-10 text-balance"
+          >
+            Frequently Asked Questions
+          </h2>
+          <div className="flex flex-col gap-3">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="faq-item glass-card rounded-xl px-5 sm:px-6 py-4 group focus-within:border-vivid-teal/40 transition-colors duration-300"
+              >
+                <summary className="flex items-start justify-between gap-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-heading font-bold text-snow-white text-base sm:text-lg leading-snug focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal rounded-md">
+                  <span className="flex-1">{faq.q}</span>
+                  <span
+                    aria-hidden="true"
+                    className="material-symbols-outlined text-vivid-teal text-2xl shrink-0 mt-0.5 transition-transform duration-300 group-open:rotate-45"
+                  >
+                    add
+                  </span>
+                </summary>
+                <p className="mt-4 text-frost-gray text-sm sm:text-base leading-relaxed">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

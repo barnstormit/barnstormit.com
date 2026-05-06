@@ -66,10 +66,10 @@ const steps = [
       <>
         STL, STEP, or 3MF format. Email{" "}
         <a
-          href="mailto:3d@barnstormit.com"
+          href="mailto:info@barnstormit.com"
           className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
-          3d@barnstormit.com
+          info@barnstormit.com
         </a>{" "}
         or call{" "}
         <a
@@ -99,6 +99,42 @@ const steps = [
     ),
   },
 ];
+
+const faqs = [
+  {
+    q: "What 3D printing services do you offer?",
+    a: "We print custom parts, replacement brackets, prototypes, enclosures, and more using a Bambu Lab X2D with AMS right here in Fairplay, CO. We work with PLA, PETG, TPU, and multi-material prints. We serve customers in Alma, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, and across Park, Summit, Lake, and Chaffee counties.",
+  },
+  {
+    q: "What files do you accept?",
+    a: "We accept STL, 3MF, and STEP files. You'll need to provide the print file — we don't do CAD design. If you found a model on Thingiverse, Printables, or another repository, just send us the file and we'll handle the rest.",
+  },
+  {
+    q: "How much does a 3D print cost?",
+    a: "It depends on size, material, and complexity. Send us your file and we'll give you a quote — usually within a day.",
+  },
+  {
+    q: "How long does a print take?",
+    a: "Small parts can be done in a few hours. Larger or more complex prints may take a day or two. We'll give you a timeline with your quote.",
+  },
+  {
+    q: "Can I drop off a file in person?",
+    a: "Yes — you can drop off a USB drive or send your STL file by email. We're based in Fairplay and accept drop-offs. You can also submit your file through our contact form or email it to info@barnstormit.com.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
+    },
+  })),
+};
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -149,6 +185,10 @@ export default function ThreeDPrinting() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Hero */}
@@ -330,6 +370,47 @@ export default function ThreeDPrinting() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-12 md:py-16 px-6 md:px-8" aria-labelledby="threed-faq-heading">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-vivid-teal mb-3 block">
+              FAQ
+            </span>
+            <h2
+              id="threed-faq-heading"
+              className="font-heading text-3xl md:text-4xl font-bold text-snow-white text-balance"
+            >
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group glass-card rounded-xl overflow-hidden"
+              >
+                <summary className="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vivid-teal rounded-xl">
+                  <h3 className="font-heading font-bold text-lg pr-4 text-snow-white">
+                    {faq.q}
+                  </h3>
+                  <span
+                    className="material-symbols-outlined group-open:rotate-180 transition-transform text-vivid-teal shrink-0"
+                    aria-hidden="true"
+                  >
+                    expand_more
+                  </span>
+                </summary>
+                <div className="px-6 md:px-8 pb-6 md:pb-8 text-frost-gray leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
