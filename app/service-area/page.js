@@ -25,6 +25,7 @@ const counties = [
       { name: "Jefferson" },
       { name: "Grant" },
       { name: "Bailey" },
+      { name: "Hartsel" },
     ],
   },
   {
@@ -53,7 +54,7 @@ const counties = [
 const faqs = [
   {
     q: "What areas do you serve?",
-    a: "We provide on-site IT support in Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties. Remote support is available anywhere with an internet connection.",
+    a: "We provide on-site IT support in Fairplay, Alma, Como, Hartsel, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties. Remote support is available anywhere with an internet connection.",
   },
   {
     q: "How does pricing work for on-site service?",
@@ -269,6 +270,7 @@ const TOWN_ZONE_COLORS = {
   "Buena Vista": "#F0A500", // Regional
   Jefferson: "#F0A500",    // Regional
   Grant: "#F0A500",        // Regional
+  Hartsel: "#F0A500",      // Regional
   Frisco: "#5CE0D6",       // Extended
   Bailey: "#5CE0D6",       // Extended
   Dillon: "#DC2626",       // Remote
