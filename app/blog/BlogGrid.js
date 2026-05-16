@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CATEGORY_COLORS = {
-  "Tech Tips": "text-vivid-teal bg-vivid-teal/10 border-vivid-teal/30",
+  "Tech Tips": "text-vivid-teal bg-vivid-teal/5 border-vivid-teal/30",
   "3D Printing": "text-alpine-gold bg-alpine-gold/10 border-alpine-gold/30",
   "Mountain Living": "text-snow-white bg-frost-gray/10 border-frost-gray/30",
-  "Business Updates": "text-vivid-teal bg-vivid-teal/10 border-vivid-teal/30",
+  "Business Updates": "text-vivid-teal bg-vivid-teal/5 border-vivid-teal/30",
 };
 
 const FILTERS = [
@@ -81,7 +81,7 @@ export default function BlogGrid({ posts }) {
                   >
                     {post.category}
                   </span>
-                  <span className="text-frost-gray/40 text-xs">
+                  <span className="text-frost-gray text-xs">
                     {new Date(post.date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",

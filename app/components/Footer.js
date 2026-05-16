@@ -68,7 +68,7 @@ export default function Footer() {
                 </span>
                 <div className="leading-relaxed">
                   <p>Mon&ndash;Fri, 9 AM &ndash; 5 PM MT</p>
-                  <p className="text-xs text-frost-gray/70 mt-1">Emergency &amp; after-hours support available &mdash; call for priority rates.</p>
+                  <p className="text-xs text-frost-gray mt-1">Emergency &amp; after-hours support available &mdash; call for priority rates.</p>
                 </div>
               </div>
             </address>
@@ -187,7 +187,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Barnstorm Computer Services. All
             rights reserved.
           </p>
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-xs font-mono tracking-wider text-frost-gray/60">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-xs font-mono tracking-wider text-frost-gray">
             <div className="flex gap-8">
               <Link
                 href="/privacy-policy"
