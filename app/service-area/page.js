@@ -103,7 +103,24 @@ export default function ServiceArea() {
             />
             <ZoneCard
               name="Regional Zone"
-              towns="Breckenridge, Blue River, Buena Vista, Jefferson, Grant"
+              towns={
+                <>
+                  <Link
+                    href="/computer-repair-breckenridge-co"
+                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                  >
+                    Breckenridge
+                  </Link>
+                  , Blue River,{" "}
+                  <Link
+                    href="/computer-repair-buena-vista-co"
+                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                  >
+                    Buena Vista
+                  </Link>
+                  , Jefferson, Grant
+                </>
+              }
               note="Just over the pass."
               icon="distance"
             />
