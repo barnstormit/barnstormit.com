@@ -12,6 +12,18 @@ export const metadata = {
     url: "https://barnstormit.com/computer-repair-fairplay-co",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Computer Repair in Fairplay, CO | Barnstorm Computer Services",
+    description:
+      "On-site computer repair and IT support in Fairplay, CO. Virus removal, WiFi setup, Starlink, networking, and more. Local technician based in Fairplay.",
+  },
+  other: {
+    "geo.region": "US-CO",
+    "geo.placename": "Fairplay",
+    "geo.position": "39.2247;-105.9989",
+    ICBM: "39.2247, -105.9989",
+  },
 };
 
 const services = [

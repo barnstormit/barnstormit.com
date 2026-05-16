@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",
     description:
-      "On-site and remote computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, and Lake counties.",
+      "On-site and remote computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
     url: "https://barnstormit.com",
     type: "website",
   },

@@ -41,7 +41,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/barnstorm_cover_v2.jpg",
+        url: "/barnstorm_og.png",
         width: 1200,
         height: 630,
         alt: "Barnstorm Computer Services — Mountain Tech, Done Right",
@@ -54,7 +54,7 @@ export const metadata = {
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",
     description:
       "On-site computer repair and IT support for Colorado's mountain communities.",
-    images: ["/barnstorm_cover_v2.jpg"],
+    images: ["/barnstorm_og.png"],
   },
   alternates: {
     canonical: "https://barnstormit.com",
@@ -89,6 +89,11 @@ const jsonLd = {
     postalCode: "80440",
     addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 39.2247,
+    longitude: -105.9989,
+  },
   areaServed: [
     "Fairplay",
     "Alma",
@@ -98,6 +103,13 @@ const jsonLd = {
     "Silverthorne",
     "Leadville",
     "Buena Vista",
+    "Hartsel",
+    "Salida",
+    "Como",
+    "Jefferson",
+    "Grant",
+    "Bailey",
+    "Blue River",
   ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -112,7 +124,12 @@ const jsonLd = {
     closes: "17:00",
   },
   priceRange: "$$",
-  image: "https://barnstormit.com/hero_bg.jpg",
+  image: "https://barnstormit.com/barnstorm_og.png",
+  sameAs: [
+    "https://maps.app.goo.gl/6NBvhpAmGBW7SnaA6",
+    "https://www.facebook.com/BarnstormIT/",
+    "https://www.linkedin.com/company/barnstorm-computer-services/",
+  ],
   founder: {
     "@type": "Person",
     "@id": "https://barnstormit.com/#jeff",

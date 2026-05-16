@@ -74,7 +74,7 @@ export default function Footer() {
             </address>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.facebook.com/profile.php?id=61573305336720"
+                href="https://www.facebook.com/BarnstormIT/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

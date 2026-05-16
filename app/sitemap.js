@@ -81,7 +81,8 @@ export default function sitemap() {
   const staticPages = discoverPageFiles().map((file) => {
     const path = fileToUrlPath(file);
     return {
-      url: `${baseUrl}${path}`,
+      // Home is "/" internally; emit it slash-free to match the canonical.
+      url: path === "/" ? baseUrl : `${baseUrl}${path}`,
       lastModified: lastModified(file),
       changeFrequency: "monthly",
       priority: getPriority(path),
