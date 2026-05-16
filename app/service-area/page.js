@@ -4,7 +4,7 @@ import countyData from "./colorado-counties.json";
 export const metadata = {
   title: "Service Area",
   description:
-    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, and Buena Vista. Zone-based service across Park, Summit, Lake, and Chaffee counties.",
+    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista, and surrounding mountain communities across Park, Summit, Lake, and Chaffee counties.",
   alternates: { canonical: "https://barnstormit.com/service-area" },
   openGraph: {
     title: "Service Area | Barnstorm Computer Services",
@@ -15,6 +15,41 @@ export const metadata = {
   },
 };
 
+const counties = [
+  {
+    name: "Park County",
+    towns: [
+      { name: "Fairplay", href: "/computer-repair-fairplay-co" },
+      { name: "Alma" },
+      { name: "Como" },
+      { name: "Jefferson" },
+      { name: "Grant" },
+      { name: "Bailey" },
+    ],
+  },
+  {
+    name: "Summit County",
+    towns: [
+      { name: "Breckenridge", href: "/computer-repair-breckenridge-co" },
+      { name: "Frisco" },
+      { name: "Dillon" },
+      { name: "Silverthorne" },
+      { name: "Blue River" },
+    ],
+  },
+  {
+    name: "Chaffee County",
+    towns: [
+      { name: "Buena Vista", href: "/computer-repair-buena-vista-co" },
+      { name: "Salida" },
+    ],
+  },
+  {
+    name: "Lake County",
+    towns: [{ name: "Leadville" }],
+  },
+];
+
 const faqs = [
   {
     q: "What areas do you serve?",
@@ -22,7 +57,7 @@ const faqs = [
   },
   {
     q: "How does pricing work for on-site service?",
-    a: "Pricing depends on your location — contact us for a quote. We serve Fairplay, Alma, Como, Bailey, Jefferson, Grant, Blue River, Breckenridge, Frisco, Dillon, Buena Vista, Leadville, Salida, and surrounding areas across Park, Summit, Lake, and Chaffee counties.",
+    a: "Pricing depends on your location and what you need done — contact us for a quote. We serve communities across Park, Summit, Lake, and Chaffee counties.",
   },
   {
     q: "Can you help with Starlink installation and setup?",
@@ -81,61 +116,36 @@ export default function ServiceArea() {
         </div>
       </section>
 
-      {/* Zone Cards */}
+      {/* Towns by County */}
       <section className="py-8 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ZoneCard
-              name="Local Zone"
-              towns={
-                <>
-                  <Link
-                    href="/computer-repair-fairplay-co"
-                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
-                  >
-                    Fairplay
-                  </Link>
-                  , Alma, Como
-                </>
-              }
-              note="Our home base."
-              icon="home_pin"
-            />
-            <ZoneCard
-              name="Regional Zone"
-              towns={
-                <>
-                  <Link
-                    href="/computer-repair-breckenridge-co"
-                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
-                  >
-                    Breckenridge
-                  </Link>
-                  , Blue River,{" "}
-                  <Link
-                    href="/computer-repair-buena-vista-co"
-                    className="underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
-                  >
-                    Buena Vista
-                  </Link>
-                  , Jefferson, Grant
-                </>
-              }
-              note="Just over the pass."
-              icon="distance"
-            />
-            <ZoneCard
-              name="Extended Zone"
-              towns="Frisco, Bailey"
-              note="Worth the drive."
-              icon="explore"
-            />
-            <ZoneCard
-              name="Remote Zone"
-              towns="Dillon, Silverthorne, Leadville, Salida"
-              note="We&apos;ll come to you."
-              icon="landscape"
-            />
+            {counties.map((county) => (
+              <div
+                key={county.name}
+                className="glass-card rounded-xl p-8 flex flex-col h-full"
+              >
+                <h2 className="font-heading text-xl font-bold text-snow-white mb-5">
+                  {county.name}
+                </h2>
+                <ul className="space-y-2">
+                  {county.towns.map((town) => (
+                    <li key={town.name} className="text-sm">
+                      {town.href ? (
+                        <Link
+                          href={town.href}
+                          className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                        >
+                          {town.name}
+                        </Link>
+                      ) : (
+                        <span className="text-frost-gray">{town.name}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -223,25 +233,6 @@ export default function ServiceArea() {
         </div>
       </section>
     </>
-  );
-}
-
-function ZoneCard({ name, towns, note, icon }) {
-  return (
-    <div className="glass-card rounded-xl p-8 flex flex-col h-full">
-      <div className="flex justify-between items-start mb-6">
-        <span className="p-3 rounded-lg bg-vivid-teal/10 text-vivid-teal">
-          <span className="material-symbols-outlined" aria-hidden="true">{icon}</span>
-        </span>
-      </div>
-      <h2 className="font-heading text-xl font-bold text-snow-white mb-2">
-        {name}
-      </h2>
-      <p className="text-vivid-teal text-sm mb-6">{towns}</p>
-      <div className="mt-auto pt-6 border-t border-steel-blue/20">
-        <p className="text-sm italic text-frost-gray">{note}</p>
-      </div>
-    </div>
   );
 }
 
