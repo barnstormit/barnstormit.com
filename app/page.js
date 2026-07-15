@@ -247,11 +247,8 @@ export default function Home() {
           </p>
         </div>
 
-      </div>
-      {/* Bottom row — 2 cards centered */}
-      <div className="max-w-[1200px] mx-auto mt-8 flex flex-col sm:flex-row justify-center gap-8">
         {/* Business IT */}
-        <div className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/3">
+        <div className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500">
           <div className="w-14 h-14 rounded-lg bg-vivid-teal/10 flex items-center justify-center mb-6 group-hover:bg-vivid-teal/20 transition-colors border border-vivid-teal/20">
             <span className="material-symbols-outlined text-vivid-teal text-3xl" aria-hidden="true">
               business_center
@@ -267,7 +264,7 @@ export default function Home() {
         </div>
 
         {/* 3D Printing */}
-        <Link href="/3d-printing" className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500 sm:w-1/3 block focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none">
+        <Link href="/3d-printing" className="glass-card p-8 group hover:border-vivid-teal/30 transition-colors duration-500 block focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none">
           <div className="flex items-center justify-between mb-6">
             <div className="w-14 h-14 rounded-lg bg-vivid-teal/10 flex items-center justify-center group-hover:bg-vivid-teal/20 transition-colors border border-vivid-teal/20">
               <span className="material-symbols-outlined text-vivid-teal text-3xl" aria-hidden="true">
