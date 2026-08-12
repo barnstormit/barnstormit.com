@@ -3,14 +3,17 @@
 
 @theme inline {
   /* --- Color Palette --- */
-  --color-deep-navy: #0D1B2A;
-  --color-midnight-slate: #1B2838;
-  --color-steel-blue: #1A4A7A;
-  --color-vivid-teal: #3A9BD5;
-  --color-alpine-gold: #F0A500;
-  --color-snow-white: #F7F9FC;
-  --color-frost-gray: #8AA0B4;
-  --color-ice-blue: #E8F4FD;
+  --color-deep-navy: #FAF7F2;
+  --color-midnight-slate: #F2EDE5;
+  --color-steel-blue: #E4DFD6;
+  --color-vivid-teal: #BA7517;
+  --color-alpine-gold: #EF9F27;
+  --color-snow-white: #1A1D21;
+  --color-frost-gray: #6B6459;
+  --color-ice-blue: #FFFFFF;
+  --color-slate-band: #2B3743;
+  --color-espresso: #412402;
+  --color-paper-line: #E4DFD6;
 
   /* --- Fonts --- */
   --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -28,10 +31,10 @@ body {
 
 /* --- Glass Card Utility --- */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: #FFFFFF;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(58, 155, 213, 0.18);
+  border: 1px solid #E4DFD6;
   border-radius: 12px;
 }
 
@@ -68,8 +71,8 @@ html {
 
 /* --- Selection Color --- */
 ::selection {
-  background-color: var(--color-vivid-teal);
-  color: var(--color-deep-navy);
+  background-color: var(--color-alpine-gold);
+  color: var(--color-espresso);
 }
 
 /* --- Animations --- */
@@ -102,12 +105,12 @@ html {
 .atmospheric-bg {
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(58, 155, 213, 0.05) 0%,
-    rgba(13, 27, 42, 0) 100%
+    rgba(186, 117, 23, 0.05) 0%,
+    rgba(250, 247, 242, 0) 100%
   );
 }
 
 /* --- Topographic Pattern Overlay --- */
 .topo-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10C30 10 30 30 50 30S70 10 90 10' stroke='%233A9BD5' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3Cpath d='M0 40C20 40 20 60 40 60S60 40 80 40' stroke='%233A9BD5' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10C30 10 30 30 50 30S70 10 90 10' stroke='%23BA7517' stroke-width='0.5' fill='none' opacity='0.06'/%3E%3Cpath d='M0 40C20 40 20 60 40 60S60 40 80 40' stroke='%23BA7517' stroke-width='0.5' fill='none' opacity='0.06'/%3E%3C/svg%3E");
 }

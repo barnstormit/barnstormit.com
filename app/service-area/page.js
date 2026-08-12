@@ -255,28 +255,28 @@ const LABEL_NUDGE = {
 
 /* County fill colors — very muted, recede behind town labels */
 const COUNTY_COLORS = {
-  "08093": "#152840", // Park
-  "08117": "#122828", // Summit
-  "08065": "#1C152A", // Lake
-  "08015": "#15281D", // Chaffee
+  "08093": "#FDF3E0", // Park
+  "08117": "#F5EFE4", // Summit
+  "08065": "#EFE7DA", // Lake
+  "08015": "#E9E2D6", // Chaffee
 };
 
 /* Town label colors by pricing zone */
 const TOWN_ZONE_COLORS = {
-  Fairplay: "#22D3EE",     // Local
-  Alma: "#22D3EE",         // Local
-  Como: "#22D3EE",         // Local
-  Breckenridge: "#F0A500", // Regional
-  "Buena Vista": "#F0A500", // Regional
-  Jefferson: "#F0A500",    // Regional
-  Grant: "#F0A500",        // Regional
-  Hartsel: "#F0A500",      // Regional
-  Frisco: "#5CE0D6",       // Extended
-  Bailey: "#5CE0D6",       // Extended
-  Dillon: "#DC2626",       // Remote
-  Silverthorne: "#DC2626",  // Remote
-  Leadville: "#DC2626",    // Remote
-  Salida: "#DC2626",       // Remote
+  Fairplay: "#EF9F27",     // Local
+  Alma: "#EF9F27",         // Local
+  Como: "#EF9F27",         // Local
+  Breckenridge: "#BA7517", // Regional
+  "Buena Vista": "#BA7517", // Regional
+  Jefferson: "#BA7517",    // Regional
+  Grant: "#BA7517",        // Regional
+  Hartsel: "#BA7517",      // Regional
+  Frisco: "#854F0B",       // Extended
+  Bailey: "#854F0B",       // Extended
+  Dillon: "#6B6459",       // Remote
+  Silverthorne: "#6B6459",  // Remote
+  Leadville: "#6B6459",    // Remote
+  Salida: "#6B6459",       // Remote
 };
 
 function ColoradoMap() {
@@ -292,9 +292,9 @@ function ColoradoMap() {
         <path
           key={county.id}
           d={county.d}
-          fill={COUNTY_COLORS[county.id] || "#111921"}
-          stroke="#0D1B2A"
-          strokeWidth="0.75"
+          fill={COUNTY_COLORS[county.id] || "#FAF7F2"}
+          stroke="#D8D0C2"
+          strokeWidth="1"
         />
       ))}
 
@@ -304,7 +304,7 @@ function ColoradoMap() {
         const dx = nudge.dx || 0;
         const dy = nudge.dy || (town.primary ? -10 : -8);
         const anchor = nudge.anchor || "middle";
-        const color = TOWN_ZONE_COLORS[town.name] || "#F7F9FC";
+        const color = TOWN_ZONE_COLORS[town.name] || "#1A1D21";
         return (
           <g key={town.name}>
             <circle
@@ -336,35 +336,35 @@ function ColoradoMap() {
           width="180"
           height="115"
           rx="8"
-          fill="#0D1B2A"
+          fill="#FFFFFF"
           fillOpacity="0.85"
-          stroke="#2A3F55"
+          stroke="#E4DFD6"
           strokeWidth="1"
         />
         <text
           x="14"
           y="26"
-          fill="#F7F9FC"
+          fill="#1A1D21"
           fontSize="13"
           fontWeight="bold"
           fontFamily="sans-serif"
         >
           Service Zones
         </text>
-        <circle cx="22" cy="46" r="6" fill="#22D3EE" />
-        <text x="36" y="50" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+        <circle cx="22" cy="46" r="6" fill="#EF9F27" />
+        <text x="36" y="50" fontSize="12" fontFamily="sans-serif" fill="#1A1D21">
           Local
         </text>
-        <circle cx="22" cy="66" r="6" fill="#F0A500" />
-        <text x="36" y="70" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+        <circle cx="22" cy="66" r="6" fill="#BA7517" />
+        <text x="36" y="70" fontSize="12" fontFamily="sans-serif" fill="#1A1D21">
           Regional
         </text>
-        <circle cx="22" cy="86" r="6" fill="#5CE0D6" />
-        <text x="36" y="90" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+        <circle cx="22" cy="86" r="6" fill="#854F0B" />
+        <text x="36" y="90" fontSize="12" fontFamily="sans-serif" fill="#1A1D21">
           Extended
         </text>
-        <circle cx="22" cy="106" r="6" fill="#DC2626" />
-        <text x="36" y="110" fontSize="12" fontFamily="sans-serif" fill="#F7F9FC">
+        <circle cx="22" cy="106" r="6" fill="#6B6459" />
+        <text x="36" y="110" fontSize="12" fontFamily="sans-serif" fill="#1A1D21">
           Remote
         </text>
       </g>

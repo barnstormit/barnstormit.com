@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "../lib/posts";
 
 export const metadata = {
-  title: "Mountain IT Support, Fairplay",
+  title: "Computer Repair & IT Support in Fairplay, CO | Barnstorm",
   description:
     "On-site and remote computer repair, IT support, and networking for Fairplay, Breckenridge, and Colorado mountain communities. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com" },
@@ -32,15 +32,15 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[rgba(13,27,42,0.7)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-transparent to-deep-navy" />
-        <div className="absolute inset-0 topo-pattern opacity-10" />
+        <div className="absolute inset-0 bg-[rgba(43,55,67,0.55)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(43,55,67,0.75)] via-[rgba(43,55,67,0.2)] to-[rgba(43,55,67,0.7)]" />
+        <div className="absolute inset-0 topo-pattern opacity-[0.07]" />
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
         {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-frost-gray/20 animate-fade-in-up">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(43,55,67,0.55)] border border-white/25 animate-fade-in-up">
           <span
             className="material-symbols-outlined text-alpine-gold text-sm"
             aria-hidden="true"
@@ -48,23 +48,23 @@ export default function Home() {
           >
             terrain
           </span>
-          <span className="font-mono text-[10px] tracking-widest text-snow-white uppercase">
+          <span className="font-mono text-[10px] tracking-widest text-white uppercase">
             Colorado High Country Specialists
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-snow-white tracking-tighter leading-[0.9] drop-shadow-2xl animate-fade-in-up stagger-1 text-balance">
+        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9] drop-shadow-2xl animate-fade-in-up stagger-1 text-balance">
           Mountain Tech,
           <br />
           <span className="text-vivid-teal">Done Right</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed drop-shadow-md animate-fade-in-up stagger-2">
+        <p className="text-lg md:text-xl text-[#D2D8DE] max-w-2xl leading-relaxed drop-shadow-md animate-fade-in-up stagger-2">
           On-site computer repair and IT support for Colorado&apos;s mountain
           communities. Based in{" "}
-          <span className="text-snow-white font-semibold">Fairplay</span>,
+          <span className="text-white font-semibold">Fairplay</span>,
           serving Summit, Park, Lake, and Chaffee counties.
         </p>
 
@@ -72,14 +72,14 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 animate-fade-in-up stagger-3">
           <a
             href="tel:+17198380435"
-            className="w-full sm:w-auto bg-vivid-teal text-deep-navy px-10 py-4 rounded-xl font-heading font-bold text-lg shadow-[0_20px_40px_rgba(58,155,213,0.3)] hover:shadow-[0_20px_40px_rgba(58,155,213,0.4)] transition-[box-shadow,transform] duration-300 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            className="w-full sm:w-auto bg-alpine-gold text-espresso px-10 py-4 rounded-xl font-heading font-bold text-lg shadow-[0_20px_20px_rgba(239,159,39,0.18)] hover:shadow-[0_20px_20px_rgba(239,159,39,0.25)] transition-[box-shadow,transform] duration-300 active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             <span className="material-symbols-outlined" aria-hidden="true">call</span>
             Call (719) 838-0435
           </a>
           <Link
             href="/services"
-            className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-frost-gray/20 hover:border-vivid-teal text-snow-white px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-frost-gray/20 hover:border-vivid-teal text-white px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             View Services
             <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
@@ -88,7 +88,7 @@ export default function Home() {
           </Link>
           <Link
             href="/book"
-            className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            className="w-full sm:w-auto bg-[rgba(43,55,67,0.55)] backdrop-blur-sm border-2 border-alpine-gold/60 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
             <span className="material-symbols-outlined" aria-hidden="true">
               event
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
 
         {/* Vacation callout */}
-        <p className="text-sm text-frost-gray/70 mt-2 animate-fade-in-up stagger-4">
+        <p className="text-sm text-[#D2D8DE]/70 mt-2 animate-fade-in-up stagger-4">
           Vacationing in the mountains?{" "}
           <Link
             href="/vacation-help"
@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center items-center gap-y-4 gap-x-6 mt-12 pt-12 border-t border-frost-gray/15 w-full animate-fade-in-up stagger-4">
-          <div className="flex items-center gap-2 text-snow-white">
+          <div className="flex items-center gap-2 text-white">
             <span
               className="material-symbols-outlined text-vivid-teal"
               aria-hidden="true"
@@ -119,11 +119,11 @@ export default function Home() {
             >
               school
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
+            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap text-[#D2D8DE]">
               BS, Information Technology
             </span>
           </div>
-          <div className="flex items-center gap-2 text-snow-white">
+          <div className="flex items-center gap-2 text-white">
             <span
               className="material-symbols-outlined text-alpine-gold"
               aria-hidden="true"
@@ -131,11 +131,11 @@ export default function Home() {
             >
               workspace_premium
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
+            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap text-[#D2D8DE]">
               20+ Years IT Experience
             </span>
           </div>
-          <div className="flex items-center gap-2 text-snow-white">
+          <div className="flex items-center gap-2 text-white">
             <span
               className="material-symbols-outlined text-alpine-gold"
               aria-hidden="true"
@@ -143,11 +143,11 @@ export default function Home() {
             >
               person_pin_circle
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
+            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap text-[#D2D8DE]">
               Local Owner &amp; Operator
             </span>
           </div>
-          <div className="flex items-center gap-2 text-snow-white">
+          <div className="flex items-center gap-2 text-white">
             <span
               className="material-symbols-outlined text-vivid-teal"
               aria-hidden="true"
@@ -155,7 +155,7 @@ export default function Home() {
             >
               verified_user
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap">
+            <span className="font-mono text-[10px] uppercase tracking-tight whitespace-nowrap text-[#D2D8DE]">
               Licensed &amp; Insured
             </span>
           </div>
@@ -164,7 +164,7 @@ export default function Home() {
 
       {/* Coordinates Ornament */}
       <div className="absolute bottom-12 left-12 hidden lg:block z-10">
-        <div className="flex flex-col gap-2 font-mono text-[10px] text-frost-gray/40 tracking-[0.3em] uppercase">
+        <div className="flex flex-col gap-2 font-mono text-[10px] text-[#D2D8DE]/40 tracking-[0.3em] uppercase">
           <span className="flex items-center gap-2">
             <span className="w-1 h-1 bg-vivid-teal" /> Lat: 39.2247&deg; N
           </span>
