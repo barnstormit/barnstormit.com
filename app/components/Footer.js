@@ -15,7 +15,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#2B3743] mt-auto">
+    <footer className="w-full bg-slate-band mt-auto">
       {/* Main Footer */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 md:px-8 py-16 max-w-[1200px] mx-auto">
         {/* Column 1: Business Info */}
