@@ -30,7 +30,8 @@ export default function Home() {
           src="/hero_bg.jpg"
           alt=""
           fill
-          priority
+          loading="eager"
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-center"
         />

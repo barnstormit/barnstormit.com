@@ -66,7 +66,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#0D1B2A",
+  themeColor: "#FAF7F2",
 };
 
 const jsonLd = {
@@ -168,7 +168,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      style={{ colorScheme: "dark" }}
+      style={{ colorScheme: "light" }}
       className={`${spaceGrotesk.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
     >
       <head>

@@ -66,7 +66,7 @@ export default function Book() {
                 calendar_month
               </span>
               <p className="font-heading font-bold text-snow-white mb-1">
-                Mon&ndash;Fri, All Day
+                Mon&ndash;Fri, 9 AM&ndash;5 PM MT
               </p>
               <p className="text-frost-gray text-sm">
                 Business hours

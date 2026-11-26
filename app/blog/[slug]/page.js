@@ -106,7 +106,8 @@ export default async function BlogPost({ params }) {
               src={post.image}
               alt={post.title}
               fill
-              priority
+              loading="eager"
+              fetchPriority="high"
               sizes="(min-width: 768px) 800px, 100vw"
               className="object-cover object-bottom"
             />

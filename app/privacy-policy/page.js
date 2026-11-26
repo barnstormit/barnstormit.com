@@ -3,12 +3,12 @@ import { baseOpenGraph } from "@/lib/seo";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for Barnstorm Computer Services. We keep data collection minimal — no tracking cookies, no analytics, no ad networks.",
+    "Privacy policy for Barnstorm Computer Services. Minimal data collection: Google Analytics for site stats, no ad networks, and we never sell your data.",
   alternates: { canonical: "https://barnstormit.com/privacy-policy" },
   openGraph: {
     ...baseOpenGraph,
     title: "Privacy Policy | Barnstorm Computer Services",
-    description: "Our privacy practices — minimal data collection, no tracking.",
+    description: "Our privacy practices: minimal data collection, basic site analytics, no ad networks, and we never sell your data.",
     url: "https://barnstormit.com/privacy-policy",
     type: "website",
   },
@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p className="text-frost-gray text-sm font-mono">
-            Last updated: April 2, 2026
+            Last updated: November 25, 2026
           </p>
           <p className="text-frost-gray text-sm mt-1">
             Barnstorm Computer Services LLC, PO Box 371, Fairplay, CO 80440
@@ -96,10 +96,36 @@ export default function PrivacyPolicy() {
                   are not used to identify individual visitors.
                 </span>
               </li>
+              <li className="flex gap-3">
+                <span
+                  className="material-symbols-outlined text-vivid-teal mt-0.5 shrink-0"
+                  style={{ fontVariationSettings: "'FILL' 1" }}
+                >
+                  check_circle
+                </span>
+                <span>
+                  <strong className="text-snow-white">Website analytics</strong>{" "}
+                  — we use Google Analytics 4 to see which pages get visited and
+                  how people find us. It sets first-party cookies (such as{" "}
+                  <code>_ga</code>) and collects pages viewed, approximate
+                  location, device and browser type, and referring site. We
+                  don&apos;t use it to identify you, and we don&apos;t send it
+                  your contact form details.
+                </span>
+              </li>
             </ul>
             <p className="text-frost-gray leading-relaxed mt-6 pl-9">
-              We do not use tracking cookies, analytics platforms, or ad
-              networks.
+              We do not use advertising cookies or ad networks. You can block
+              Google Analytics with any ad blocker or Google&apos;s{" "}
+              <a
+                href="https://tools.google.com/dlpage/gaoptout"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-vivid-teal hover:text-gold-ink underline transition-colors"
+              >
+                opt-out browser add-on
+              </a>
+              .
             </p>
           </div>
 
@@ -128,7 +154,8 @@ export default function PrivacyPolicy() {
             <p className="text-frost-gray leading-relaxed">
               We do not sell or share your personal information. Payment
               processing is handled directly by our payment provider — we do not
-              store credit card numbers.
+              store credit card numbers. Website usage data collected by Google
+              Analytics is processed by Google under its own privacy policy.
             </p>
           </div>
 
