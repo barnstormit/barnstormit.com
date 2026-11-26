@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Contact",
@@ -8,6 +9,7 @@ export const metadata = {
     "Contact Barnstorm Computer Services for IT support in Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435 or send us a message.",
   alternates: { canonical: "https://barnstormit.com/contact" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Contact | Barnstorm Computer Services",
     description:
       "Get in touch for computer repair and IT support. Call (719) 838-0435 or send a message.",
@@ -49,7 +51,7 @@ export default function Contact() {
               >
                 (719) 838-0435
               </a>
-              <p className="text-alpine-gold text-sm font-bold flex items-center gap-2">
+              <p className="text-gold-ink text-sm font-bold flex items-center gap-2">
                 <span
                   className="material-symbols-outlined text-base"
                   style={{ fontVariationSettings: "'FILL' 1" }}
@@ -95,7 +97,7 @@ export default function Contact() {
                 Monday&ndash;Friday, 9 AM &ndash; 5 PM Mountain Time
               </p>
               <div className="glass-card rounded-lg p-4 space-y-2">
-                <p className="text-alpine-gold text-sm font-bold flex items-center gap-2">
+                <p className="text-gold-ink text-sm font-bold flex items-center gap-2">
                   <span className="material-symbols-outlined text-base" aria-hidden="true">
                     nights_stay
                   </span>
@@ -106,7 +108,7 @@ export default function Contact() {
                   Call{" "}
                   <a
                     href="tel:+17198380435"
-                    className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+                    className="text-vivid-teal font-medium hover:text-gold-ink transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
                   >
                     (719) 838-0435
                   </a>{" "}
@@ -130,7 +132,7 @@ export default function Contact() {
           <div className="bg-alpine-gold/5 border border-alpine-gold/20 rounded-xl py-6 px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <span
-                className="material-symbols-outlined text-alpine-gold text-2xl"
+                className="material-symbols-outlined text-gold-ink text-2xl"
                 style={{ fontVariationSettings: "'FILL' 1" }}
                 aria-hidden="true"
               >
@@ -145,7 +147,7 @@ export default function Contact() {
             </div>
             <Link
               href="/book"
-              className="shrink-0 bg-alpine-gold text-deep-navy px-6 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter] flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="shrink-0 bg-alpine-gold text-snow-white px-6 py-3 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter] flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined text-lg" aria-hidden="true">
                 calendar_month

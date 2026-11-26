@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "AI & Automation",
@@ -6,6 +7,7 @@ export const metadata = {
     "AI tool setup, workflow automation, local AI servers, and chatbot deployment for Colorado small businesses. Practical AI that saves real time and money.",
   alternates: { canonical: "https://barnstormit.com/services/ai-automation" },
   openGraph: {
+    ...baseOpenGraph,
     title: "AI & Automation | Barnstorm Computer Services",
     description:
       "AI tool setup, workflow automation (n8n / Make / Zapier), local on-premises AI servers, chatbot deployment, and AI strategy consulting for small business.",
@@ -69,6 +71,7 @@ export default function AIAutomation() {
   return (
     <ServiceLandingLayout
       slug="ai-automation"
+      breadcrumbName="AI & Automation"
       eyebrow="AI & AUTOMATION"
       title="AI That"
       titleAccent="Pays For Itself"

@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import OsSetupTabs from "../components/OsSetupTabs";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Remote Support",
@@ -8,6 +9,7 @@ export const metadata = {
     "Get remote IT support from Barnstorm Computer Services. Download the app, share your ID, and we connect to fix your computer while you watch.",
   alternates: { canonical: "https://barnstormit.com/remote-support" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Remote Support | Barnstorm Computer Services",
     description:
       "Skip the house call. Download the app, share your ID, and we fix your computer while you watch.",
@@ -122,19 +124,19 @@ export default function RemoteSupport() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+              <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-4 block">
                 Privacy &amp; Trust
               </span>
               <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tight mb-12 leading-tight text-snow-white text-balance">
                 Your Computer,
                 <br />
-                <span className="text-alpine-gold">Your Control</span>
+                <span className="text-gold-ink">Your Control</span>
               </h2>
               <div className="space-y-8">
                 <div className="flex gap-5 items-start">
                   <div className="bg-alpine-gold/10 p-3 rounded-lg border border-alpine-gold/20 shrink-0">
                     <span
-                      className="material-symbols-outlined text-alpine-gold text-2xl"
+                      className="material-symbols-outlined text-gold-ink text-2xl"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                       aria-hidden="true"
                     >
@@ -153,7 +155,7 @@ export default function RemoteSupport() {
                 <div className="flex gap-5 items-start">
                   <div className="bg-alpine-gold/10 p-3 rounded-lg border border-alpine-gold/20 shrink-0">
                     <span
-                      className="material-symbols-outlined text-alpine-gold text-2xl"
+                      className="material-symbols-outlined text-gold-ink text-2xl"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                       aria-hidden="true"
                     >
@@ -173,7 +175,7 @@ export default function RemoteSupport() {
                 <div className="flex gap-5 items-start">
                   <div className="bg-alpine-gold/10 p-3 rounded-lg border border-alpine-gold/20 shrink-0">
                     <span
-                      className="material-symbols-outlined text-alpine-gold text-2xl"
+                      className="material-symbols-outlined text-gold-ink text-2xl"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                       aria-hidden="true"
                     >
@@ -192,7 +194,7 @@ export default function RemoteSupport() {
                 <div className="flex gap-5 items-start">
                   <div className="bg-alpine-gold/10 p-3 rounded-lg border border-alpine-gold/20 shrink-0">
                     <span
-                      className="material-symbols-outlined text-alpine-gold text-2xl"
+                      className="material-symbols-outlined text-gold-ink text-2xl"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                       aria-hidden="true"
                     >

@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Computer Training",
@@ -6,6 +7,7 @@ export const metadata = {
     "One-on-one computer training, email and productivity setup, security awareness, and business software training in mountain Colorado.",
   alternates: { canonical: "https://barnstormit.com/services/training" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Computer Training | Barnstorm Computer Services",
     description:
       "Patient one-on-one computer training, email and productivity coaching, safe-browsing education, and business software training tailored to your workflow.",
@@ -59,6 +61,7 @@ export default function Training() {
   return (
     <ServiceLandingLayout
       slug="training"
+      breadcrumbName="Computer Training"
       eyebrow="TRAINING & EDUCATION"
       title="Computer Training"
       titleAccent="That Sticks"

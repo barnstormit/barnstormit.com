@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Services",
@@ -6,6 +7,7 @@ export const metadata = {
     "Computer repair, networking, 3D printing, and AI automation for Fairplay, Breckenridge, and Colorado mountain communities. Call (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/services" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Services | Barnstorm Computer Services",
     description:
       "Hardware repair, software services, networking, business IT, 3D printing, and more for Colorado mountain communities.",
@@ -297,14 +299,14 @@ export default function Services() {
                 <span
                   aria-hidden="true"
                   className={`material-symbols-outlined text-3xl ${
-                    svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                    svc.highlight ? "text-gold-ink" : "text-vivid-teal"
                   }`}
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   {svc.icon}
                 </span>
                 {svc.badge && (
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-deep-navy px-3 py-1 rounded-full">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-snow-white px-3 py-1 rounded-full">
                     {svc.badge}
                   </span>
                 )}
@@ -327,7 +329,7 @@ export default function Services() {
               </ul>
               <span
                 className={`mt-6 font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap] ${
-                  svc.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                  svc.highlight ? "text-gold-ink" : "text-vivid-teal"
                 }`}
               >
                 Learn more
@@ -378,12 +380,12 @@ export default function Services() {
               <div className="flex items-center justify-between mb-6">
                 <span
                   aria-hidden="true"
-                  className="material-symbols-outlined text-3xl text-alpine-gold"
+                  className="material-symbols-outlined text-3xl text-gold-ink"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   handshake
                 </span>
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-deep-navy px-3 py-1 rounded-full">
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase font-bold bg-alpine-gold text-snow-white px-3 py-1 rounded-full">
                   NEW
                 </span>
               </div>
@@ -394,7 +396,7 @@ export default function Services() {
                 Property managers and hosts&nbsp;&mdash; keep your guests happy
                 with on-call tech support. No contracts, local response.
               </p>
-              <span className="mt-6 text-alpine-gold font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
+              <span className="mt-6 text-gold-ink font-heading font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-[gap]">
                 Learn more
                 <span aria-hidden="true" className="material-symbols-outlined text-sm">arrow_forward</span>
               </span>
@@ -465,7 +467,7 @@ export default function Services() {
             </Link>
             <Link
               href="/book"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span aria-hidden="true" className="material-symbols-outlined">event</span>
               Book a Call

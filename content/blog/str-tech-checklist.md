@@ -1,5 +1,6 @@
 ---
 title: "Tech Checklist for Short-Term Rental Hosts"
+seoTitle: "Short-Term Rental Tech Checklist"
 date: "2026-04-03"
 category: "Tech Tips"
 excerpt: "A guest's WiFi complaint at 10pm on a Friday can tank your review rating. Here's how to bulletproof the tech in your rental before it becomes a problem."

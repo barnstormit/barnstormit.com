@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "WiFi & Networking",
@@ -6,6 +7,7 @@ export const metadata = {
     "Home and business WiFi, router config, mesh networks, security, and Starlink installation for Colorado mountain homes and short-term rentals.",
   alternates: { canonical: "https://barnstormit.com/services/networking" },
   openGraph: {
+    ...baseOpenGraph,
     title: "WiFi & Networking | Barnstorm Computer Services",
     description:
       "Home and business WiFi, mesh setups, router configuration, network security audits, and Starlink installation across the Colorado high country.",
@@ -64,6 +66,7 @@ export default function Networking() {
   return (
     <ServiceLandingLayout
       slug="networking"
+      breadcrumbName="WiFi & Networking"
       eyebrow="NETWORKING"
       title="WiFi That"
       titleAccent="Actually Works"

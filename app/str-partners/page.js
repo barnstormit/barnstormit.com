@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "STR Partner Program for Hosts",
@@ -6,6 +7,7 @@ export const metadata = {
     "On-call IT support for vacation rental hosts and property managers in Summit & Park County. No contracts, local response. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/str-partners" },
   openGraph: {
+    ...baseOpenGraph,
     title: "STR Partner Program — On-Call Tech for Hosts",
     description:
       "Keep your guests happy with on-call tech support. No contracts, local response in Summit & Park County.",
@@ -73,7 +75,7 @@ export default function StrPartners() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-frost-gray/20 animate-fade-in-up">
             <span
-              className="material-symbols-outlined text-alpine-gold text-sm"
+              className="material-symbols-outlined text-gold-ink text-sm"
               aria-hidden="true"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
@@ -94,7 +96,7 @@ export default function StrPartners() {
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-frost-gray max-w-2xl leading-relaxed animate-fade-in-up stagger-2">
             When your guests hit a tech snag, you have a local pro to call.
-            That&apos;s a <span className="text-alpine-gold font-semibold">5-star review</span> instead of a 3-star.
+            That&apos;s a <span className="text-gold-ink font-semibold">5-star review</span> instead of a 3-star.
           </p>
 
           {/* CTA */}
@@ -108,7 +110,7 @@ export default function StrPartners() {
             </a>
             <Link
               href="/book"
-              className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">event</span>
               Book a Discovery Call
@@ -125,7 +127,7 @@ export default function StrPartners() {
               Sound Familiar?
             </span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-snow-white tracking-tight text-balance">
-              Guest Tech Problems Are <span className="text-alpine-gold">Your</span> Problem
+              Guest Tech Problems Are <span className="text-gold-ink">Your</span> Problem
             </h2>
           </div>
 
@@ -136,7 +138,7 @@ export default function StrPartners() {
                 className="glass-card p-8 flex flex-col"
               >
                 <span
-                  className="material-symbols-outlined text-3xl text-alpine-gold mb-5"
+                  className="material-symbols-outlined text-3xl text-gold-ink mb-5"
                   aria-hidden="true"
                 >
                   {s.icon}
@@ -212,7 +214,7 @@ export default function StrPartners() {
           }}
         >
           <span
-            className="material-symbols-outlined text-alpine-gold text-4xl"
+            className="material-symbols-outlined text-gold-ink text-4xl"
             aria-hidden="true"
             style={{ fontVariationSettings: "'FILL' 1" }}
           >
@@ -228,7 +230,7 @@ export default function StrPartners() {
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Link
               href="/book"
-              className="w-full sm:w-auto bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto bg-alpine-gold text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] active:scale-95 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">event</span>
               Book a Discovery Call

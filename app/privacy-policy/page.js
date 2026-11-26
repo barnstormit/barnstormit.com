@@ -1,9 +1,12 @@
+import { baseOpenGraph } from "@/lib/seo";
+
 export const metadata = {
   title: "Privacy Policy",
   description:
     "Privacy policy for Barnstorm Computer Services. We keep data collection minimal — no tracking cookies, no analytics, no ad networks.",
   alternates: { canonical: "https://barnstormit.com/privacy-policy" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Privacy Policy | Barnstorm Computer Services",
     description: "Our privacy practices — minimal data collection, no tracking.",
     url: "https://barnstormit.com/privacy-policy",
@@ -140,7 +143,7 @@ export default function PrivacyPolicy() {
               email us at{" "}
               <a
                 href="mailto:info@barnstormit.com"
-                className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                className="text-vivid-teal hover:text-gold-ink transition-colors"
               >
                 info@barnstormit.com
               </a>
@@ -178,7 +181,7 @@ export default function PrivacyPolicy() {
               Contact us at{" "}
               <a
                 href="mailto:info@barnstormit.com"
-                className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                className="text-vivid-teal hover:text-gold-ink transition-colors"
               >
                 info@barnstormit.com
               </a>{" "}
@@ -220,7 +223,7 @@ export default function PrivacyPolicy() {
                 </span>
                 <a
                   href="mailto:info@barnstormit.com"
-                  className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                  className="text-vivid-teal hover:text-gold-ink transition-colors"
                 >
                   info@barnstormit.com
                 </a>
@@ -231,7 +234,7 @@ export default function PrivacyPolicy() {
                 </span>
                 <a
                   href="tel:+17198380435"
-                  className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                  className="text-vivid-teal hover:text-gold-ink transition-colors"
                 >
                   (719) 838-0435
                 </a>

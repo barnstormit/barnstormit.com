@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { baseTwitter } from "@/lib/seo";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -50,13 +51,9 @@ export const metadata = {
     ],
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Barnstorm Computer Services — Mountain Tech, Done Right",
-    description:
-      "On-site computer repair and IT support for Colorado's mountain communities.",
-    images: ["/barnstorm_og.png"],
-  },
+  // No title/description here: pages inherit this object wholesale, and X
+  // falls back to each page's og:title / og:description when these are absent.
+  twitter: baseTwitter,
   alternates: {
     canonical: "https://barnstormit.com",
   },

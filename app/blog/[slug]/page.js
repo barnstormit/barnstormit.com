@@ -3,6 +3,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import Image from "next/image";
 import Link from "next/link";
+import { baseOpenGraph, baseTwitter } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -13,10 +14,13 @@ export async function generateMetadata({ params }) {
   const post = getPostBySlug(slug);
   const description = post.seoDescription || post.excerpt;
   return {
-    title: post.title,
+    // seoTitle (frontmatter) keeps <title> under 70 chars once the
+    // " | Barnstorm Computer Services" template is added; the H1 and og:title keep the full title.
+    title: post.seoTitle || post.title,
     description,
     alternates: { canonical: `https://barnstormit.com/blog/${slug}` },
     openGraph: {
+      ...baseOpenGraph,
       title: `${post.title} | Barnstorm Computer Services`,
       description,
       url: `https://barnstormit.com/blog/${slug}`,
@@ -26,6 +30,10 @@ export async function generateMetadata({ params }) {
       ...(post.image
         ? { images: [{ url: `https://barnstormit.com${post.image}`, width: 1200, height: 630, alt: post.title }] }
         : {}),
+    },
+    twitter: {
+      ...baseTwitter,
+      ...(post.image ? { images: [`https://barnstormit.com${post.image}`] } : {}),
     },
   };
 }

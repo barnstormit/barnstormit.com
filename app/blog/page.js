@@ -1,5 +1,6 @@
 import { getAllPosts } from "../../lib/posts";
 import BlogGrid from "./BlogGrid";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Blog",
@@ -7,6 +8,7 @@ export const metadata = {
     "Tech tips, 3D printing projects, and mountain living updates from Barnstorm Computer Services. Practical advice from Fairplay, Colorado.",
   alternates: { canonical: "https://barnstormit.com/blog" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Blog | Barnstorm Computer Services",
     description:
       "Practical tech advice, behind-the-scenes builds, and updates from Colorado's high country.",

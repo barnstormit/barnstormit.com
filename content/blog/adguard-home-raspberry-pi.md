@@ -1,5 +1,6 @@
 ---
 title: "Block Ads on Every Device You Own with a $150 Raspberry Pi"
+seoTitle: "Block Ads at Home with AdGuard on a Pi"
 date: "2026-05-03"
 category: "Tech Tips"
 excerpt: "A Raspberry Pi 4 plus AdGuard Home plus Tailscale equals ad and tracker blocking on every device you own, at home, on the road, or anywhere in between. Here's the full setup, end to end."

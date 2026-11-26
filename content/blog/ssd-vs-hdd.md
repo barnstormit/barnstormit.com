@@ -1,5 +1,6 @@
 ---
 title: "SSD vs HDD: The $100 Upgrade That Makes Your Old Laptop Feel New"
+seoTitle: "SSD vs HDD: The $100 Laptop Upgrade"
 date: "2026-04-03"
 category: "Tech Tips"
 excerpt: "Your laptop isn't slow because it's old. It's slow because it's still running a spinning hard drive. Here's why an SSD swap is the single best upgrade you can make."

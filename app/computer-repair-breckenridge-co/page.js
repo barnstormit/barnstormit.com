@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { baseOpenGraph, baseTwitter } from "@/lib/seo";
 
 export const metadata = {
   title: "Computer Repair in Breckenridge, CO",
   description:
-    "On-site computer repair and IT support in Breckenridge, CO. WiFi, networking, Starlink, virus removal, and more. Local technician serving Summit County. Call (719) 838-0435.",
+    "On-site computer repair in Breckenridge, CO. WiFi, Starlink, virus removal, and more from a local Summit County tech. Call (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/computer-repair-breckenridge-co" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Computer Repair in Breckenridge, CO | Barnstorm Computer Services",
     description:
       "On-site computer repair and IT support in Breckenridge, CO. WiFi, networking, Starlink, virus removal, and more. Local technician serving Summit County.",
@@ -13,6 +15,7 @@ export const metadata = {
     type: "website",
   },
   twitter: {
+    ...baseTwitter,
     card: "summary_large_image",
     title: "Computer Repair in Breckenridge, CO | Barnstorm Computer Services",
     description:
@@ -208,7 +211,7 @@ export default function ComputerRepairBreckenridge() {
           <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-alpine-gold blur-[160px] rounded-full opacity-40" />
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 text-center">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-4 block">
             Breckenridge, CO &middot; 80424
           </span>
           <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
@@ -231,7 +234,7 @@ export default function ComputerRepairBreckenridge() {
             </Link>
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span aria-hidden="true" className="material-symbols-outlined">call</span>
               Call (719) 838-0435
@@ -302,7 +305,7 @@ export default function ComputerRepairBreckenridge() {
       <section className="pb-12 md:pb-16 px-6 md:px-8" aria-labelledby="breck-trust-heading">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10">
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-3 block">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-3 block">
               Local
             </span>
             <h2
@@ -325,7 +328,7 @@ export default function ComputerRepairBreckenridge() {
                 <div className="bg-alpine-gold/10 p-3 rounded-lg border border-alpine-gold/20 shrink-0">
                   <span
                     aria-hidden="true"
-                    className="material-symbols-outlined text-alpine-gold text-2xl"
+                    className="material-symbols-outlined text-gold-ink text-2xl"
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
                     {p.icon}
@@ -405,7 +408,7 @@ export default function ComputerRepairBreckenridge() {
             </Link>
             <a
               href="tel:+17198380435"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span aria-hidden="true" className="material-symbols-outlined">call</span>
               Call (719) 838-0435

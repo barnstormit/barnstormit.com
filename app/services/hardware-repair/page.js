@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Hardware Repair",
@@ -6,6 +7,7 @@ export const metadata = {
     "Laptop screens, SSD/RAM upgrades, motherboard repair, and batteries. On-site computer hardware repair in Fairplay, Breckenridge, and Summit County.",
   alternates: { canonical: "https://barnstormit.com/services/hardware-repair" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Hardware Repair | Barnstorm Computer Services",
     description:
       "Laptop screens, SSD/RAM upgrades, motherboard repair, batteries, hinges, cooling and DC jack work. On-site repair across the Colorado high country.",
@@ -79,6 +81,7 @@ export default function HardwareRepair() {
   return (
     <ServiceLandingLayout
       slug="hardware-repair"
+      breadcrumbName="Hardware Repair"
       eyebrow="HARDWARE REPAIR"
       title="Hardware Repair"
       titleAccent="That Lasts"

@@ -5,20 +5,24 @@ export default function ServiceLandingLayout({
   eyebrow,
   title,
   titleAccent,
+  breadcrumbName,
   intro,
   icon,
   highlight = false,
   items,
   serviceJsonLd,
 }) {
-  const accentColor = highlight ? "alpine-gold" : "vivid-teal";
+  // Literal class names so Tailwind can see them. Gold text uses the AA-safe
+  // gold-ink token; the bright alpine-gold is only for the background glow.
+  const accentText = highlight ? "text-gold-ink" : "text-vivid-teal";
+  const accentBg = highlight ? "bg-alpine-gold" : "bg-vivid-teal";
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://barnstormit.com/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://barnstormit.com/services" },
-      { "@type": "ListItem", position: 3, name: title, item: `https://barnstormit.com/services/${slug}` },
+      { "@type": "ListItem", position: 3, name: breadcrumbName || title, item: `https://barnstormit.com/services/${slug}` },
     ],
   };
 
@@ -56,24 +60,24 @@ export default function ServiceLandingLayout({
             </Link>
           </li>
           <li aria-hidden="true" className="text-frost-gray/40">/</li>
-          <li className="text-snow-white" aria-current="page">{title}</li>
+          <li className="text-snow-white" aria-current="page">{breadcrumbName || title}</li>
         </ol>
       </nav>
 
       <header className="relative pt-8 pb-10 md:pt-12 md:pb-14 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-          <div className={`absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-${accentColor} blur-[160px] rounded-full`} />
+          <div className={`absolute top-[-20%] right-[-10%] w-[600px] h-[600px] ${accentBg} blur-[160px] rounded-full`} />
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-8 text-center flex flex-col items-center">
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full glass-card">
-            <span className={`font-mono text-[10px] tracking-[0.3em] uppercase text-${accentColor}`}>
+            <span className={`font-mono text-[10px] tracking-[0.3em] uppercase ${accentText}`}>
               {eyebrow}
             </span>
           </div>
           {icon && (
             <span
               aria-hidden="true"
-              className={`material-symbols-outlined text-5xl md:text-6xl text-${accentColor} mb-6`}
+              className={`material-symbols-outlined text-5xl md:text-6xl ${accentText} mb-6`}
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
               {icon}
@@ -84,7 +88,7 @@ export default function ServiceLandingLayout({
             {titleAccent && (
               <>
                 <br />
-                <span className={`text-${accentColor}`}>{titleAccent}</span>
+                <span className={`${accentText}`}>{titleAccent}</span>
               </>
             )}
           </h1>
@@ -104,7 +108,7 @@ export default function ServiceLandingLayout({
               <h2 className="font-heading text-xl font-bold text-snow-white mb-3 flex items-start gap-3">
                 <span
                   aria-hidden="true"
-                  className={`material-symbols-outlined text-${accentColor} text-2xl mt-0.5 shrink-0`}
+                  className={`material-symbols-outlined ${accentText} text-2xl mt-0.5 shrink-0`}
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
                   check_circle
@@ -145,7 +149,7 @@ export default function ServiceLandingLayout({
             </Link>
             <Link
               href="/book"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span aria-hidden="true" className="material-symbols-outlined">event</span>
               Book a Call

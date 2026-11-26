@@ -59,7 +59,7 @@ function WindowsSteps() {
           </p>
           <a
             href="https://remote.barnstormit.com/rustdesk.exe"
-            className="flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-6 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-[filter,transform] active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            className="flex items-center justify-center gap-3 bg-alpine-gold text-snow-white px-6 py-4 rounded-lg font-heading font-bold text-base hover:brightness-110 transition-[filter,transform] active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
             <span className="material-symbols-outlined text-2xl" aria-hidden="true">
               desktop_windows
@@ -260,7 +260,7 @@ function MacSteps() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64.dmg"
-              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-snow-white px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined text-2xl" aria-hidden="true">
                 laptop_mac
@@ -272,7 +272,7 @@ function MacSteps() {
             </a>
             <a
               href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg"
-              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-deep-navy px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="flex-1 flex flex-col items-center justify-center gap-2 bg-alpine-gold text-snow-white px-5 py-4 rounded-lg font-heading font-bold hover:brightness-110 transition-[filter,transform] active:scale-95 text-center focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined text-2xl" aria-hidden="true">
                 laptop_mac
@@ -383,7 +383,7 @@ function MacSteps() {
         </p>
         <div className="bg-alpine-gold/5 border border-alpine-gold/20 rounded-lg p-4 mb-4">
           <p className="text-frost-gray text-sm leading-relaxed">
-            <span className="text-alpine-gold font-bold">Note:</span> Due to
+            <span className="text-gold-ink font-bold">Note:</span> Due to
             macOS security policy, you must also enable{" "}
             <span className="text-snow-white font-bold">Input Monitoring</span>{" "}
             permission for keyboard and mouse control to work correctly.
@@ -569,7 +569,7 @@ export default function OsSetupTabs() {
             onClick={() => switchTab("windows")}
             className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none ${
               activeTab === "windows"
-                ? "bg-alpine-gold text-deep-navy"
+                ? "bg-alpine-gold text-snow-white"
                 : "text-frost-gray hover:text-snow-white"
             }`}
           >
@@ -582,7 +582,7 @@ export default function OsSetupTabs() {
             onClick={() => switchTab("mac")}
             className={`flex items-center gap-2.5 px-6 py-3 rounded-lg font-heading font-bold text-base transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none ${
               activeTab === "mac"
-                ? "bg-alpine-gold text-deep-navy"
+                ? "bg-alpine-gold text-snow-white"
                 : "text-frost-gray hover:text-snow-white"
             }`}
           >

@@ -1,5 +1,6 @@
 import PricingCalculator from "./PricingCalculator";
 import QuoteForm from "./QuoteForm";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Custom 3D Printing",
@@ -7,6 +8,7 @@ export const metadata = {
     "Custom FDM 3D printing in Fairplay, CO. Bambu X2D dual-nozzle, multi-material AMS. Fair pricing, no minimums on quotes. Call (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/3d-printing" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Custom 3D Printing | Barnstorm Computer Services",
     description:
       "Professional FDM printing on a Bambu Lab X2D — prototypes, parts, props, and production runs. Printed locally in Fairplay, CO.",
@@ -67,14 +69,14 @@ const steps = [
         STL, STEP, or 3MF format. Email{" "}
         <a
           href="mailto:info@barnstormit.com"
-          className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          className="text-vivid-teal hover:text-gold-ink transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
           info@barnstormit.com
         </a>{" "}
         or call{" "}
         <a
           href="tel:+17198380435"
-          className="text-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+          className="text-vivid-teal hover:text-gold-ink transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
         >
           (719) 838-0435
         </a>{" "}
@@ -194,7 +196,7 @@ export default function ThreeDPrinting() {
       {/* Hero */}
       <section className="pt-20 md:pt-28 pb-12 md:pb-16 px-6 md:px-8">
         <div className="max-w-[1200px] mx-auto text-center">
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-4 block">
             3D Printing
           </span>
           <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-snow-white tracking-tighter leading-[0.95] mb-6 text-balance">
@@ -237,7 +239,7 @@ export default function ThreeDPrinting() {
                   <span
                     aria-hidden="true"
                     className={`material-symbols-outlined text-3xl ${
-                      m.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                      m.highlight ? "text-gold-ink" : "text-vivid-teal"
                     }`}
                     style={{ fontVariationSettings: "'FILL' 1" }}
                   >
@@ -253,7 +255,7 @@ export default function ThreeDPrinting() {
                   </h3>
                   <span
                     className={`font-mono text-sm font-bold tabular-nums ${
-                      m.highlight ? "text-alpine-gold" : "text-vivid-teal"
+                      m.highlight ? "text-gold-ink" : "text-vivid-teal"
                     }`}
                   >
                     {m.rate}
@@ -308,7 +310,7 @@ export default function ThreeDPrinting() {
       <section className="py-12 md:py-16 px-6 md:px-8" id="calculator">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8">
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-3 block">
+            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-3 block">
               Pricing Calculator
             </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-snow-white mb-4 text-balance">
@@ -337,11 +339,11 @@ export default function ThreeDPrinting() {
                 </li>
                 <li className="flex justify-between gap-4">
                   <span><strong className="text-snow-white font-heading">Rush</strong> — 24–48 hours</span>
-                  <span className="font-mono text-alpine-gold whitespace-nowrap">+50%</span>
+                  <span className="font-mono text-gold-ink whitespace-nowrap">+50%</span>
                 </li>
                 <li className="flex justify-between gap-4">
                   <span><strong className="text-snow-white font-heading">Same-day</strong> — when machine is available</span>
-                  <span className="font-mono text-alpine-gold whitespace-nowrap">+100%</span>
+                  <span className="font-mono text-gold-ink whitespace-nowrap">+100%</span>
                 </li>
               </ul>
             </div>

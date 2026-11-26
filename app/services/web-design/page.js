@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Web Design & SEO",
@@ -6,6 +7,7 @@ export const metadata = {
     "Modern fast websites, local SEO, Google Business Profile setup, and domain email. Built for small businesses across the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/web-design" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Web Design & SEO | Barnstorm Computer Services",
     description:
       "Custom websites, local SEO, Google Business Profile setup, and domain email for Colorado small businesses. Fast, mobile-friendly, no platform lock-in.",
@@ -59,6 +61,7 @@ export default function WebDesign() {
   return (
     <ServiceLandingLayout
       slug="web-design"
+      breadcrumbName="Web Design & SEO"
       eyebrow="WEB & DIGITAL"
       title="Web Design"
       titleAccent="& Local SEO"

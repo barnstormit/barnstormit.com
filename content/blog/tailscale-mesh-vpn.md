@@ -1,5 +1,6 @@
 ---
 title: "How I Use Tailscale to Run My Business From Anywhere in the Mountains"
+seoTitle: "How I Use Tailscale to Run My Business"
 date: "2026-04-13"
 category: "Tech Tips"
 excerpt: "How a mesh VPN connects my entire infrastructure, from a Raspberry Pi in Fairplay to a VPS in Los Angeles, and why you might want one too."

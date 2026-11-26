@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Book a Discovery Call",
@@ -6,6 +7,7 @@ export const metadata = {
     "Schedule a free 30-minute discovery call with Barnstorm Computer Services. We'll discuss your tech issue and determine the best next steps.",
   alternates: { canonical: "https://barnstormit.com/book" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Book a Discovery Call | Barnstorm Computer Services",
     description:
       "Schedule a free 30-minute discovery call. We'll discuss your tech issue and determine the best next steps.",
@@ -92,7 +94,7 @@ export default function Book() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="tel:+17198380435"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-alpine-gold text-deep-navy px-12 py-5 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-alpine-gold text-snow-white px-12 py-5 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
               >
                 <span className="material-symbols-outlined text-2xl" aria-hidden="true">
                   call

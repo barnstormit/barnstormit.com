@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Vacation Tech Help for Guests",
@@ -6,6 +7,7 @@ export const metadata = {
     "Tech emergency during your stay? We come to your rental. WiFi, smart TV, printer, and laptop help in Summit & Park County. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com/vacation-help" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Vacation Tech Help — On-Site IT for Guests",
     description:
       "Tech emergency during your stay? Fast, friendly on-site IT help for vacation rentals in Summit & Park County.",
@@ -135,7 +137,7 @@ export default function VacationHelp() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-frost-gray/20 animate-fade-in-up">
             <span
-              className="material-symbols-outlined text-alpine-gold text-sm"
+              className="material-symbols-outlined text-gold-ink text-sm"
               aria-hidden="true"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
@@ -169,7 +171,7 @@ export default function VacationHelp() {
             </a>
             <Link
               href="/book"
-              className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">event</span>
               Book a Call
@@ -237,7 +239,7 @@ export default function VacationHelp() {
             <div className="flex flex-col gap-10">
               {steps.map((s) => (
                 <div key={s.num} className="flex gap-6">
-                  <span className="text-5xl font-heading font-black text-alpine-gold/30 leading-none select-none shrink-0">
+                  <span className="text-5xl font-heading font-black text-gold-ink/30 leading-none select-none shrink-0">
                     {s.num}
                   </span>
                   <div>
@@ -316,7 +318,7 @@ export default function VacationHelp() {
                 }}
               >
                 <span
-                  className="material-symbols-outlined text-alpine-gold text-4xl"
+                  className="material-symbols-outlined text-gold-ink text-4xl"
                   aria-hidden="true"
                   style={{ fontVariationSettings: "'FILL' 1" }}
                 >
@@ -330,14 +332,14 @@ export default function VacationHelp() {
                 </p>
                 <a
                   href="tel:+17198380435"
-                  className="w-full px-8 py-4 bg-alpine-gold text-deep-navy font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+                  className="w-full px-8 py-4 bg-alpine-gold text-snow-white font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
                 >
                   <span className="material-symbols-outlined" aria-hidden="true">call</span>
                   (719) 838-0435
                 </a>
                 <Link
                   href="/book"
-                  className="w-full px-8 py-3 border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold font-heading font-bold rounded-lg transition-[border-color] duration-300 flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+                  className="w-full px-8 py-3 border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink font-heading font-bold rounded-lg transition-[border-color] duration-300 flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
                 >
                   <span className="material-symbols-outlined" aria-hidden="true">event</span>
                   Book a Call

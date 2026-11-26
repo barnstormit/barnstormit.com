@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Business IT Support",
   description:
-    "Small business IT support in Fairplay, Breckenridge, Frisco, Dillon, and Buena Vista. Managed IT, consulting, POS installation, and workflow automation — local response, no contracts.",
+    "Small business IT in Fairplay, Breckenridge, Frisco, Dillon, and Buena Vista. Managed IT, POS installs, and automation. Local response, no contracts.",
   alternates: { canonical: "https://barnstormit.com/services/business-it" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Business IT Support | Barnstorm Computer Services",
     description:
       "Small business IT support in Fairplay, Breckenridge, Frisco, Dillon, and Buena Vista. Managed IT, consulting, POS installation, and workflow automation — local response, no contracts.",
@@ -257,7 +259,7 @@ export default function BusinessIT() {
             </Link>
             <Link
               href="/book"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span aria-hidden="true" className="material-symbols-outlined">event</span>
               Book a Call

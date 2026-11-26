@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "About",
@@ -7,6 +8,7 @@ export const metadata = {
     "Meet Jeff Barnstorf — over 20 years of IT experience, MCSE certified, based in Fairplay. On-site repair and IT support for mountain communities.",
   alternates: { canonical: "https://barnstormit.com/about" },
   openGraph: {
+    ...baseOpenGraph,
     title: "About | Barnstorm Computer Services",
     description:
       "Meet Jeff Barnstorf — over 20 years of IT experience serving Colorado's mountain communities from Fairplay.",
@@ -91,13 +93,13 @@ export default function About() {
             {/* Cert Badge */}
             <div className="absolute bottom-4 left-4 bg-deep-navy/90 backdrop-blur-sm border border-alpine-gold/40 rounded-lg px-4 py-2 flex items-center gap-2">
               <span
-                className="material-symbols-outlined text-alpine-gold"
+                className="material-symbols-outlined text-gold-ink"
                 style={{ fontVariationSettings: "'FILL' 1" }}
                 aria-hidden="true"
               >
                 verified
               </span>
-              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-alpine-gold font-bold">
+              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gold-ink font-bold">
                 MCSE &amp; CompTIA A+
               </span>
             </div>
@@ -187,7 +189,7 @@ export default function About() {
 
                 {/* Content */}
                 <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <span className="font-mono text-sm text-alpine-gold font-bold mb-2 block">
+                  <span className="font-mono text-sm text-gold-ink font-bold mb-2 block">
                     {item.year}
                   </span>
                   <h3 className="font-heading text-2xl font-bold text-snow-white mb-3">
@@ -226,7 +228,7 @@ export default function About() {
             </Link>
             <Link
               href="/book"
-              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="w-full sm:w-auto border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink px-10 py-4 rounded-lg font-heading font-bold text-lg transition-[border-color,transform] hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined" aria-hidden="true">event</span>
               Book a Call

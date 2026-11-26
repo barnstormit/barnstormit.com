@@ -32,23 +32,23 @@ export default function CopyField({ label, value }) {
         {label}
       </span>
       <div className="flex-1 flex items-center justify-between gap-3 bg-deep-navy rounded-lg px-4 py-3 border border-steel-blue/30">
-        <span className="font-mono text-sm text-alpine-gold break-all select-all">
+        <span className="font-mono text-sm text-gold-ink break-all select-all">
           {value}
         </span>
         <button
           onClick={handleCopy}
-          className="shrink-0 flex items-center gap-1.5 text-frost-gray/50 hover:text-alpine-gold transition-colors"
+          className="shrink-0 flex items-center gap-1.5 text-frost-gray/50 hover:text-gold-ink transition-colors"
           aria-label={`Copy ${label}`}
         >
           {copied ? (
             <>
               <span
-                className="material-symbols-outlined text-lg text-alpine-gold"
+                className="material-symbols-outlined text-lg text-gold-ink"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 check_circle
               </span>
-              <span className="font-mono text-xs text-alpine-gold">
+              <span className="font-mono text-xs text-gold-ink">
                 Copied!
               </span>
             </>

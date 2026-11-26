@@ -291,7 +291,7 @@ export default function PricingCalculator() {
           className="rounded-xl border border-alpine-gold/30 bg-alpine-gold/5 p-6 sm:p-7 self-start"
           aria-live="polite"
         >
-          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold block mb-3">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink block mb-3">
             Estimated Price
           </span>
           <div className="font-heading text-5xl sm:text-6xl font-black text-snow-white tabular-nums tracking-tighter leading-none">
@@ -322,7 +322,7 @@ export default function PricingCalculator() {
           </dl>
 
           {breakdown.minApplied && (
-            <p className="mt-4 text-xs text-alpine-gold flex items-start gap-1.5">
+            <p className="mt-4 text-xs text-gold-ink flex items-start gap-1.5">
               <span className="material-symbols-outlined text-base leading-none mt-px" aria-hidden="true">
                 info
               </span>

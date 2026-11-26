@@ -13,6 +13,16 @@ const quickLinks = [
   { href: "/blog", label: "Blog" },
 ];
 
+// Towns with a dedicated city page get a link (sitewide internal links to the city pages).
+const cityLinks = [
+  { label: "Fairplay", href: "/computer-repair-fairplay-co" },
+  { label: "Breckenridge", href: "/computer-repair-breckenridge-co" },
+  { label: "Frisco" },
+  { label: "Dillon" },
+  { label: "Leadville" },
+  { label: "Buena Vista", href: "/computer-repair-buena-vista-co", last: true },
+];
+
 export default function Footer() {
   return (
     <footer className="w-full bg-slate-band mt-auto">
@@ -122,7 +132,7 @@ export default function Footer() {
             </div>
             <Link
               href="/book"
-              className="inline-flex items-center gap-2 bg-alpine-gold text-deep-navy px-5 py-2.5 rounded-lg font-heading font-bold text-sm hover:brightness-110 transition-[filter] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+              className="inline-flex items-center gap-2 bg-alpine-gold text-snow-white px-5 py-2.5 rounded-lg font-heading font-bold text-sm hover:brightness-110 transition-[filter] focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
             >
               <span className="material-symbols-outlined text-lg" aria-hidden="true">
                 event
@@ -163,7 +173,21 @@ export default function Footer() {
             <p className="text-frost-gray leading-relaxed relative z-10">
               Serving{" "}
               <span className="text-snow-white font-medium">
-                Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista
+                {cityLinks.map((c) => (
+                  <span key={c.label}>
+                    {c.href ? (
+                      <Link
+                        href={c.href}
+                        className="underline decoration-vivid-teal/40 underline-offset-2 hover:text-vivid-teal transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+                      >
+                        {c.label}
+                      </Link>
+                    ) : (
+                      c.label
+                    )}
+                    {c.last ? "" : ", "}
+                  </span>
+                ))}
               </span>{" "}
               &amp; surrounding mountain communities.
             </p>

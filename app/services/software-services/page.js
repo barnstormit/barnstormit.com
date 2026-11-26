@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Software Services",
@@ -6,6 +7,7 @@ export const metadata = {
     "OS installs, virus removal, optimization and updates. On-site and remote software services across Fairplay, Breckenridge, and the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/software-services" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Software Services | Barnstorm Computer Services",
     description:
       "OS installation, virus and malware removal, optimization, software/driver updates, and full system cleanup for slow or compromised computers.",
@@ -69,6 +71,7 @@ export default function SoftwareServices() {
   return (
     <ServiceLandingLayout
       slug="software-services"
+      breadcrumbName="Software Services"
       eyebrow="SOFTWARE SERVICES"
       title="Software Services"
       titleAccent="Made Right"

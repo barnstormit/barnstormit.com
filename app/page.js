@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "../lib/posts";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Computer Repair & IT Support in Fairplay, CO | Barnstorm",
@@ -8,6 +9,7 @@ export const metadata = {
     "On-site and remote computer repair, IT support, and networking for Fairplay, Breckenridge, and Colorado mountain communities. (719) 838-0435.",
   alternates: { canonical: "https://barnstormit.com" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Barnstorm Computer Services — Mountain Tech, Done Right",
     description:
       "On-site and remote computer repair and IT support for Colorado's mountain communities. Based in Fairplay, serving Summit, Park, Lake, and Chaffee counties.",
@@ -57,7 +59,7 @@ export default function Home() {
         <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9] drop-shadow-2xl animate-fade-in-up stagger-1 text-balance">
           Mountain Tech,
           <br />
-          <span className="text-vivid-teal">Done Right</span>
+          <span className="text-alpine-gold">Done Right</span>
         </h1>
 
         {/* Subheadline */}
@@ -82,7 +84,7 @@ export default function Home() {
             className="w-full sm:w-auto bg-deep-navy/50 backdrop-blur-sm border-2 border-frost-gray/20 hover:border-vivid-teal text-white px-10 py-4 rounded-xl font-heading font-bold text-lg transition-[border-color,transform] duration-300 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             View Services
-            <span className="material-symbols-outlined text-vivid-teal" aria-hidden="true">
+            <span className="material-symbols-outlined text-alpine-gold" aria-hidden="true">
               arrow_forward
             </span>
           </Link>
@@ -102,7 +104,7 @@ export default function Home() {
           Vacationing in the mountains?{" "}
           <Link
             href="/vacation-help"
-            className="text-vivid-teal font-medium hover:text-alpine-gold transition-colors inline-flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
+            className="text-alpine-gold font-medium hover:text-white transition-colors inline-flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none"
           >
             Get vacation tech help
             <span className="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
@@ -113,7 +115,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center items-center gap-y-4 gap-x-6 mt-12 pt-12 border-t border-frost-gray/15 w-full animate-fade-in-up stagger-4">
           <div className="flex items-center gap-2 text-white">
             <span
-              className="material-symbols-outlined text-vivid-teal"
+              className="material-symbols-outlined text-alpine-gold"
               aria-hidden="true"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
@@ -149,7 +151,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2 text-white">
             <span
-              className="material-symbols-outlined text-vivid-teal"
+              className="material-symbols-outlined text-alpine-gold"
               aria-hidden="true"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
@@ -271,7 +273,7 @@ export default function Home() {
                 view_in_ar
               </span>
             </div>
-            <span className="font-mono text-[10px] uppercase tracking-widest text-alpine-gold bg-alpine-gold/10 px-2.5 py-1 rounded-full border border-alpine-gold/30">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-gold-ink bg-alpine-gold/10 px-2.5 py-1 rounded-full border border-alpine-gold/30">
               New
             </span>
           </div>
@@ -288,7 +290,7 @@ export default function Home() {
         Every job gets a clear estimate &mdash;{" "}
         <Link
           href="/book"
-          className="text-alpine-gold font-bold hover:text-vivid-teal hover:underline transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+          className="text-gold-ink font-bold hover:text-vivid-teal hover:underline transition-colors focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
         >
           Book a Call
         </Link>{" "}
@@ -350,7 +352,7 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
               <span
-                className="material-symbols-outlined text-xl text-alpine-gold"
+                className="material-symbols-outlined text-xl text-gold-ink"
                 aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -362,7 +364,7 @@ export default function Home() {
             </div>
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
               <span
-                className="material-symbols-outlined text-xl text-alpine-gold"
+                className="material-symbols-outlined text-xl text-gold-ink"
                 aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -374,7 +376,7 @@ export default function Home() {
             </div>
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
               <span
-                className="material-symbols-outlined text-xl text-alpine-gold"
+                className="material-symbols-outlined text-xl text-gold-ink"
                 aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -386,7 +388,7 @@ export default function Home() {
             </div>
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
               <span
-                className="material-symbols-outlined text-xl text-alpine-gold"
+                className="material-symbols-outlined text-xl text-gold-ink"
                 aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -398,7 +400,7 @@ export default function Home() {
             </div>
             <div className="glass-card flex items-center gap-3 px-5 py-3.5 border-alpine-gold/30">
               <span
-                className="material-symbols-outlined text-xl text-alpine-gold"
+                className="material-symbols-outlined text-xl text-gold-ink"
                 aria-hidden="true"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
@@ -444,7 +446,7 @@ export default function Home() {
             <p className="text-sm text-frost-gray mb-8 min-h-[40px]">
               <Link
                 href="/computer-repair-fairplay-co"
-                className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-gold-ink transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
               >
                 Fairplay
               </Link>
@@ -475,7 +477,7 @@ export default function Home() {
 
           {/* Zone 2 — Regional (Popular) */}
           <div className="glass-card p-8 transition-colors flex flex-col" style={{ borderColor: "rgba(58, 155, 213, 0.5)" }}>
-            <span className="text-xs font-mono font-bold text-alpine-gold tracking-widest uppercase mb-2 block">
+            <span className="text-xs font-mono font-bold text-gold-ink tracking-widest uppercase mb-2 block">
               Zone 02 — Popular
             </span>
             <h3 className="text-2xl font-heading font-bold mb-4 text-snow-white">
@@ -594,12 +596,12 @@ export default function Home() {
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto text-center">
-        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-alpine-gold mb-4 block">
+        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-ink mb-4 block">
           Get In Touch
         </span>
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-snow-white mb-8 tracking-tight leading-[0.95] text-balance">
           Tech Problems Don&apos;t Care About Your{" "}
-          <span className="text-alpine-gold">Checkout Date.</span>
+          <span className="text-gold-ink">Checkout Date.</span>
         </h2>
         <p className="text-lg md:text-xl text-frost-gray mb-12 max-w-2xl mx-auto leading-relaxed">
           Whether you&apos;re a local business, a full-time resident, or a
@@ -611,7 +613,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="tel:+17198380435"
-            className="w-full sm:w-auto px-10 py-5 bg-alpine-gold text-deep-navy font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            className="w-full sm:w-auto px-10 py-5 bg-alpine-gold text-snow-white font-heading font-bold text-lg rounded-lg hover:brightness-110 transition-[filter,transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(240,165,0,0.3)] flex items-center justify-center gap-3 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
             <span className="material-symbols-outlined" aria-hidden="true">call</span>
             Call Now
@@ -625,7 +627,7 @@ export default function Home() {
           </a>
           <Link
             href="/book"
-            className="w-full sm:w-auto px-10 py-5 border-2 border-alpine-gold/30 hover:border-alpine-gold text-alpine-gold font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            className="w-full sm:w-auto px-10 py-5 border-2 border-alpine-gold/30 hover:border-alpine-gold text-gold-ink font-heading font-bold text-lg rounded-lg transition-[border-color,transform] duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-3 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
             <span className="material-symbols-outlined" aria-hidden="true">event</span>
             Book a Call

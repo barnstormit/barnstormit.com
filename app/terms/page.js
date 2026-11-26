@@ -1,9 +1,12 @@
+import { baseOpenGraph } from "@/lib/seo";
+
 export const metadata = {
   title: "Terms of Service",
   description:
     "Terms of service for Barnstorm Computer Services. Rates, scheduling, warranties, and liability for IT services in Colorado mountain communities.",
   alternates: { canonical: "https://barnstormit.com/terms" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Terms of Service | Barnstorm Computer Services",
     description: "Service terms, rates, warranties, and liability information.",
     url: "https://barnstormit.com/terms",
@@ -155,7 +158,7 @@ export default function TermsOfService() {
           <div className="glass-card rounded-xl p-8 border-alpine-gold/30">
             <h2 className="font-heading text-xl font-bold text-snow-white mb-4 flex items-center gap-3">
               <span
-                className="material-symbols-outlined text-alpine-gold"
+                className="material-symbols-outlined text-gold-ink"
                 style={{ fontVariationSettings: "'FILL' 1" }}
               >
                 verified
@@ -239,7 +242,7 @@ export default function TermsOfService() {
                 </span>
                 <a
                   href="mailto:info@barnstormit.com"
-                  className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                  className="text-vivid-teal hover:text-gold-ink transition-colors"
                 >
                   info@barnstormit.com
                 </a>
@@ -250,7 +253,7 @@ export default function TermsOfService() {
                 </span>
                 <a
                   href="tel:+17198380435"
-                  className="text-vivid-teal hover:text-alpine-gold transition-colors"
+                  className="text-vivid-teal hover:text-gold-ink transition-colors"
                 >
                   (719) 838-0435
                 </a>

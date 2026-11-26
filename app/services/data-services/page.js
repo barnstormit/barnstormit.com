@@ -1,4 +1,5 @@
 import ServiceLandingLayout from "../../components/ServiceLandingLayout";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Data Recovery & Backup",
@@ -6,6 +7,7 @@ export const metadata = {
     "Data recovery, automated backup setup, and cloud storage configuration in Fairplay, Breckenridge, and the Colorado high country.",
   alternates: { canonical: "https://barnstormit.com/services/data-services" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Data Recovery & Backup | Barnstorm Computer Services",
     description:
       "Data recovery from failed drives, automated backup design, full data transfer between computers, and cloud storage setup tailored to your workflow.",
@@ -59,6 +61,7 @@ export default function DataServices() {
   return (
     <ServiceLandingLayout
       slug="data-services"
+      breadcrumbName="Data Recovery & Backup"
       eyebrow="DATA SERVICES"
       title="Data Recovery"
       titleAccent="& Backup"

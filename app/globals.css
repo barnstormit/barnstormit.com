@@ -8,6 +8,8 @@
   --color-steel-blue: #E4DFD6;
   --color-vivid-teal: #8A5711;
   --color-alpine-gold: #EF9F27;
+  /* AA-safe gold for TEXT on light backgrounds (>=5:1 on cream/white). Keep alpine-gold for fills, borders, glows, and text on the dark footer. */
+  --color-gold-ink: #8F5900;
   --color-snow-white: #1A1D21;
   --color-frost-gray: #6B6459;
   --color-ice-blue: #FFFFFF;

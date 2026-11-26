@@ -1,5 +1,6 @@
 ---
 title: "What 3D Printing Means for Mountain Communities"
+seoTitle: "3D Printing for Mountain Communities"
 date: "2026-03-25"
 category: "3D Printing"
 excerpt: "When the nearest hardware store is an hour away and shipping takes a week, being able to print a replacement part in your own town changes everything."

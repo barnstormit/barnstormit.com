@@ -1,12 +1,14 @@
 import Link from "next/link";
 import countyData from "./colorado-counties.json";
+import { baseOpenGraph } from "@/lib/seo";
 
 export const metadata = {
   title: "Service Area",
   description:
-    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista, and surrounding mountain communities across Park, Summit, Lake, and Chaffee counties.",
+    "On-site IT support for Fairplay, Breckenridge, Frisco, Dillon, Leadville, Buena Vista, and nearby towns in Park, Summit, Lake, and Chaffee counties.",
   alternates: { canonical: "https://barnstormit.com/service-area" },
   openGraph: {
+    ...baseOpenGraph,
     title: "Service Area | Barnstorm Computer Services",
     description:
       "On-site IT support across Park, Summit, Lake, and Chaffee counties in Colorado.",
@@ -135,7 +137,7 @@ export default function ServiceArea() {
                       {town.href ? (
                         <Link
                           href={town.href}
-                          className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-alpine-gold transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
+                          className="text-vivid-teal underline underline-offset-4 decoration-vivid-teal/40 hover:decoration-vivid-teal hover:text-gold-ink transition-colors focus-visible:ring-2 focus-visible:ring-vivid-teal focus-visible:outline-none rounded-sm"
                         >
                           {town.name}
                         </Link>
@@ -156,7 +158,7 @@ export default function ServiceArea() {
         <div className="max-w-[1200px] mx-auto">
           <div className="bg-alpine-gold/5 border border-alpine-gold/20 rounded-xl py-5 px-8 flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left">
             <span
-              className="material-symbols-outlined text-alpine-gold"
+              className="material-symbols-outlined text-gold-ink"
               style={{ fontVariationSettings: "'FILL' 1" }}
               aria-hidden="true"
             >
@@ -164,7 +166,7 @@ export default function ServiceArea() {
             </span>
             <p className="text-frost-gray text-sm md:text-base">
               Remote support available{" "}
-              <span className="text-alpine-gold font-bold">
+              <span className="text-gold-ink font-bold">
                 anywhere with internet
               </span>{" "}
               &mdash; secure screen-sharing, no drive time.
@@ -226,7 +228,7 @@ export default function ServiceArea() {
           </p>
           <a
             href="tel:+17198380435"
-            className="inline-flex items-center gap-3 bg-alpine-gold text-deep-navy px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
+            className="inline-flex items-center gap-3 bg-alpine-gold text-snow-white px-10 py-4 rounded-lg font-heading font-bold text-lg hover:brightness-110 transition-[filter,transform] hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-alpine-gold focus-visible:outline-none"
           >
             <span className="material-symbols-outlined" aria-hidden="true">call</span>
             Call (719) 838-0435 and Ask
