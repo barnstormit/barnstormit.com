@@ -34,9 +34,9 @@ const counties = [
     name: "Summit County",
     towns: [
       { name: "Breckenridge", href: "/computer-repair-breckenridge-co" },
-      { name: "Frisco" },
-      { name: "Dillon" },
-      { name: "Silverthorne" },
+      { name: "Frisco", href: "/computer-repair-frisco-dillon-silverthorne-co" },
+      { name: "Dillon", href: "/computer-repair-frisco-dillon-silverthorne-co" },
+      { name: "Silverthorne", href: "/computer-repair-frisco-dillon-silverthorne-co" },
       { name: "Blue River" },
     ],
   },
@@ -44,12 +44,12 @@ const counties = [
     name: "Chaffee County",
     towns: [
       { name: "Buena Vista", href: "/computer-repair-buena-vista-co" },
-      { name: "Salida" },
+      { name: "Salida", href: "/computer-repair-salida-co" },
     ],
   },
   {
     name: "Lake County",
-    towns: [{ name: "Leadville" }],
+    towns: [{ name: "Leadville", href: "/computer-repair-leadville-co" }],
   },
 ];
 

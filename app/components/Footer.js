@@ -17,10 +17,11 @@ const quickLinks = [
 const cityLinks = [
   { label: "Fairplay", href: "/computer-repair-fairplay-co" },
   { label: "Breckenridge", href: "/computer-repair-breckenridge-co" },
-  { label: "Frisco" },
-  { label: "Dillon" },
-  { label: "Leadville" },
-  { label: "Buena Vista", href: "/computer-repair-buena-vista-co", last: true },
+  { label: "Frisco", href: "/computer-repair-frisco-dillon-silverthorne-co" },
+  { label: "Dillon", href: "/computer-repair-frisco-dillon-silverthorne-co" },
+  { label: "Leadville", href: "/computer-repair-leadville-co" },
+  { label: "Buena Vista", href: "/computer-repair-buena-vista-co" },
+  { label: "Salida", href: "/computer-repair-salida-co", last: true },
 ];
 
 export default function Footer() {
